@@ -1,0 +1,11 @@
+ID,name,gender,dob,ssn,address,jobTitle_ID,businessUnit_ID
+001,John Doe,M,1980-01-01,123-45-6789,123 Main St,2,6
+002,Jane Smith,F,1985-02-02,234-56-7890,456 Oak Ave,7,3
+003,Mark Johnson,M,1990-03-03,345-67-8901,789 Pine Dr,4,2
+004,Emily Jones,F,1975-04-04,456-78-9012,1024 Elm St,6,1
+005,Matthew Brown,M,1987-05-05,567-89-0123,2048 Birch Blvd,1,4
+006,Linda Davis,F,1992-06-06,678-90-1234,4096 Cedar Ct,5,5
+007,Robert Miller,M,1982-07-07,789-01-2345,8192 Dogwood Dr,3,3
+008,Patricia Wilson,F,1988-08-08,890-12-3456,16384 Fir St,5,1
+009,James Moore,M,1991-09-09,901-23-4567,32768 Grove Ave,4,2
+010,Jennifer Taylor,F,1978-10-10,012-34-5678,65536 Hickory Blvd,7,3

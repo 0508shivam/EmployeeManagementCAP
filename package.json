@@ -1,0 +1,42 @@
+{
+  "name": "EmployeeManagment",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7.9.0",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^7",
+    "@sap/ux-specification": "^1.108.29",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-employee_management_ui": "cds watch --open employee_management_ui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy EmployeeManagment --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana-cloud",
+      "[production]": {
+        "db": "hana-cloud",
+        "auth": "xsuaa"
+      },
+      "[hybrid]": {
+        "db": "hana-cloud",
+        "auth": "xsuaa"
+      }
+    }
+  },
+  "sapux": [
+    "app/employee_management_ui"
+  ]
+}

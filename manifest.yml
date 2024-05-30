@@ -1,0 +1,10 @@
+---
+applications:
+- name: EmployeeManagment
+  memory: 512M
+  instances: 1
+  random-route: false
+  # services:
+  #   - test-xsuaa
+  #   - test-connectivity
+  #   - test-destination
