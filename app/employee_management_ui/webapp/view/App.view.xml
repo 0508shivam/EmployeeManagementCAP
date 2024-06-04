@@ -1,7 +1,8 @@
-<mvc:View controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.App"
+<mvc:View xmlns:tnt="sap.tnt" controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.App"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    <tnt:ToolPage id="_IDGenToolPage1">
+    <tnt:header>
+    </tnt:header>
+    </tnt:ToolPage>
 </mvc:View>
