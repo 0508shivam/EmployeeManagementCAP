@@ -100,11 +100,6 @@
             },
             "routes": [
                 {
-                    "name": "RouteApp",
-                    "pattern": ":?query:",
-                    "target": "RouteApp"
-                },
-                {
                     "pattern": ":?query:",
                     "name": "TargetApp",
                     "target": "TargetApp"
