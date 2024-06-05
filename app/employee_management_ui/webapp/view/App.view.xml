@@ -60,10 +60,12 @@
         <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="true">
         <tnt:NavigationList id="_IDGenNavigationList1">
             <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" />
-            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" expanded="false"> 
+            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" expanded="true"> 
                 <tnt:NavigationListItem id="_IDGenNavigationListItem2a" text="Create Need" icon="sap-icon://add-activity" />
                 <tnt:NavigationListItem id="_IDGenNavigationListItem2b" text="Assign Need" icon="sap-icon://activity-individual" />
             </tnt:NavigationListItem>
+            <tnt:NavigationListItem id="_IDGenNavigationListItem3" text="Authorizations" icon="sap-icon://key-user-settings" />
+            <tnt:NavigationListItem id="_IDGenNavigationListItem4" text="Extended Team’s Needs" icon="sap-icon://collaborate" />
         </tnt:NavigationList>
         </tnt:SideNavigation>
         </tnt:sideContent>
