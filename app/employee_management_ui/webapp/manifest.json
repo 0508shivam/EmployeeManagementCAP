@@ -43,6 +43,14 @@
     },
     "sap.ui5": {
         "flexEnabled": true,
+        "config": {
+			"sample": {
+				"files": [
+					"model/cardManifests.json",
+					"manifest.json"
+				]
+			}
+		},
         "dependencies": {
             "minUI5Version": "1.108.27",
             "libs": {

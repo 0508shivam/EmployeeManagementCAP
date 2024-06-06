@@ -1,0 +1,353 @@
+{
+	"list1": {
+		"sap.app": {
+			"id": "sample.CardsLayout.model.list",
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "Need Master List",
+				"status": {
+					"text": "4 of 4"
+				}
+			},
+			"content": {
+				"data": {
+					"json": [
+                        {
+							"name": "Sales Manager",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"description": "Houston Texas, USA",
+							"info": "Lead Case",
+							"infoState": "Information"
+						},
+						{
+							"name": "Project Manager",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case1.png",
+							"description": "Houston, Texas, USA",
+							"info": "Final Reviewed",
+                            "infoState": "Success"
+						},
+						{
+							"name": "Product Specialist",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"description": "Houston Texas, USA",
+							"info": "In Progress",
+							"infoState": "Information"
+						},
+						{
+							"name": "Employee Central Consultant",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+							"description": "Hyderabad, Telangana, India",
+							"info": "Rejected",
+							"infoState": "Error"
+						}
+					]
+				},
+				"item": {
+					"icon": {
+						"src": "{icon}"
+					},
+					"title": {
+						"value": "{name}"
+					},
+					"description": {
+						"value": "{description}"
+					},
+					"info": {
+						"value": "{info}",
+						"state": "{infoState}"
+					}
+				}
+			}
+		}
+	},
+    "list2": {
+		"sap.app": {
+			"id": "sample.CardsLayout.model.list",
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "My Tasks",
+				"status": {
+					"text": "3 of 3"
+				}
+			},
+			"content": {
+				"data": {
+					"json": [
+						{
+							"name": "Position Validation",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case1.png",
+							"description": "kirk Change",
+							"info": "06/03/2024, Due 3 days ago",
+                            "infoState": "Error"
+						},
+						{
+							"name": "Export Controls Review",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"description": "Nancy Drew",
+							"info": "06/06/2024, Due today",
+							"infoState": "Success"
+						},
+						{
+							"name": "Notify Employee and Confirm",
+							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+							"description": "Aaron Jones",
+							"info": "06/08/2024, Due in 2 days",
+							"infoState": "Information"
+						}
+					]
+				},
+				"item": {
+					"icon": {
+						"src": "{icon}"
+					},
+					"title": {
+						"value": "{name}"
+					},
+					"description": {
+						"value": "{description}"
+					},
+					"info": {
+						"value": "{info}",
+						"state": "{infoState}"
+					}
+				}
+			}
+		}
+	},
+    "stackedColumn": {
+		"sap.app": {
+			"id": "sample.CardsLayout.model.Analytical",
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"n": "43.2",
+						"u": "%",
+						"trend": "Down",
+						"valueColor": "Good"
+					}
+				},
+				"title": "Failure Breakdown - Q1, 2019",
+				"mainIndicator": {
+					"number": "{n}",
+					"unit": "{u}",
+					"trend": "{trend}",
+					"state": "{valueColor}"
+				}
+			},
+			"content": {
+				"chartType": "StackedColumn",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": false,
+						"showTotal": false
+					},
+					"categoryAxisText": {
+						"visible": false
+					},
+					"valueAxisText": {
+						"visible": false
+					}
+				},
+				"title": {
+					"visible": false
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [
+							{
+								"Category": "Weather",
+								"Revenue": 431000.22,
+								"Cost": 230000.00,
+								"Target": 500000.00,
+								"Budget": 210000.00
+							},
+							{
+								"Category": "Mechanics",
+								"Revenue": 494000.30,
+								"Cost": 238000.00,
+								"Target": 500000.00,
+								"Budget": 224000.00
+							},
+							{
+								"Category": "Software",
+								"Revenue": 491000.17,
+								"Cost": 221000.00,
+								"Target": 500000.00,
+								"Budget": 238000.00
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"dimensions": [
+					{
+						"label": "Categories",
+						"value": "{Category}"
+					}
+				],
+				"measures": [
+					{
+						"label": "Revenue",
+						"value": "{Revenue}"
+					},
+					{
+						"label": "Cost",
+						"value": "{Cost}"
+					},
+					{
+						"label": "Target",
+						"value": "{Target}"
+					}
+				]
+			}
+		}
+     },
+        "donut": {
+            "sap.app": {
+                "id": "sample.CardsLayout.model.donut",
+                "type": "card"
+            },
+            "sap.card": {
+                "type": "Analytical",
+                "header": {
+                    "title": "Need Status"
+                },
+                "content": {
+                    "chartType": "Donut",
+                    "legend": {
+                        "visible": true,
+                        "position": "Bottom",
+                        "alignment": "Left"
+                    },
+                    "plotArea": {
+                        "dataLabel": {
+                            "visible": true,
+                            "showTotal": true
+                        }
+                    },
+                    "title": {
+                        "visible": false
+                    },
+                    "measureAxis": "size",
+                    "dimensionAxis": "color",
+                    "data": {
+                        "json": {
+                            "measures": [
+                                {
+                                    "measureName": "Lead Case",
+                                    "value": 1564235.29
+                                },
+                                {
+                                    "measureName": "In Progress",
+                                    "value": 157913.07
+                                },
+                                {
+                                    "measureName": "Rejected",
+                                    "value": 1085567.22
+                                },
+                                {
+                                    "measureName": "Final Reviewed",
+                                    "value": 245609.486884
+                                },
+                                {
+                                    "measureName": "Lead Case",
+                                    "value": 345292.06
+                                },
+                                {
+                                    "measureName": "Final Reviewed",
+                                    "value": 82922.07
+                                }
+                            ]
+                        },
+                        "path": "/measures"
+                    },
+                    "dimensions": [{
+                        "label": "Measure Name",
+                        "value": "{measureName}"
+                    }],
+                    "measures": [{
+                        "label": "Value",
+                        "value": "{value}"
+                    }]
+                }
+            }
+        },
+	"timeline": {
+		"sap.app": {
+			"id": "sample.CardsLayout.model.timeline",
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Timeline",
+			"header": {
+				"title": "Schedule for today",
+				"subTitle": "9:32 AM",
+				"status": {
+					"text": "3 of 3"
+				},
+				"actions": [
+					{
+						"type": "Navigation",
+						"parameters": {
+							"url": "/quickLinks"
+						}
+					}
+				]
+			},
+			"content": {
+				"data": {
+					"json": [
+						{
+							"Title": "Call Donna Mendez",
+							"Icon": "sap-icon://outgoing-call",
+							"Time":  "9:15 AM"
+						},
+						{
+							"Title": "Incidents Status - Online",
+							"Icon": "sap-icon://my-view",
+							"Time": "10:00 - 11:00"
+						},
+						{
+							"Title": "Site Visit - Peach Valley",
+							"Description": "San Joaquin valley",
+							"Icon": "sap-icon://appointment-2",
+							"Time": "12:00 - 17:00"
+						}
+					]
+				},
+				"item": {
+					"dateTime": {
+						"value": "{Time}"
+					},
+					"description": {
+						"value": "{Description}"
+					},
+					"title": {
+						"value": "{Title}"
+					},
+					"icon": {
+						"src": "{Icon}"
+					}
+				}
+			}
+		}
+	}
+}
