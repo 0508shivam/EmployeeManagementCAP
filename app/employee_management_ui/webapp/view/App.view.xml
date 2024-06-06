@@ -45,15 +45,6 @@
 						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData3" closeOverflowOnInteraction="false"/>
 					</layoutData>
 				</Button>
-				<Button
-					id="userButton"
-					text="{i18n>userName}"
-					type="Transparent"
-					press=".onUserNamePress">
-					<layoutData>
-						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData4" closeOverflowOnInteraction="false"/>
-					</layoutData>
-				</Button>
             </tnt:ToolHeader>
         </tnt:header>
         <tnt:sideContent>
