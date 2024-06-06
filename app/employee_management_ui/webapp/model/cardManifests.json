@@ -17,28 +17,28 @@
 					"json": [
                         {
 							"name": "Sales Manager",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"icon": "sap-icon://add-employee",
 							"description": "Houston Texas, USA",
 							"info": "Lead Case",
 							"infoState": "Information"
 						},
 						{
 							"name": "Project Manager",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case1.png",
+							"icon": "sap-icon://add-employee",
 							"description": "Houston, Texas, USA",
 							"info": "Final Reviewed",
                             "infoState": "Success"
 						},
 						{
 							"name": "Product Specialist",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"icon": "sap-icon://add-employee",
 							"description": "Houston Texas, USA",
 							"info": "In Progress",
 							"infoState": "Information"
 						},
 						{
 							"name": "Employee Central Consultant",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+							"icon": "sap-icon://add-employee",
 							"description": "Hyderabad, Telangana, India",
 							"info": "Rejected",
 							"infoState": "Error"
@@ -81,21 +81,21 @@
 					"json": [
 						{
 							"name": "Position Validation",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case1.png",
-							"description": "kirk Change",
+							"icon": "sap-icon://activity-2",
+							"description": "Kirk Chance",
 							"info": "06/03/2024, Due 3 days ago",
                             "infoState": "Error"
 						},
 						{
 							"name": "Export Controls Review",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+							"icon": "sap-icon://activity-2",
 							"description": "Nancy Drew",
 							"info": "06/06/2024, Due today",
 							"infoState": "Success"
 						},
 						{
 							"name": "Notify Employee and Confirm",
-							"icon": "./test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+							"icon": "sap-icon://activity-2",
 							"description": "Aaron Jones",
 							"info": "06/08/2024, Due in 2 days",
 							"infoState": "Information"
@@ -228,7 +228,7 @@
             "sap.card": {
                 "type": "Analytical",
                 "header": {
-                    "title": "Need Status"
+                    "title": "Need Status Statistics"
                 },
                 "content": {
                     "chartType": "Donut",

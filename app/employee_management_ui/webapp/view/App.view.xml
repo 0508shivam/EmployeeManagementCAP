@@ -71,18 +71,21 @@
         </tnt:NavigationList>
         </tnt:SideNavigation>
         </tnt:sideContent>
-<<<<<<< HEAD
-                <tnt:mainContents>
-            <f:GridContainer id="mainGrid">
+        <tnt:mainContents>
+            <Title id="pageTitle"
+					text="Overview"
+					titleStyle="H4"
+					class="sapUiSmallMarginBottom sapUiSmallMarginTop sapUiSmallMarginBegin" />   
+            <f:GridContainer id="mainGrid" class="sapUiSmallMarginBegin">
 				<f:layout>
-					<f:GridContainerSettings id="gridSettings1" rowSize="5rem" columnSize="5rem" gap="1rem" />
+					<f:GridContainerSettings id="gridSettings1" rowSize="5rem" columnSize="5rem" gap="1.5rem"/>
 				</f:layout>
 				<f:layoutS>
-					<f:GridContainerSettings id="gridSettings2" rowSize="5rem" columnSize="5rem" gap="0.5rem" />
+					<f:GridContainerSettings id="gridSettings2" rowSize="5rem" columnSize="5rem" gap="0.5rem"/>
 				</f:layoutS>
 				<w:Card id="needMaster" manifest="{manifests>/list1}" action="onAction">
 					<w:layoutData>
-						<f:GridContainerItemLayoutData id="needMasterLayout" minRows="4" columns="4" />
+						<f:GridContainerItemLayoutData id="needMasterLayout" minRows="4" columns="4"/>
 					</w:layoutData>
 				</w:Card>
                 <w:Card id="myTasks" manifest="{manifests>/list2}" action="onAction">
@@ -96,10 +99,6 @@
 					</w:layoutData>
 				</w:Card>
 			</f:GridContainer>
-=======
-        <tnt:mainContents>
-			<App id="mainContents"/>
->>>>>>> refs/remotes/origin/main
 		</tnt:mainContents>
     </tnt:ToolPage>
 </mvc:View>
