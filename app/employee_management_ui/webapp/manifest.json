@@ -102,24 +102,26 @@
                 "async": true,
                 "viewPath": "sap.deloitte.employeemanagement.employeemanagementui.view",
                 "controlAggregation": "pages",
-                "controlId": "app",
-                "clearControlAggregation": false,
+                "controlId": "mainContents",
                 "path": "sap.deloitte.employeemanagement.employeemanagementui.view"
             },
             "routes": [
                 {
-                    "pattern": ":?query:",
-                    "name": "TargetApp",
-                    "target": "TargetApp"
+                    "pattern": "",
+                    "name": "Default",
+                    "target": "Home"
+                },
+                {
+                    "pattern": "home",
+                    "name": "home",
+                    "target": "Home"
                 }
             ],
             "targets": {
-                "TargetApp": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "App",
-                    "viewName": "App"
+                "Home": {
+                    "viewId": "home",
+                    "viewName": "Home",
+                    "controlAggregation": "pages"
                 }
             }
         },

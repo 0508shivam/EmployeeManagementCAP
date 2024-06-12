@@ -52,8 +52,8 @@
         <tnt:sideContent>
         <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="true">
         <tnt:NavigationList id="_IDGenNavigationList1">
-            <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" href="#/home" />
-            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" expanded="true" href="#/needs"> 
+            <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" href="#/home" key="home" />
+            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" expanded="true" href="#/needs" key="needs`"> 
                 <tnt:NavigationListItem id="_IDGenNavigationListItem2a" text="Create Need" icon="sap-icon://add-activity" href="#/create-needs" />
                 <tnt:NavigationListItem id="_IDGenNavigationListItem2b" text="Assign Need" icon="sap-icon://activity-individual" />
             </tnt:NavigationListItem>
@@ -62,34 +62,8 @@
         </tnt:NavigationList>
         </tnt:SideNavigation>
         </tnt:sideContent>
-        <tnt:mainContents>
-            <Title id="pageTitle"
-					text="Overview"
-					titleStyle="H4"
-					class="sapUiSmallMarginBottom sapUiSmallMarginTop sapUiSmallMarginBegin" />   
-            <f:GridContainer id="mainGrid" class="sapUiSmallMarginBegin">
-				<f:layout>
-					<f:GridContainerSettings id="gridSettings1" rowSize="5rem" columnSize="5rem" gap="1.5rem"/>
-				</f:layout>
-				<f:layoutS>
-					<f:GridContainerSettings id="gridSettings2" rowSize="5rem" columnSize="5rem" gap="0.5rem"/>
-				</f:layoutS>
-				<w:Card id="needMaster" manifest="{manifests>/list1}" action="onAction">
-					<w:layoutData>
-						<f:GridContainerItemLayoutData id="needMasterLayout" minRows="4" columns="4"/>
-					</w:layoutData>
-				</w:Card>
-                <w:Card id="myTasks" manifest="{manifests>/list2}" action="onAction">
-					<w:layoutData>
-						<f:GridContainerItemLayoutData id="myTasksLayout" minRows="4" columns="4" />
-					</w:layoutData>
-				</w:Card>
-                <w:Card id="analytics" manifest="{manifests>/donut}" action="onAction">
-					<w:layoutData>
-						<f:GridContainerItemLayoutData id="analyticsLayout" minRows="4" columns="4" />
-					</w:layoutData>
-				</w:Card>
-			</f:GridContainer>
+		<tnt:mainContents>
+			<App id="mainContents"/>
 		</tnt:mainContents>
     </tnt:ToolPage>
 </mvc:View>
