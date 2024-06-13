@@ -28,5 +28,11 @@ sap.ui.define([
                 var oToolPage = this.byId("_IDGenToolPage1");
                 oToolPage.setSideExpanded(!oToolPage.getSideExpanded());
             },
+
+            onItemSelect: function(oEvent) {
+                var oUserSelected = oEvent.getParameter("item");
+                this.getOwnerComponent().getRouter().navTo(oUserSelected.getKey());
+            }
+
         });
     });
