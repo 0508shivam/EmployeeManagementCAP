@@ -115,9 +115,6 @@
                     "pattern": "home",
                     "name": "home",
                     "target": "Home"
-                    "pattern": "",
-                    "name": "TargetApp",
-                    "target": "TargetApp"
                 },
                 {
                     "pattern": "needsObjectPage/{name}",
@@ -130,7 +127,14 @@
                     "viewId": "home",
                     "viewName": "Home",
                     "controlAggregation": "pages"
-                }
+                },
+                "needsObjectPage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "needsObjectPage",
+                    "viewName": "needsObjectPage"
+                }    
             }
         },
         "rootView": {
