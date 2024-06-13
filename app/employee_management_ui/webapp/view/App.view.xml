@@ -60,13 +60,15 @@
             <tnt:NavigationListItem id="_IDGenNavigationListItem3" text="Authorizations" icon="sap-icon://key-user-settings" />
             <tnt:NavigationListItem id="_IDGenNavigationListItem4" text="Extended Team’s Needs" icon="sap-icon://collaborate" />
         </tnt:NavigationList>
-        </tnt:SideNavigation>
+        </tnt:SideNavigation> 
         </tnt:sideContent>
         <tnt:mainContents>
-            <Title id="pageTitle"
+		<Title id="pageTitle"
 					text="Overview"
 					titleStyle="H4"
-					class="sapUiSmallMarginBottom sapUiSmallMarginTop sapUiSmallMarginBegin" />   
+					class="sapUiSmallMarginBottom sapUiSmallMarginTop sapUiSmallMarginBegin" /> 
+		<App id="app">
+              
             <f:GridContainer id="mainGrid" class="sapUiSmallMarginBegin">
 				<f:layout>
 					<f:GridContainerSettings id="gridSettings1" rowSize="5rem" columnSize="5rem" gap="1.5rem"/>
@@ -90,6 +92,7 @@
 					</w:layoutData>
 				</w:Card>
 			</f:GridContainer>
+			</App>
 		</tnt:mainContents>
     </tnt:ToolPage>
 </mvc:View>

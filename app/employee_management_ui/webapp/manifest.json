@@ -42,7 +42,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "config": {
 			"sample": {
 				"files": [
@@ -108,9 +108,14 @@
             },
             "routes": [
                 {
-                    "pattern": ":?query:",
+                    "pattern": "",
                     "name": "TargetApp",
                     "target": "TargetApp"
+                },
+                {
+                    "pattern": "needsObjectPage/{name}",
+                    "name": "needsObjectPage",
+                    "target": "needsObjectPage" 
                 }
             ],
             "targets": {
@@ -120,7 +125,14 @@
                     "clearControlAggregation": false,
                     "viewId": "App",
                     "viewName": "App"
-                }
+                },
+                "needsObjectPage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "needsObjectPage",
+                    "viewName": "needsObjectPage"
+                }   
             }
         },
         "rootView": {

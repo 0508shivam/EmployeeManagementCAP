@@ -1,0 +1,60 @@
+<mvc:View
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<List
+		headerText="Candidates">
+            <headerToolbar>
+            <Toolbar>
+                <Title text="Candidates" level="H1" />
+                <ToolbarSpacer /> <!-- This pushes all content after it to the right -->
+                <Button id="addCandidate" press="onAdd" text="Add Candidate" icon="sap-icon://add" type="Emphasized" />
+            </Toolbar>
+        </headerToolbar>
+        <CustomListItem type="Active">
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiResponsiveMargin">
+                <HBox alignItems="Center" class="sapUiSmallMargin">
+                    <core:Icon src="sap-icon://customer" size="2.5rem" class="sapUiSmallMarginEnd"/>
+                <VBox alignItems="Start" class="sapUiNoMargin"> 
+                     <Title text="Allen Carr" level="H2"/>
+                <HBox alignItems="Center" class="sapUiTinyMarginEnd">
+                    <Label text="Sales Lead" class="sapUiNoMargin"/>
+                    <Link text="View employee profile" href="http://careerconnect.com" target="_blank" class="sapUiSmallMarginBegin"/>
+                </HBox>
+                </VBox>
+            </HBox>
+                    <core:Icon src="sap-icon://alert" size="1rem"/>
+            </HBox>
+        </CustomListItem>
+        <CustomListItem type="Active">
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiResponsiveMargin">
+                <HBox alignItems="Center" class="sapUiSmallMargin">
+                    <core:Icon src="sap-icon://customer" size="2.5rem" class="sapUiSmallMarginEnd"/>
+                <VBox alignItems="Start" class="sapUiNoMargin"> 
+                     <Title text="John Oliver" level="H2"/>
+                <HBox alignItems="Center" class="sapUiTinyMarginEnd">
+                    <Label text="Offshore Sales Lead" class="sapUiNoMargin"/>
+                    <Link text="View employee profile" href="http://careerconnect.com" target="_blank" class="sapUiSmallMarginBegin"/>
+                </HBox>
+                </VBox>
+            </HBox>
+            </HBox>
+        </CustomListItem>
+        <CustomListItem type="Active">
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiResponsiveMargin">
+                <HBox alignItems="Center" class="sapUiSmallMargin">
+                    <core:Icon src="sap-icon://customer" size="2.5rem" class="sapUiSmallMarginEnd"/>
+                <VBox alignItems="Start" class="sapUiNoMargin"> 
+                     <Title text="Ryan Baker" level="H2"/>
+                <HBox alignItems="Center" class="sapUiTinyMarginEnd">
+                    <Label text="Chemical Sales Executive" class="sapUiNoMargin"/>
+                    <Link text="View employee profile" href="http://careerconnect.com" target="_blank" class="sapUiSmallMarginBegin"/>
+                </HBox>
+                </VBox>
+            </HBox>
+                    <core:Icon src="sap-icon://alert" size="1rem"/>
+            </HBox>
+        </CustomListItem>
+	</List>
+</mvc:View>

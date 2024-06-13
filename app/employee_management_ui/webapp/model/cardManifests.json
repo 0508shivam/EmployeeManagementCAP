@@ -5,11 +5,31 @@
 			"type": "card"
 		},
 		"sap.card": {
+			"configuration": {
+				"filters": {
+					"searchQuery": {
+						"type": "Search",
+						"label": "name",
+						"placeholder": "Enter a position"
+					}
+				},
+				"data": {
+					"request": {
+							"$filter": "contains(name, '{filters>/searchQuery/value}')",
+							"$count": true
+						}
+					}
+				},	
 			"type": "List",
 			"header": {
 				"title": "Need Master List",
 				"status": {
-					"text": "4 of 4"
+					"text": "3 of 4"
+				}
+			},
+			"footer": {
+				"paginator": {
+					"pageSize": 3
 				}
 			},
 			"content": {
@@ -58,8 +78,17 @@
 					"info": {
 						"value": "{info}",
 						"state": "{infoState}"
-					}
-				}
+					},
+					"actions": [
+						{
+						  "type": "Navigation",
+						  "parameters": {
+							"url": "#/needsObjectPage/{name}",
+							"target": "_self"
+						  }
+						}
+					  ]	
+				}	
 			}
 		}
 	},
