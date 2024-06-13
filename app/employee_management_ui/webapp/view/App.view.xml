@@ -50,7 +50,7 @@
             </tnt:ToolHeader>
         </tnt:header>
         <tnt:sideContent>
-        <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="true">
+        <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="true" itemSelect="onItemSelect">
         <tnt:NavigationList id="_IDGenNavigationList1">
             <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" href="#/home" key="home" />
             <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" expanded="true" href="#/needs" key="needs`"> 
