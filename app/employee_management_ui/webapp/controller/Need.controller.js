@@ -51,6 +51,165 @@ function (Controller, JSONModel) {
                         "JobResponsibilities": "Updated Need: Need status change from \"Endorsed\" to \"Pending Final Review\"",
                         "HireDate": "Date(1272697200000)"
                     }
+                ],
+                "Candidates": [
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    },
+                    {
+                        "status": "Created",
+                        "name": "Casey D Robertson",
+                        "jobTitle": "Processing Monitoring Engineer",
+                        "availableDate": "June 14, 2024",
+                        "mobile": "+01 9876543210",
+                        "address": "Malaysia",
+                        "location": "4th Floor Tower C Building",
+                        "function": "Research & Engineering",
+                        "career": "",
+                        "primaryCouncil":"Not Assigned",
+                        "comments": ""
+                    }
+                    
                 ]
             };
             var oModel = new JSONModel(mData);

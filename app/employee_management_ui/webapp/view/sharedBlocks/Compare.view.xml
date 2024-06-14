@@ -1,22 +1,146 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:forms="sap.ui.layout.form">
-    <forms:Form width="100%">
-        <forms:layout>
-            <forms:ColumnLayout />
-        </forms:layout>
-        <forms:formContainers>
-            <forms:FormContainer id="addressInfo" title="Details">
-				<forms:formElements>
-
-					<forms:FormElement label="Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                    <forms:FormElement label="Original Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                </forms:formElements>    
-            </forms:FormContainer>        
-        </forms:formContainers>
-    </forms:Form>    
+<mvc:View
+    xmlns="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+>
+    <Table
+        id="table"
+        rows="{/Candidates}"
+        selectionMode="MultiToggle"
+        ariaLabelledBy="title"
+        enableCellFilter="true"
+        sort="sortColumn"
+        class="sapUiSmallMarginTop"
+    >
+        <extension>
+            <m:OverflowToolbar>
+                <m:Title
+                    id="title"
+                    text="Candidates(10)"
+                />
+                <m:ToolbarSpacer />
+                <m:SegmentedButton selectedKey="Default">
+                    <m:items>
+                        <m:SegmentedButtonItem text="Default" key="Default" />
+                        <m:SegmentedButtonItem text="Sensitive" />
+                        <m:SegmentedButtonItem text="Brief" />
+                    </m:items>
+                </m:SegmentedButton>
+                <m:ToolbarSpacer />
+                <m:HBox id="_IDHBoxFButton">
+                    <m:Button id="_IDButton1" class="sapUiTinyMarginEnd" press="" icon="sap-icon://edit" enabled="false" tooltip=""/>
+                    <m:Button id="_IDButton2" class="sapUiTinyMarginEnd" press="" icon="sap-icon://filter" tooltip=""/>                             
+                    <m:Button id="_IDButton3" press="" class="sapUiTinyMarginEnd" icon="sap-icon://add-filter" tooltip=""/> 
+                    <m:Button id="_IDButton4" press="" class="sapUiTinyMarginEnd" icon="sap-icon://provision" tooltip=""/>    
+                    <m:SearchField id="_IDSearchBar" liveChange="">
+                        <m:layoutData>
+                            <m:OverflowToolbarLayoutData maxWidth="300px" shrinkable="true" priority="NeverOverflow"/>
+                        </m:layoutData>
+                    </m:SearchField>                         
+                </m:HBox>
+            </m:OverflowToolbar>
+        </extension>
+        <columns>
+            <Column width="6rem">
+                <m:Label text="Status" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{status}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="10rem">
+                <m:Label text="Candidates" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{name}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="12rem">
+                <m:Label text="Title" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{jobTitle}"
+                        wrapping="true"
+                    />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="Availablity Date" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{availableDate}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="Mobile" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{mobile}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="6rem">
+                <m:Label text="Address" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{address}"
+                        wrapping="true"
+                    />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="Location" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{location}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="12rem">
+                <m:Label text="Function" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{function}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="10rem">
+                <m:Label text="Career" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{career}"
+                        wrapping="false"
+                    />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="Primary Council" width="100%" textAlign="Center" />
+                <template>
+                    <m:Text
+                        text="{primaryCouncil}"
+                        wrapping="true"
+                    />
+                </template>
+            </Column>
+            <Column width="16rem">
+                <m:Label text="Comment" width="100%" textAlign="Center"/>
+                <template>
+                    <m:Text
+                        text="{comment}"
+                        wrapping="true"
+                    />
+                </template>
+            </Column>
+        </columns>
+    </Table>
 </mvc:View>
