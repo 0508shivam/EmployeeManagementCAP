@@ -1,1 +1,53 @@
-/* Enter your custom styles here */
+.sapFCard {
+    box-shadow: none !important;
+}
+
+.AuthorizationList {
+    border: 1px solid #DDD;
+    padding: 32px 16px 32px 16px;
+    margin-right: 16px;
+}
+
+.AuthorizationListLabelBottom{
+    margin-top: 8px;
+    font-weight: bold;
+    color: blue;
+}
+
+.bgcolorwhite{
+    background-color: white;
+}
+
+.bgcolorops{
+    background-color: white;
+}
+
+.buttonSize {
+    font-size:30px;
+}
+
+.MarginLeft8px{
+    margin-left: 28px;
+}
+
+.MarginLeft8pxBottom8px{
+    margin-left: 28px;
+    margin-bottom: 8px;
+}
+
+.bgGrey{
+    background-color: #f5f4f4;
+    padding: 8px 8px 8px 8px;
+    border-radius: 17px 17px 21px 17px;
+    -webkit-border-radius: 17px 17px 21px 17px;
+    -moz-border-radius: 17px 17px 21px 17px;
+}
+
+
+.bgDark{
+    background-color: #f5f4f4;
+    padding: 8px 8px 8px 8px;
+    border-radius: 17px 17px 21px 17px;
+    -webkit-border-radius: 17px 17px 21px 17px;
+    -moz-border-radius: 17px 17px 21px 17px;
+}

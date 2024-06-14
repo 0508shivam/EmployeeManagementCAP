@@ -1,0 +1,70 @@
+<mvc:View controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Main"
+    xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	height="100%">
+	<Page showHeader="false" >
+		<l:VerticalLayout
+			class="sapUiContentPadding"
+			width="100%">
+			<f:GridList
+				id="gridList"
+				itemPress="_handleItemPress"
+				items="{
+					path: '/items',
+					sorter: {
+						path: 'status',
+						descending: false,
+						group: true
+					}
+				}">
+				<f:headerToolbar>
+					<Toolbar>
+						<Text text="Needs({/items/length})" />
+						<ToolbarSpacer ></ToolbarSpacer>
+						<SearchField width="50%" placeholder="Search Need(s)"/>
+						<Button type="Transparent" icon="sap-icon://filter"/>
+						<Button type="Transparent" icon="sap-icon://sort"/>
+					</Toolbar>
+				</f:headerToolbar>
+				<f:customLayout>
+					<grid:GridBoxLayout boxMinWidth="17rem"/>
+				</f:customLayout>
+
+				<f:GridListItem type="Active">
+					<f:Card>
+						<f:header>
+							<card:Header
+								title="{title}"
+								subtitle="{subtitle}"
+								iconSrc="sap-icon://work-history" />
+						</f:header>
+						<f:content>
+							<VBox class="sapUiSmallMargin">
+								<layoutData>
+									<FlexItemData growFactor="1" shrinkFactor="0" />
+								</layoutData>
+								<Label text="{jobDetail}"/>
+								<ObjectNumber
+									class="sapUiTinyMarginTop"
+									number="{number}"
+									state="Information" />
+								<ObjectStatus
+									class="sapUiTinyMarginTop"
+									text="{status}"
+									inverted="true"
+									icon="{= ${status} !== 'In progress' ? 'sap-icon://alert' : 'sap-icon://sys-enter-2' }"
+									state="{= ${status} !== 'In progress' ? 'Error' : 'Success' }" />
+							</VBox>
+						</f:content>
+					</f:Card>
+				</f:GridListItem>
+			</f:GridList>
+		</l:VerticalLayout>
+	</Page>
+</mvc:View>

@@ -1,0 +1,234 @@
+<mvc:View controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Need"
+   	xmlns="sap.uxap"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	xmlns:forms="sap.ui.layout.form"
+	xmlns:info="sap.deloitte.employeemanagement.employeemanagementui.controller.sharedBlocks"
+	xmlns:core="sap.ui.core"
+	height="100%">
+
+<ObjectPageLayout id="ObjectPageLayout"
+		showTitleInHeaderContent="true" class="bgcolorops"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="ITM Planning and Integration Manager" wrapping="true" />
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:HBox>
+
+						<m:VBox>
+							<m:Title text="ITM Planning and Integration Manager" wrapping="true"/>
+							<m:Label text="Target Effective Date: Aug 8, 2022"/>
+						</m:VBox>
+					</m:HBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<m:Label text="Target Effective Date: Aug 8, 2022"/>
+				</expandedContent>
+				<actions>
+						<m:VBox>
+							<m:Title text="" wrapping="true"/>
+							<m:Title text="Incumbent"/>
+							<m:Label text="610020203"/>
+						</m:VBox>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true">
+				
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Job Family:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" Projects"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Country:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" United States"/>
+					</m:HBox>
+
+					<m:HBox>
+						<m:Label text="CL Range:" class="sapUiTinyMarginEnd"/>
+						<m:Link text=" 26 - 27" press="onExternalApplicationLinkPress"/>
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Sub Function:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" Information Technology - Projects"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Department:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" Information Technology - Integrated Talent Management Contact"/>
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label text="Created By:" class="sapUiSmallMarginEnd"/>
+						<m:Link text="Julie Armstrong" press="handleTitleSelectorPress"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Created On:" class="sapUiSmallMarginEnd"/>
+						<m:Text text=" February 20, 2020"/>
+					</m:HBox>
+
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label text="Changed By:" class="sapUiSmallMarginEnd"/>
+						<m:Link text="John Miller" press="handleTitleSelectorPress"/>
+					</m:HBox>
+
+					<m:HBox renderType="Bare">
+						<m:Label text="Changed On:" class="sapUiSmallMarginEnd"/>
+						<m:Text text=" February 20, 2020"/>
+					</m:HBox>
+				</m:VBox>
+
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+		
+			
+
+		<ObjectPageSection titleUppercase="false" id="Candidate" title="Candidate" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Candidate" showTitle="false">
+						<blocks>
+							<info:Candidates />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="Compare" title="Compare" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Compare" showTitle="false">
+						<blocks>
+							<info:Compare />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="Overview" title="Overview"  class="bgcolorops"> 
+				<subSections>
+					<ObjectPageSubSection title="Overview" showTitle="false">
+						<blocks>
+							<info:Overview />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+
+
+			<ObjectPageSection titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Authorization" showTitle="false">
+						<blocks>	
+							<m:HBox>
+					 			<m:HBox width="200px" class="AuthorizationList" alignItems="Center" alignContent="Center" justifyContent="Center">						
+									<m:VBox>
+										<m:Button icon="sap-icon://add" class="buttonSize" type="Transparent" iconDensityAware="false"/>
+									</m:VBox>	
+								</m:HBox>
+	                   			<m:HBox width="200px" class="AuthorizationList" alignItems="Start" alignContent="Center" justifyContent="Center">
+									<m:VBox>
+										<m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" />
+									</m:VBox>
+									<m:VBox>
+										<m:Title text="Seneca Smith" wrapping="true"/>
+										<m:Title text="Manager" wrapping="true"/>
+										<m:HBox>
+											<m:Label class="AuthorizationListLabelBottom" text="Reviewer"/>
+											<m:Button icon="sap-icon://delete" class="buttonSize" type="Transparent" iconDensityAware="false"/>
+										</m:HBox>
+									</m:VBox>
+								</m:HBox>
+								<m:HBox id="_IDGenHBox1" width="200px" class="AuthorizationList" alignItems="Start" alignContent="Center" justifyContent="Center">
+									<m:VBox id="_IDGenVBox1">
+										<m:Avatar id="_IDGenAvatar1" src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" />
+									</m:VBox>
+									<m:VBox id="_IDGenVBox2" >
+										<m:Title id="_IDGenTitle1" text="Mary Clark" wrapping="true"/>
+										<m:Title id="_IDGenTitle11" text="HR Partner" wrapping="true"/>
+										<m:HBox>
+											<m:Label id="_IDGenLabel1" class="AuthorizationListLabelBottom" text="Endorsor"/>
+											<m:Button icon="sap-icon://delete" class="buttonSize" type="Transparent" iconDensityAware="false"/>
+										</m:HBox>
+									</m:VBox>
+								</m:HBox>
+								<m:HBox width="200px" class="AuthorizationList" alignItems="Start" alignContent="Center" justifyContent="Center">
+									<m:VBox>
+										<m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" />
+									</m:VBox>
+									<m:VBox>
+										<m:Title text="Tim G Carey" wrapping="true"/>
+										<m:Title text="VP" wrapping="true"/>
+										<m:HBox>
+											<m:Label class="AuthorizationListLabelBottom" text="Final Reviewer"/>
+											<m:Button icon="sap-icon://delete" class="buttonSize" type="Transparent" iconDensityAware="false"/>
+										</m:HBox>
+									</m:VBox>
+								</m:HBox>
+							</m:HBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="Post-PMG" title="Post-PMG" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Post-PMG" showTitle="false">
+						<blocks>
+							<m:VBox> </m:VBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="Checklist" title="Checklist" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Checklist" showTitle="false">
+						<blocks>
+							<info:Checklist />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="Discussion" title="Discussion" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Discussion" showTitle="false">
+						<blocks>
+							<info:Discussion />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="StatusHistory" title="Status History" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Status History" showTitle="false">
+						<blocks>
+							<info:statusHistory />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

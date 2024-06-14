@@ -1,7 +1,7 @@
 sap.ui.define(["sap/uxap/BlockBase"], function(BlockBase) {
     "use strict"
 
-    return BlockBase.extend("sap.deloitte.employeemanagement.employeemanagementui.view.sharedBlocks.Candidates",{
+    return BlockBase.extend("com.em.empoc.view.sharedBlocks.Candidates",{
         metadata:{}
     });
 });

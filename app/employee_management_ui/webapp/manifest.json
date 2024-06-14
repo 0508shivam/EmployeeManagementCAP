@@ -120,11 +120,18 @@
                     "pattern": "needsObjectPage/{name}",
                     "name": "needsObjectPage",
                     "target": "needsObjectPage" 
+                },
+                {
+                    "name": "Need",
+                    "pattern": "need",
+                    "target": [
+                        "Need"
+                    ]
                 }
             ],
             "targets": {
                 "Home": {
-                    "viewId": "home",
+                    "viewId": "Home",
                     "viewName": "Home",
                     "controlAggregation": "pages"
                 },
@@ -134,6 +141,13 @@
                     "clearControlAggregation": false,
                     "viewId": "needsObjectPage",
                     "viewName": "needsObjectPage"
+                },
+                "Need": {
+                    "transition": "slide",
+                    "viewId": "Main",
+                    "viewName": "Main",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
                 }    
             }
         },
