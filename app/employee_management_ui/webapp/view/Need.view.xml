@@ -194,7 +194,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Post-PMG" showTitle="false">
 						<blocks>
-							<m:VBox> </m:VBox>
+						<info:postPMG />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
