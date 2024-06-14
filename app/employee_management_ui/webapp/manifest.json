@@ -1,5 +1,5 @@
 {
-    "_version": "1.48.0",
+    "_version": "1.59.0",
     "sap.app": {
         "id": "sap.deloitte.employeemanagement.employeemanagementui",
         "type": "application",
@@ -52,7 +52,7 @@
 			}
 		},
         "dependencies": {
-            "minUI5Version": "1.108.27",
+            "minUI5Version": "1.124.1",
             "libs": {
                 "sap.m": {},
                 "sap.ui.core": {},
@@ -122,10 +122,15 @@
                     "target": "needsObjectPage" 
                 },
                 {
+                    "pattern": "Main/{name}",
+                    "name": "Main",
+                    "target": "Need" 
+                },
+                {
                     "name": "Need",
                     "pattern": "need",
                     "target": [
-                        "Need"
+                        "Main"
                     ]
                 }
             ],
@@ -142,10 +147,17 @@
                     "viewId": "needsObjectPage",
                     "viewName": "needsObjectPage"
                 },
-                "Need": {
+                "Main": {
                     "transition": "slide",
                     "viewId": "Main",
                     "viewName": "Main",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "Need": {
+                    "transition": "slide",
+                    "viewId": "Need",
+                    "viewName": "Need",
                     "viewType": "XML",
                     "controlAggregation": "pages"
                 }    

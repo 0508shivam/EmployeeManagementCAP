@@ -83,7 +83,7 @@
 						{
 						  "type": "Navigation",
 						  "parameters": {
-							"url": "#/needsObjectPage/{name}",
+							"url": "#/Main/{name}",
 							"target": "_self"
 						  }
 						}

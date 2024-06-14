@@ -51,3 +51,7 @@
     -webkit-border-radius: 17px 17px 21px 17px;
     -moz-border-radius: 17px 17px 21px 17px;
 }
+
+.sapSuiteUiCommonsTimeline {
+    max-width: 90% !important;
+}

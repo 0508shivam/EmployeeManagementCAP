@@ -1,22 +1,47 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:forms="sap.ui.layout.form">
-    <forms:Form width="100%">
-        <forms:layout>
-            <forms:ColumnLayout />
-        </forms:layout>
-        <forms:formContainers>
-            <forms:FormContainer id="addressInfo" title="Details">
-				<forms:formElements>
-
-					<forms:FormElement label="Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                    <forms:FormElement label="Original Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                </forms:formElements>    
-            </forms:FormContainer>        
-        </forms:formContainers>
-    </forms:Form>    
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    xmlns="sap.suite.ui.commons"
+    xmlns:core="sap.ui.core"
+    height="100%"
+>
+    <m:VBox>
+        <m:FeedInput
+            post="onPost"
+            icon="https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png"
+            class="sapUiSmallMarginBottom"
+        />
+        <Timeline
+            id="idTimeline"
+            enableBackendFilter="true"
+            content=""
+            showIcons="false">
+            <content>
+                <TimelineItem
+                    id="idTemplateItem1"
+                    dateTime="June 14, 2024, 2:36:38 PM"
+                    text="A discussion Point worth considering"
+                    title=""
+                    userName="Casey D Robertson"
+                    select="">
+                </TimelineItem>
+                <TimelineItem
+                    id="idTemplateItem2"
+                    dateTime="June 12, 2024, 4:36:38 PM"
+                    text="Life is like this, I like this."
+                    title=""
+                    userName="Harvey Spectre"
+                    select="">
+                </TimelineItem>
+                <TimelineItem
+                    id="idTemplateItem3"
+                    dateTime="May 5, 2024, 12:36:38 PM"
+                    text="If you want to make everyone happy, don't be a leader, sell ice-cream."
+                    title=""
+                    userName="Loui'da Silva"
+                    select="">
+                </TimelineItem>
+            </content>
+        </Timeline>
+    </m:VBox>
 </mvc:View>

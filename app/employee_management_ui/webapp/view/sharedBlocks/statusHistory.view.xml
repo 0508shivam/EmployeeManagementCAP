@@ -1,22 +1,25 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:forms="sap.ui.layout.form">
-    <forms:Form width="100%">
-        <forms:layout>
-            <forms:ColumnLayout />
-        </forms:layout>
-        <forms:formContainers>
-            <forms:FormContainer id="addressInfo" title="Details">
-				<forms:formElements>
-
-					<forms:FormElement label="Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                    <forms:FormElement label="Original Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                </forms:formElements>    
-            </forms:FormContainer>        
-        </forms:formContainers>
-    </forms:Form>    
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.suite.ui.commons"
+    xmlns:forms="sap.ui.layout.form">
+    <Timeline
+			id="idTimeline"
+			enableDoubleSided="true"
+			groupBy="HireDate"
+			growingThreshold="0"
+			filterTitle="Name"
+			sortOldestFirst="true"
+            enableScroll="false"
+			content="{/Employees}">
+		<content>
+			<TimelineItem
+					id="idTemplateItem"
+					dateTime="{HireDate}"
+					text="{JobResponsibilities}"
+                    userNameClickable="true"
+					userName="{Name}"
+					filterValue="{Name}"
+					icon="{Icon}">
+			</TimelineItem>
+		</content>
+	</Timeline>
 </mvc:View>

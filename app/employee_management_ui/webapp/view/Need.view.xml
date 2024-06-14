@@ -103,7 +103,7 @@
 		
 			
 
-		<ObjectPageSection titleUppercase="false" id="Candidate" title="Candidate" class="bgcolorops">
+		<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="Candidate" title="Candidate" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Candidate" showTitle="false">
 						<blocks>
@@ -113,7 +113,7 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection titleUppercase="false" id="Compare" title="Compare" class="bgcolorops">
+			<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="Compare" title="Compare" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Compare" showTitle="false">
 						<blocks>
@@ -123,7 +123,7 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection titleUppercase="false" id="Overview" title="Overview"  class="bgcolorops"> 
+			<ObjectPageSection  titleUppercase="false" id="Overview" title="Overview"  class="bgcolorops"> 
 				<subSections>
 					<ObjectPageSubSection title="Overview" showTitle="false">
 						<blocks>
@@ -135,7 +135,7 @@
 
 
 
-			<ObjectPageSection titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
+			<ObjectPageSection anchorBarButtonColor="Negative" titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Authorization" showTitle="false">
 						<blocks>	
