@@ -95,6 +95,15 @@ xmlns:mvc="sap.ui.core.mvc"
                         </ObjectPageSubSection>
                     </subSections>
                 </ObjectPageSection>
+				<ObjectPageSection titleUppercase="false" title="Compare" >
+                    <subSections>
+                        <ObjectPageSubSection >
+                            <blocks>
+                                <info:Overview />
+                            </blocks>
+                        </ObjectPageSubSection>
+                    </subSections>
+                </ObjectPageSection>
 			   <ObjectPageSection titleUppercase="false" title="Overview" >
                     <subSections>
                         <ObjectPageSubSection >
@@ -104,11 +113,20 @@ xmlns:mvc="sap.ui.core.mvc"
                         </ObjectPageSubSection>
                     </subSections>
                 </ObjectPageSection>
-				<ObjectPageSection titleUppercase="false" title="Compare" >
+				<ObjectPageSection titleUppercase="false" title="Authorizations" >
                     <subSections>
                         <ObjectPageSubSection >
                             <blocks>
-                                <info:Overview />
+                                <info:Authorizations />
+                            </blocks>
+                        </ObjectPageSubSection>
+                    </subSections>
+                </ObjectPageSection>
+				<ObjectPageSection titleUppercase="false" title="Post-PMG" >
+                    <subSections>
+                        <ObjectPageSubSection >
+                            <blocks>
+                                <info:postPMG />
                             </blocks>
                         </ObjectPageSubSection>
                     </subSections>

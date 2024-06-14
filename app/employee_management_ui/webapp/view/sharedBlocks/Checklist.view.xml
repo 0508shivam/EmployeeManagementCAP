@@ -1,22 +1,2 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:forms="sap.ui.layout.form">
-    <forms:Form width="100%">
-        <forms:layout>
-            <forms:ColumnLayout />
-        </forms:layout>
-        <forms:formContainers>
-            <forms:FormContainer id="addressInfo" title="Details">
-				<forms:formElements>
-
-					<forms:FormElement label="Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                    <forms:FormElement label="Original Hire Date">
-						<forms:fields>
-						</forms:fields>
-					</forms:FormElement>
-                </forms:formElements>    
-            </forms:FormContainer>        
-        </forms:formContainers>
-    </forms:Form>    
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:forms="sap.ui.layout.form">  
 </mvc:View>
