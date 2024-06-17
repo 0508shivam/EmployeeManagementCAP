@@ -30,6 +30,7 @@
 						<SearchField width="50%" placeholder="Search Need(s)"/>
 						<Button type="Transparent" icon="sap-icon://filter"/>
 						<Button type="Transparent" icon="sap-icon://sort"/>
+						<Button type="Emphasized" icon="sap-icon://collaborate" text="Extended Team's Need" tooltip="Extended Team's Need" press="onExtendedNeedPress" />
 					</Toolbar>
 				</f:headerToolbar>
 				<f:customLayout>

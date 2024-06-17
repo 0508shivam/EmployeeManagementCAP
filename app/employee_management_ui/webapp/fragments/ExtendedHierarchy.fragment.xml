@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout" xmlns:t="sap.ui.table">
+    <Dialog id="_IDExtendedHierarchy" contentHeight="90%" contentWidth="95%" title="Extended Functional Hierarchy">
+        <content>
+        <Page showHeader="false">
+        <l:VerticalLayout class="sapUiContentPadding" width="100%">
+        </l:VerticalLayout>
+        </Page>
+        </content>
+        <endButton>
+            <Button type="Reject" icon="sap-icon://decline" text="Close" tooltip="Extended Team's Need" press="closeExtendedNeed" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

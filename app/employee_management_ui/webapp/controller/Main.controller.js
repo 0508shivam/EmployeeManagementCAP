@@ -264,6 +264,22 @@ function (Controller, JSONModel) {
         _handleItemPress: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("Need");
+        },
+
+        onExtendedNeedPress: function (oEvent) {
+            this._oExtendedNeedDialog = new sap.ui.xmlfragment("_IDExtendedHierarchy", 
+            "sap.deloitte.employeemanagement.employeemanagementui.fragments.ExtendedHierarchy", this);
+            this.getView().addDependent(this._oExtendedNeedDialog);
+            this._oExtendedNeedDialog.open();
+        },
+
+        closeExtendedNeed: function(oEvent) {
+            if (this._oExtendedNeedDialog) {
+                this._oExtendedNeedDialog.close();
+                this._oExtendedNeedDialog.destroy();
+                this._oExtendedNeedDialog = null;
+            }
         }
+
     });
 });
