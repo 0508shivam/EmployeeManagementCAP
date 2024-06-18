@@ -254,8 +254,41 @@ function (Controller, JSONModel) {
                         "number" : "120000987",
                         "status" : "Pending review"
                     }
-                ]
-            };
+                ],
+                "ExtendedView":{
+                    "Reports":[{
+                        "name": "Karl Munoz",
+                        "jobTitle": "Administrative Assistant",
+                        "email": "kmunoz@exxonmobil.com",
+                        "Reports":[{
+                            "name": "Angel Miquel",
+                            "jobTitle": "Indirect Tax Lead",
+                            "email": "amiquel@exxonmobil.com"
+                        }]
+                    },
+                       {
+                        "name":"Mark Macmanus",
+                        "jobTitle": "Corporate Financials Program Manager",
+                        "email": "mmacmanus@exxonmobil.com"
+                    },
+                    {
+                        "name": "Norris Burnside",
+                        "jobTitle": "HR IT Manager",
+                        "email": "nburnside@exxonmobil.com",
+                        "Reports":[{
+                            "name": "Adam Sanders",
+                            "jobTitle": "System Engineer",
+                            "email": "asander@exxonmobil.com"
+                        }]
+                    },
+                    {
+                        "name": "Lisa Sharpe",
+                        "jobTitle": "Legal Advisor",
+                        "email": "lsharpe@exxonmobil.com"   
+                    }
+                    ]
+                }};
+                    
             var oModel = new JSONModel(mData);
             this.getView().setModel(oModel);
 
@@ -267,9 +300,11 @@ function (Controller, JSONModel) {
         },
 
         onExtendedNeedPress: function (oEvent) {
+   
             this._oExtendedNeedDialog = new sap.ui.xmlfragment("_IDExtendedHierarchy", 
             "sap.deloitte.employeemanagement.employeemanagementui.fragments.ExtendedHierarchy", this);
             this.getView().addDependent(this._oExtendedNeedDialog);
+            var oModel = this.getView().getModel();
             this._oExtendedNeedDialog.open();
         },
 

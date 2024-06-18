@@ -168,10 +168,10 @@
                 </Panel>
             </CustomListItem>
             <CustomListItem>
-                <Panel headerText="Receiving Organization: Position Validation" expandable="true" expanded="false">
+                <Panel headerText="Receiving Organization - Position Validation" expandable="true" expanded="false">
                     <headerToolbar>
                         <Toolbar>
-                            <Title text="Receiving Organization: Position Validation" level="H2" />
+                            <Title text="Receiving Organization - Position Validation" level="H2" />
                             <ToolbarSpacer />
                         <ObjectStatus text="Not Started" state="None"></ObjectStatus>     
                         </Toolbar>
