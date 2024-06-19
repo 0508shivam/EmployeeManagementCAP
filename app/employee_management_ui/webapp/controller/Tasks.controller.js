@@ -1,0 +1,81 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
+],
+function(Controller, JSONModel){
+    "use strict";
+
+    return Controller.extend("sap.deloitte.employeemanagement.employeemanagementui.controller.Tasks", {
+        onInit: function() {
+            var mData = {
+                "Tasks": [
+                    {
+                        "title" : "Position Validation",
+                        "name": "Krik C Nadler",
+                        "type": "Active",
+                        "date": "5/11/19",
+                        "message": "Due 5 days ago",
+                        "status": "Past Due",
+                        "state": "Error"
+                    },
+                    {
+                        "title" : "Export Controls Review",
+                        "name": "Stephine R Burdine",
+                        "type": "Active",
+                        "date": "3/10/19",
+                        "message": "Due March 10, 2019",
+                        "status": "Past Due",
+                        "state": "Success"
+                    },
+                    {
+                        "title" : "Notify Employee & Confirm",
+                        "name": "Stephine R Burdine",
+                        "type": "Active",
+                        "date": "5/19/19",
+                        "message": "Due in 3 days",
+                        "status": "",
+                        "state": "None"
+                    },
+                    {
+                        "title" : "Export Controls Review",
+                        "name": "Jessica Pearson",
+                        "type": "Active",
+                        "date": "5/19/19",
+                        "message": "Due in 3 days",
+                        "status": "Past Due",
+                        "state": "Error"
+                    },
+                    {
+                        "title" : "Notify Employee & Confirm",
+                        "name": "Michael Cross",
+                        "type": "Active",
+                        "date": "5/19/19",
+                        "message": "Due in 3 days",
+                        "status": "",
+                        "state": "None"
+                    },
+                    {
+                        "title" : "Export Controls Review",
+                        "name": "Harvey Sepctre",
+                        "type": "Active",
+                        "date": "5/19/19",
+                        "message": "Due in 3 days",
+                        "status": "Due",
+                        "state": "Success"
+                    },
+                    {
+                        "title" : "Position Validation",
+                        "name": "Stephine R Burdine",
+                        "type": "Active",
+                        "date": "5/19/19",
+                        "message": "Due in 3 days",
+                        "status": "Past Due",
+                        "state": "Error"
+                    }
+                ]
+            };
+            var oModel = new JSONModel(mData);
+            this.getView().setModel(oModel);
+        }
+    });
+});

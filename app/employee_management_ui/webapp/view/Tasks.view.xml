@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Tasks"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:grid="sap.ui.layout.cssgrid"
+    height="100%"
+    >
+    <Page showHeader="false">
+    <l:VerticalLayout
+			class="sapUiContentPadding"
+			width="100%">
+			<f:GridList
+				id="gridList" sticky="HeaderToolbar">
+				<f:headerToolbar>
+					<Toolbar>
+						<Text text="My Tasks(5)" />
+						<ToolbarSpacer ></ToolbarSpacer>
+						<SearchField width="50%" placeholder="Search Need(s)"/>
+						<Button type="Transparent" icon="sap-icon://filter"/>
+						<Button type="Transparent" icon="sap-icon://sort"/>
+					</Toolbar>
+				</f:headerToolbar>
+				<f:customLayout>
+					<grid:GridBoxLayout boxMinWidth="17rem"/>
+				</f:customLayout>
+
+				<f:GridListItem type="Active">
+					<f:content>
+						<List items="{/Tasks}">
+							<ObjectListItem title="{title}"
+								type="Active"
+								press=""
+								number="{date}"
+								numberUnit="{message}" >
+								<firstStatus>
+									<ObjectStatus
+										text="{status}"
+										state="{state}" />
+								</firstStatus>
+								<ObjectAttribute text="{name}" />
+							</ObjectListItem>
+						</List>
+					</f:content>
+				</f:GridListItem>
+			</f:GridList>
+		</l:VerticalLayout>
+    </Page>
+</mvc:View>

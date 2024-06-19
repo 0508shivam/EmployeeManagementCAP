@@ -132,6 +132,11 @@
                     "target": [
                         "Main"
                     ]
+                },
+                {
+                    "pattern": "my-tasks",
+                    "name": "tasks",
+                    "target": "Tasks"
                 }
             ],
             "targets": {
@@ -160,7 +165,14 @@
                     "viewName": "Need",
                     "viewType": "XML",
                     "controlAggregation": "pages"
-                }    
+                },
+                "Tasks": {
+                    "transition": "slide",
+                    "viewId": "Tasks",
+                    "viewName": "Tasks",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                }  
             }
         },
         "rootView": {
