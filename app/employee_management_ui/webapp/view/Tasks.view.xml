@@ -32,7 +32,7 @@
 					<f:content>
 						<List items="{/Tasks}">
 							<ObjectListItem title="{title}"
-								type="Active"
+								type="Navigation"
 								press=""
 								number="{date}"
 								numberUnit="{message}" >
