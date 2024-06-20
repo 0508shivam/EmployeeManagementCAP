@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/core/Fragment"
 ],
-function (Controller, JSONModel) {
+function (Controller, JSONModel, Fragment) {
     "use strict";
 
     return Controller.extend("sap.deloitte.employeemanagement.employeemanagementui.controller.Main", {
@@ -314,7 +315,11 @@ function (Controller, JSONModel) {
                 this._oExtendedNeedDialog.destroy();
                 this._oExtendedNeedDialog = null;
             }
-        }
+        },
+        onExpandSelection: function() {
+			var oTreeTable = Fragment.byId("_IDExtendedHierarchy","TreeTableBasic");
+			oTreeTable.expandToLevel(1);
+		}
 
     });
 });

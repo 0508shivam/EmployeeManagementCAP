@@ -24,7 +24,7 @@
                     <m:OverflowToolbar style="Clear">
                         <m:Title id="title" text="Extended Functional Hierarchy"/>
                         <m:ToolbarSpacer/>
-                        <m:Button type="Accept" icon="sap-icon://expand-all" text="Expand All" press="onExpandFirstLevel"/>
+                        <m:Button type="Accept" icon="sap-icon://expand-all" text="Expand All" press="onExpandSelection"/>
                         <m:Button type="Accept" icon="sap-icon://collapse-all" text="Collapse All" press="onCollapseAll"/>
                     </m:OverflowToolbar>
                 </extension>
