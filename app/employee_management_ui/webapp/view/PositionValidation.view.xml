@@ -1,0 +1,25 @@
+<mvc:View
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.PositionValidation"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    height="100%"
+>
+    <f:DynamicPage id="_IDDynamicPage" headerExpanded="true" class="sapUiMargin">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Position Validation"/>
+                </f:heading>
+                <f:expandedContent>
+                    <Label text="This is a subheading"/>
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="This is a subheading"/>
+                </f:snappedContent>
+            </f:DynamicPageTitle>
+        </f:title>
+    </f:DynamicPage>
+</mvc:View>

@@ -144,7 +144,16 @@
 					"info": {
 						"value": "{info}",
 						"state": "{infoState}"
-					}
+					},
+					"actions": [
+						{
+						  "type": "Navigation",
+						  "parameters": {
+							"url": "#/my-tasks",
+							"target": "_self"
+						  }
+						}
+					  ]	
 				}
 			}
 		}
