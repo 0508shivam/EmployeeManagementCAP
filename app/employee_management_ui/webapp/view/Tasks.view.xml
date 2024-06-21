@@ -30,10 +30,10 @@
 
 				<f:GridListItem type="Active">
 					<f:content>
-						<List items="{/Tasks}">
+						<List  items="{/Tasks}">
 							<ObjectListItem title="{title}"
 								type="Navigation"
-								press=""
+								press="onItemPress"
 								number="{date}"
 								numberUnit="{message}" >
 								<firstStatus>

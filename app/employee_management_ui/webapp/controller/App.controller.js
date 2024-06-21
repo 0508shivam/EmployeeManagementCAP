@@ -12,6 +12,8 @@ sap.ui.define([
 
         return Controller.extend("sap.deloitte.employeemanagement.employeemanagementui.controller.App", {
             onInit: function () {
+                var oControl = this.getView().byId("mainContents");
+    console.log(oControl);
                 if (Device.resize.width <= 1024) {
                     this.onSideNavButtonPress();
                 }

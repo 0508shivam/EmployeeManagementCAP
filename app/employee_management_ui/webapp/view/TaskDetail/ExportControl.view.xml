@@ -1,0 +1,19 @@
+<mvc:View 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:grid="sap.ui.layout.cssgrid"
+    height="100%"
+    >
+    <Page showHeader="false">
+    <l:VerticalLayout
+			class="sapUiContentPadding"
+			width="100%">
+            <Button text="Export Control"></Button>
+		</l:VerticalLayout>
+    </Page>
+</mvc:View>

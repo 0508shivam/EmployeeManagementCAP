@@ -137,6 +137,11 @@
                     "pattern": "my-tasks",
                     "name": "tasks",
                     "target": "Tasks"
+                },
+                {
+                    "pattern": "positionValidation",
+                    "name": "Position Validation",
+                    "target": "Validation"
                 }
             ],
             "targets": {
@@ -170,6 +175,13 @@
                     "transition": "slide",
                     "viewId": "Tasks",
                     "viewName": "Tasks",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "Validation": {
+                    "transition": "slide",
+                    "viewId": "PositionValidation",
+                    "viewName": "PositionValidation",
                     "viewType": "XML",
                     "controlAggregation": "pages"
                 }  

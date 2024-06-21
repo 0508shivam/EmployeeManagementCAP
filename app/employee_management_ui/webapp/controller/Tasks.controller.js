@@ -76,6 +76,16 @@ function(Controller, JSONModel){
             };
             var oModel = new JSONModel(mData);
             this.getView().setModel(oModel);
+        },
+        onItemPress: function (oEvent) {
+            var oItem = oEvent.getSource();
+            var oBindingContext = oItem.getBindingContext();
+            var sTaskId = oBindingContext.getProperty("title");
+
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("TaskNav",{
+                title: sTaskId
+            });
         }
     });
 });
