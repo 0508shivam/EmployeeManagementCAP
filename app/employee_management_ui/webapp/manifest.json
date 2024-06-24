@@ -139,7 +139,7 @@
                     "target": "Tasks"
                 },
                 {
-                    "pattern": "positionValidation",
+                    "pattern": "positionValidation/{title}",
                     "name": "Position Validation",
                     "target": "Validation"
                 }

@@ -83,7 +83,7 @@ function(Controller, JSONModel){
             var sTaskId = oBindingContext.getProperty("title");
 
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("TaskNav",{
+            oRouter.navTo("Position Validation",{
                 title: sTaskId
             });
         }
