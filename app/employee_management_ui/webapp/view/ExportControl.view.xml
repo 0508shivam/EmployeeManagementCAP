@@ -1,0 +1,181 @@
+<mvc:View
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.ExportControl"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:sf="sap.ui.layout.form"
+>
+    <f:DynamicPage id="dynamicPageId" class="sapUiNoContentPadding" showFooter="true">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="Notify Employee: Heather (Heather) Renee Wilcott"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label text="This is a subheading" />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="This is a subheading" />
+                </f:snappedContent>
+                <f:content>
+                    <OverflowToolbar>
+                        <GenericTag
+                            text="Due"
+                            status="Error"
+                            press=""
+                            design="StatusIconHidden"
+                        >
+                            <ObjectNumber
+                                number="2"
+                                unit="Days"
+                                emphasized="false"
+                                state="Error"
+                            />
+                        </GenericTag>
+                    </OverflowToolbar>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox>
+                    <Text
+                        text="Welcome Sending Supervisor, you have a current employee moving into a new position. Notifiying the employee of their new assignment is an exciting responsibility. Talent Exchange has provided all the details of the new position below for your use in the notification process. Once you have confirmed the employee has been notified, Talent Exchange will inform the Receiving Supervisor to start executing their portion of the process."
+                    />
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+        <VBox class="sapUiSmallMargin">
+                <sf:SimpleForm
+                    id="SimpleFormChange480"
+                    layout="ResponsiveGridLayout"
+                    title="Your Immediate Actions"
+                    adjustLabelSpan="false"
+                    labelSpanXL="3" 
+                    labelSpanL="3" 
+                    labelSpanM="5" 
+                    labelSpanS="12" 
+                    emptySpanXL="4" 
+                    emptySpanL="4" 
+                    emptySpanM="4" 
+                    emptySpanS="0" 
+                    columnsXL="1" 
+                    columnsL="1" 
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Text text="{i18n>ActionsTextNotifyEmployee}" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange480-2"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Position Information"
+                    labelSpanXL="4"
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Label text="Council" />
+                        <Text text="GSC - GLOBAL - 34" />
+                        <Label text="New Position" />
+                        <Text text="No" />
+                        <Label text="Functional Guidance" />
+                        <Text text="Sara O Lloyd" />
+                        <Label text="Administrative Support" />
+                        <Text text="Rodrigo Crespo" />
+                        <Label text="Position Description" />
+                        <Text text="" />
+                        <Label text="Additional Notes" />
+                        <Text text="" />
+                        <Label text="Supervisor Indicator" />
+                        <Text text="Yes" />
+                        <Label text="SHARP Position ID" />
+                        <Text text="10557168" />
+                        <Label text="Cost Center" />
+                        <Text text="9876543210" />
+                        <Label text="Company Code" />
+                        <Text text="1863 - EXXONMOBIL RESEARCH" />
+                        <Label text="City" />
+                        <Text text="" />
+                        <Label text="Country" />
+                        <Text text="Thailand" />
+                        <Label text="Secondary Locations" />
+                        <Text text="" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange480-3"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Skills"
+                    labelSpanXL="4"
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Label text="Council" />
+                        <Text text="GSC - GLOBAL - 34" />
+                        <Label text="New Position" />
+                        <Text text="No" />
+                        <Label text="Functional Guidance" />
+                        <Text text="Sara O Lloyd" />
+                        <Label text="Administrative Support" />
+                        <Text text="Rodrigo Crespo" />
+                        <Label text="Position Description" />
+                        <Text text="" />
+                        <Label text="Additional Notes" />
+                        <Text text="" />
+                        <Label text="Supervisor Indicator" />
+                        <Text text="Yes" />
+                        <Label text="SHARP Position ID" />
+                        <Text text="10557168" />
+                        <Label text="Cost Center" />
+                        <Text text="9876543210" />
+                        <Label text="Company Code" />
+                        <Text text="1863 - EXXONMOBIL RESEARCH" />
+                        <Label text="City" />
+                        <Text text="" />
+                        <Label text="Country" />
+                        <Text text="Thailand" />
+                        <Label text="Secondary Locations" />
+                        <Text text="" />
+                    </sf:content>
+                </sf:SimpleForm>
+            </VBox>
+        </f:content>
+        <f:footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button type="Success" text="EmployeeNotified" press="handleEmployeeNotify"/>
+                <Button type="Reject" text="Notified with Concerns" press="handleNotifyConcerns"/>
+            </Toolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

@@ -142,6 +142,16 @@
                     "pattern": "positionValidation/{title}",
                     "name": "Position Validation",
                     "target": "Validation"
+                },
+                {
+                    "pattern": "exportControlsReview/{title}",
+                    "name": "Export Controls Review",
+                    "target": "ExportControl"
+                },
+                {
+                    "pattern": "notifyEmployee/{title}",
+                    "name": "Notify Employee & Confirm",
+                    "target": "NotifyEmployee"
                 }
             ],
             "targets": {
@@ -184,7 +194,21 @@
                     "viewName": "PositionValidation",
                     "viewType": "XML",
                     "controlAggregation": "pages"
-                }  
+                },
+                "ExportControl": {
+                    "transition": "slide",
+                    "viewId": "ExportControl",
+                    "viewName": "ExportControl",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "NotifyEmployee": {
+                    "transition": "slide",
+                    "viewId": "Notification",
+                    "viewName": "Notification",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                }      
             }
         },
         "rootView": {
