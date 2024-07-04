@@ -9,13 +9,14 @@
 >
     <tnt:ToolPage id="_IDGenToolPage1">
         <tnt:header>
-            <tnt:ToolHeader id="_IDGenToolHeader1">
+            <tnt:ToolHeader id="_IDGenToolHeader1" class="headerBgColor">
                 <Button
                     id="sideNavigationToggleButton"
                     icon="sap-icon://menu2"
                     type="Transparent"
                     press=".onSideNavButtonPress"
                     tooltip="{i18n>collpaseMenuButtonText}"
+                    class="iconColor"
                 >
                     <layoutData>
                         <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" />
@@ -23,7 +24,8 @@
                 </Button>
                 <Title id="_IDGenTitle1"
 					text="{i18n>appTitle}"
-					level="H2"/>
+					level="H2"
+                    class="headerTitle" />
                 <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
 				<Button
 					id="errorButton"
@@ -31,6 +33,7 @@
 					visible="{= ${alerts>/alerts/errors}.length === 0 ? false : true }"
 					type="Transparent"
 					press=".onMessagePopoverPress"
+                    class="iconColor"
 					tooltip="{i18n>errorButtonTooltip}">
 					<layoutData>
 						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" closeOverflowOnInteraction="false"/>
@@ -42,6 +45,7 @@
 					visible="{= ${alerts>/alerts/notifications}.length === 0 ? false : true }"
 					type="Transparent"
 					press=".onNotificationPress"
+                    class="iconColor"
 					tooltip="{i18n>notificationButtonTooltip}">
 					<layoutData>
 						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData3" closeOverflowOnInteraction="false"/>

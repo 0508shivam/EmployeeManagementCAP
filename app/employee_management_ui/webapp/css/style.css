@@ -55,3 +55,12 @@
 .sapSuiteUiCommonsTimeline {
     max-width: 90% !important;
 }
+.headerBgColor{
+    background-color: rgb(227, 24, 24) !important;
+}
+.headerTitle{
+    color: #f5f4f4;
+}
+.iconColor{
+    color: blue;
+}

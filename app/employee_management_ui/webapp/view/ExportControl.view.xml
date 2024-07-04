@@ -92,31 +92,39 @@
                     singleContainerFullSize="false"
                 >
                     <sf:content>
-                        <Label text="Council" />
+                        <Label text="Position Title" />
                         <Text text="GSC - GLOBAL - 34" />
-                        <Label text="New Position" />
-                        <Text text="No" />
-                        <Label text="Functional Guidance" />
-                        <Text text="Sara O Lloyd" />
-                        <Label text="Administrative Support" />
-                        <Text text="Rodrigo Crespo" />
-                        <Label text="Position Description" />
-                        <Text text="" />
-                        <Label text="Additional Notes" />
-                        <Text text="" />
-                        <Label text="Supervisor Indicator" />
-                        <Text text="Yes" />
-                        <Label text="SHARP Position ID" />
-                        <Text text="10557168" />
-                        <Label text="Cost Center" />
-                        <Text text="9876543210" />
-                        <Label text="Company Code" />
-                        <Text text="1863 - EXXONMOBIL RESEARCH" />
-                        <Label text="City" />
-                        <Text text="" />
+                        <Label text="Effective Date" />
+                        <Text text="{ path: 'i18n>Date', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' }  }" />
                         <Label text="Country" />
+                        <Text text="USA" />
+                        <Label text="City" />
+                        <Text text="Rodrigo Crespo" />
+                        <Label text="Office Location" />
+                        <Text text="" />
+                        <Label text="Function" />
+                        <Text text="" />
+                        <Label text="Secondment Text" />
+                        <Text text="Yes" />
+                        <Label text="Assignment Type" />
+                        <Text text="10557168" />
+                        <Label text="Expat Type" />
+                        <Text text="9876543210" />
+                        <Label text="Expat End Date" />
+                        <Text text="1863 - EXXONMOBIL RESEARCH" />
+                        <Label text="Rotational Schedule" />
+                        <Text text="" />
+                        <Label text="Job Role" />
                         <Text text="Thailand" />
-                        <Label text="Secondary Locations" />
+                        <Label text="Primary Job Family" />
+                        <Text text="" />
+                        <Label text="Career Community" />
+                        <Text text="" />
+                        <Label text="Relocation" />
+                        <Text text="" />
+                        <Label text="Employee is Repatriating to Home Country" />
+                        <Text text="" />
+                        <Label text="Current Incumbent" />
                         <Text text="" />
                     </sf:content>
                 </sf:SimpleForm>
@@ -124,7 +132,7 @@
                     id="SimpleFormChange480-3"
                     editable="true"
                     layout="ResponsiveGridLayout"
-                    title="Skills"
+                    title="Reporting Relationships"
                     labelSpanXL="4"
                     labelSpanL="4"
                     labelSpanM="12"
@@ -140,32 +148,31 @@
                     singleContainerFullSize="false"
                 >
                     <sf:content>
-                        <Label text="Council" />
-                        <Text text="GSC - GLOBAL - 34" />
-                        <Label text="New Position" />
-                        <Text text="No" />
                         <Label text="Functional Guidance" />
-                        <Text text="Sara O Lloyd" />
-                        <Label text="Administrative Support" />
-                        <Text text="Rodrigo Crespo" />
-                        <Label text="Position Description" />
-                        <Text text="" />
-                        <Label text="Additional Notes" />
-                        <Text text="" />
-                        <Label text="Supervisor Indicator" />
-                        <Text text="Yes" />
-                        <Label text="SHARP Position ID" />
-                        <Text text="10557168" />
-                        <Label text="Cost Center" />
-                        <Text text="9876543210" />
-                        <Label text="Company Code" />
-                        <Text text="1863 - EXXONMOBIL RESEARCH" />
-                        <Label text="City" />
-                        <Text text="" />
-                        <Label text="Country" />
-                        <Text text="Thailand" />
-                        <Label text="Secondary Locations" />
-                        <Text text="" />
+                        <Text text="Robin (Robin) David Fauquier" />
+                        <Label text="Administrative Supervisor" />
+                        <Text text="Robin (Robin) David Fauquier" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange481"
+                    layout="ResponsiveGridLayout"
+                    adjustLabelSpan="false"
+                    labelSpanXL="3" 
+                    labelSpanL="3" 
+                    labelSpanM="5" 
+                    labelSpanS="12" 
+                    emptySpanXL="0" 
+                    emptySpanL="0" 
+                    emptySpanM="0" 
+                    emptySpanS="0" 
+                    columnsXL="1" 
+                    columnsL="1" 
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <FormattedText id="id_notificationWarning" htmlText="{i18n>detailValidateDataWarning}" />
                     </sf:content>
                 </sf:SimpleForm>
             </VBox>
