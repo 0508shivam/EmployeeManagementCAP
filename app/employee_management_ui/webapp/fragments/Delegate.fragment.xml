@@ -3,9 +3,9 @@
      <m:Dialog id="_searchDialog" title="Search Employee">
         <m:VBox class="sapUiSmallMargin">
             <m:SearchField id="searchField" search="onSearch" placeholder="Enter employee name..."/>
-            <m:List id="searchResults" mode="SingleSelectMaster" items="{/employees}" >
+            <m:List id="searchResults" mode="SingleSelectMaster" items="{/employees}" itemPress="onEmployeeSelect">
                 <m:items>
-                    <m:StandardListItem title="{name}" description="{department}"/>
+                    <m:StandardListItem title="{name}" description="{department}" type="Active" />
                 </m:items>
             </m:List>
         </m:VBox>

@@ -8,6 +8,10 @@ sap.ui.define([
 
         onInit: function () {
             
+        },
+
+        setHTMLText: function () {
+            // this.getView().byId("id_notificationContact").setHTMLText("Dummy Text");
         }
 
     });

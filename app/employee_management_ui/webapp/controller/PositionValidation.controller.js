@@ -53,6 +53,21 @@ function (Controller, JSONModel, Fragment) {
             } else {
                 oBinding.filter([]);
             }
+        },
+        onEmployeeSelect: function(oEvent) {
+            sap.m.MessageBox.confirm(
+                "Are you sure you want to delegate this task? The selected employee will have access to view and edit \n all data related to this Position Appointment.",
+                {
+                    title: "Confirm Delegation",
+                    actions: [sap.m.MessageBox.Action.YES, sap.m.MessageBox.Action.NO],
+                    onClose: function (sAction) {
+                        if (sAction === sap.m.MessageBox.Action.YES) {
+                            // Logic for what happens if the user confirms
+                            sap.m.MessageToast.show(" selected!");
+                        }
+                    }
+                }
+            );
         }
     });
 });
