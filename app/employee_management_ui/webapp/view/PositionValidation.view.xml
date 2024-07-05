@@ -5,21 +5,235 @@
     xmlns="sap.m"
     xmlns:f="sap.f"
     xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
     height="100%"
 >
-    <f:DynamicPage id="_IDDynamicPage" headerExpanded="true" class="sapUiMargin">
+    <f:DynamicPage id="_IDDynamicPage" headerExpanded="true" class="sapUiMargin" showFooter="true">
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
                     <Title text="Position Validation"/>
                 </f:heading>
                 <f:expandedContent>
-                    <Label text="This is a subheading"/>
+                    <Label text=""/>
                 </f:expandedContent>
                 <f:snappedContent>
-                    <Label text="This is a subheading"/>
+                    <Label text=""/>
                 </f:snappedContent>
+                <f:content>
+						<OverflowToolbar>
+                            <OverflowToolbarButton icon="sap-icon://validate" tooltip="Validate" type="Default"/>
+						</OverflowToolbar>
+					</f:content>
             </f:DynamicPageTitle>
         </f:title>
+        	<f:header>
+				<f:DynamicPageHeader pinnable="true">
+					<layout:HorizontalLayout allowWrapping="true">
+						<layout:VerticalLayout class="sapUiMediumMarginEnd">
+							<ObjectAttribute text="Welcome Position Validator, you may be the Receiving Supervisor or a delegate assigned
+                            to complete this important task for position validation. You are required to validate the information that Talent 
+                            Exchange has provided below. Once you have confirmed the information the updated details will be visible in the 
+                            Employee's HR record in Career Connect. "/>
+						</layout:VerticalLayout>
+					</layout:HorizontalLayout>
+				</f:DynamicPageHeader>
+			</f:header>
+            <f:content>
+            <VBox class="sapUiSmallMargin">
+                <form:SimpleForm id="SimpleFormChange354wideDual"
+			        editable="true"
+			        layout="ResponsiveGridLayout"
+			        title="Your Immediate Actions"
+			labelSpanXL="2"
+                        labelSpanL="2"
+                        labelSpanM="2"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                    singleContainerFullSize="false"	
+                    class="sapUiSizeCompact" >
+                    <form:content>
+                <VBox>
+                    <HBox>
+				        <Text text="{i18n>ActionsTextPositionValidation}" />
+                    </HBox>   
+                </VBox>
+                <!-- <core:Title text="Validate Information" />
+                <Label text="Position Title" />
+				<Input value="CH Test - No LITNA to US" 
+                        showValueHelp="true"/>
+                <Label text="Effective Date" />
+				<DatePicker
+                    id="dateInput"
+                    value="June 10, 2024"
+                    displayFormat="long"
+                    valueFormat="yyyy-MM-dd"
+                    change="onDateChange"/>
+                <Label text="Returning from Leave" />
+				<Switch
+                    id="simpleSwitch"
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                    change="onSwitchChange" />
+                <Label text="Company Code" />
+				<Input value="xxxx - Exxon Mobil Services" /> 
+                <Label text="Cost Center" />
+				<Input value="554xxxxx" 
+                       showValueHelp="true"/> 
+                <core:Title text="Supervisors" /> 
+                <Label text="Functional Guidance" />
+				<Text text="Crystal C Hamilton" />  
+                <Label text="Administrative Supervisor" />
+				<Input value="Crystal C Hamilton" 
+                       showValueHelp="true"/> 
+                <core:Title text="Competency" />
+                <Label text="Career Community" />
+				<Input value="Information Technology"
+                       showValueHelp="true" />
+                <core:Title text="Announcement" />
+                <Label text="Generate Draft" />
+				<Switch
+                    id="switchAnnouncement"
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                    change="onSwitchChange" />     -->
+			</form:content>
+            </form:SimpleForm>
+            <form:SimpleForm id="SimpleFormChange_info"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="4"
+                labelSpanM="12"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="2"
+                singleContainerFullSize="false" >
+                <form:content>
+                    <core:Title text="Employee Information" />
+                    <Label text="Employee" />
+                    <Text text="Heather Renee Wilcott"/>  
+                    <Label text="Personnel No" />
+                    <Text text="07004848" />
+                    <core:Title text="Contact" />
+                    <Label text="Council Contact" />
+                    <Text text="Crystal C Hamilton"/> 
+				</form:content>      
+            </form:SimpleForm>
+            <form:SimpleForm id="SimpleFormChange480_12120Dual"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Validate Information"
+                labelSpanXL="4"
+                labelSpanL="4"
+                labelSpanM="12"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="2"
+                singleContainerFullSize="false" >
+                <form:content>
+				    <core:Title text="Position Information" />
+                    <Label text="Position Title" />
+				<Input id="positionTitle"
+                       value="CH Test - No LITNA to US" 
+                        showValueHelp="true"
+                        editable="false"/>
+                <Label text="Effective Date" />
+				<DatePicker
+                    id="dateInput"
+                    value="June 10, 2024"
+                    displayFormat="long"
+                    valueFormat="yyyy-MM-dd"
+                    change="onDateChange"
+                    editable="false"/>
+                <Label text="Returning from Leave" />
+				<Switch
+                    id="simpleSwitch"
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                    change="onSwitchChange"/>
+                <Label text="Company Code" />
+				<Input id="companyCode"
+                       value="xxxx - Exxon Mobil Services" 
+                       editable="false"/> 
+                <Label text="Cost Center" />
+				<Input id="costCenter"
+                       value="554xxxxx" 
+                       showValueHelp="true"
+                       editable="false"/> 
+                <core:Title text="Supervisors" /> 
+                <Label text="Functional Guidance" />
+				<Text text="Crystal C Hamilton" />  
+                <Label text="Administrative Supervisor" />
+				<Input id="adminSupervisor"
+                       value="Crystal C Hamilton" 
+                       showValueHelp="true"
+                       editable="false"/> 
+                <core:Title text="Competency" />
+                <Label text="Career Community" />
+				<Input id="careerCommunity" 
+                       value="Information Technology"
+                       showValueHelp="true"
+                       editable="false" />
+                <Label text="Job Family" />
+				<Input id="jobFamily"
+                       value="Engineering LMS"
+                       showValueHelp="true" 
+                       editable="false"/> 
+                <Label text="Job Role" />
+				<Input id="jobRole"
+                       value="Learning Engineer"
+                       showValueHelp="true"
+                       editable="false" />             
+                <core:Title text="Announcement" />
+                <Label text="Generate Draft" />
+				<Switch
+                    id="switchAnnouncement"
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                    change="onSwitchChange" />
+                <Label text="Announcement Initiator" />
+				<Input id="initiator"
+                       value="Mary A Popp"
+                       showValueHelp="true"
+                       editable="false" />
+                <core:Title text="" />
+                <Text text="If you have any questions, please contact Jason (Jason) White " />           
+                </form:content>    
+            </form:SimpleForm>
+            </VBox>    
+            </f:content>
+        	<f:footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button type="Success" text="Submit" press="handleEmployeeNotify"/>
+                <Button type="Success" text="Save Draft" press="handleEmployeeNotify" icon="sap-icon://save"/>
+                <Button type="Success" text="Delegate" press="onDelegatePress" icon="sap-icon://forward"/>
+                <Button type="Success" text="Edit" press="onEditPositionInfo" icon="sap-icon://edit" />
+            </Toolbar>
+        </f:footer>
     </f:DynamicPage>
 </mvc:View>

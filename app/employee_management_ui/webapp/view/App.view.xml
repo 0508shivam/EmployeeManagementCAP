@@ -9,7 +9,7 @@
 >
     <tnt:ToolPage id="_IDGenToolPage1">
         <tnt:header>
-            <tnt:ToolHeader id="_IDGenToolHeader1">
+            <tnt:ToolHeader id="_IDGenToolHeader1" class="myTitle">
                 <Button
                     id="sideNavigationToggleButton"
                     icon="sap-icon://menu2"
@@ -21,9 +21,14 @@
                         <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" />
                     </layoutData>
                 </Button>
+                <Bar class="sapUiResponsiveContentPadding">
+                <contentLeft>
                 <Title id="_IDGenTitle1"
 					text="{i18n>appTitle}"
-					level="H2"/>
+					level="H2"
+                    class="myTitle"/>
+                    </contentLeft>
+                    </Bar>
                 <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
 				<Button
 					id="errorButton"
