@@ -56,11 +56,20 @@
     max-width: 90% !important;
 }
 .headerBgColor{
-    background-color: rgb(227, 24, 24) !important;
+    background-color: #0C479D !important;
 }
 .headerTitle{
     color: #f5f4f4;
 }
-.iconColor{
-    color: blue;
+.iconColor .sapUiIcon{
+    color: #f5f4f4 !important;
+    outline-color: #f5f4f4;
+}
+
+.iconColor .sapUiIcon:hover{
+    color: #0C479D !important;
+}
+
+.iconColor:hover .sapUiIcon{
+    color: #0C479D !important;
 }

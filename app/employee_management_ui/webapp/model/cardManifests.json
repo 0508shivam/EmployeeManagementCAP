@@ -149,7 +149,7 @@
 						{
 						  "type": "Navigation",
 						  "parameters": {
-							"url": "#/my-tasks",
+							"url": "#/{name}/{name}",
 							"target": "_self"
 						  }
 						}
