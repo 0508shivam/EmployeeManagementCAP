@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout" xmlns="sap.ui.table">
+     <m:Dialog id="_searchDialog" title="Search Employee">
+        <m:VBox class="sapUiSmallMargin">
+            <m:SearchField id="searchField" search="onSearch" placeholder="Enter employee name..."/>
+            <m:List id="searchResults" mode="SingleSelectMaster" items="{/employees}" itemPress="onEmployeeSelect">
+                <m:items>
+                    <m:StandardListItem title="{name}" description="{department}" type="Active" />
+                </m:items>
+            </m:List>
+        </m:VBox>
+        <m:endButton>
+            <m:Button text="Close" press="onCloseDialog"/>
+        </m:endButton>
+    </m:Dialog>
+</core:FragmentDefinition>

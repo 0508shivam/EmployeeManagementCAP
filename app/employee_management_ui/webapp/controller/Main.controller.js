@@ -317,7 +317,7 @@ function (Controller, JSONModel, Fragment) {
             }
         },
         onExpandSelection: function() {
-			var oTreeTable = Fragment.byId("_IDExtendedHierarchy","TreeTableBasic");
+			var oTreeTable = chFragment.byId("_IDExtendedHierary","TreeTableBasic");
 			oTreeTable.expandToLevel(1);
 		}
 
