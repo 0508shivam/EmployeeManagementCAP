@@ -8,10 +8,13 @@
     xmlns:smartForm="sap.ui.comp.smartform" 
     xmlns:smartMultiInput="sap.ui.comp.smartmultiinput"
     controllerName="sap.deloitte.employeemanagement.employeemanagementui.view.sharedBlocks.postPMG">
+
+    <!-- Wizard for the Post-PMG process -->
+    
     <List>
         <items>
             <CustomListItem>
-                <Panel headerText="LITNA and Export Controls" expandable="true" expanded="false">
+                <Panel headerText="LINA and Export Controls" expandable="true" expanded="false">
                     <headerToolbar>
                         <Toolbar>
                             <Title text="LITNA and Export Controls" level="H2" />
@@ -67,13 +70,109 @@
                 <Label text="LITNA Last Modified" />
                 <Text text="No data" />
 			</f:content>    
-		</f:SimpleForm>
+		</f:SimpleForm>      
         <Toolbar>
             <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
             <Title text="" />
                     <Button text="Acknowledge and Skip Process" icon="sap-icon://approvals" type="Emphasized"/>
             </HBox>
         </Toolbar>
+        <List>
+        <items>
+            <CustomListItem>
+                <Panel headerText="Execute LITNA Review/Request" expandable="true" expanded="false" >
+                    <content>
+                       <f:SimpleForm id="SimpleForm_LITNA"
+                            editable="false"
+                            layout="ResponsiveGridLayout"
+                            title=""
+                            labelSpanXL="4"
+                            labelSpanL="4"
+                            labelSpanM="4"
+                            labelSpanS="12"
+                            adjustLabelSpan="false"
+                            emptySpanXL="0"
+                            emptySpanL="0"
+                            emptySpanM="0"
+                            emptySpanS="0"
+                            columnsXL="3"
+                            columnsL="2"
+                            columnsM="2"
+                            singleContainerFullSize="false" >
+                            <f:content>
+                                <Label text="Sending Supervisor" />
+                                <Input
+                                                    id="sendingSupervisor"
+                                                    placeholder="Enter Name"
+                                                    showValueHelp="true" />
+                                <Label text="CC List" />
+                                <Input
+                                                    id="ccList"
+                                                    placeholder="Enter CC recepients"
+                                                    showValueHelp="true"/>
+                                <Label text="Comments to Recepient" />
+                                <Input
+                                                    id="comments"
+                                                    placeholder="Leave a comment for LITNA request recipient" />
+                            </f:content>
+            
+		</f:SimpleForm>
+         <Toolbar>
+            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+            <Title text="" />
+                    <Button text="Request LITNA" icon="sap-icon://approvals" type="Emphasized" class= "buttonColor"/>
+            </HBox>
+        </Toolbar>
+                    </content>
+                </Panel>
+            </CustomListItem>
+        </items>
+        </List> 
+        <List>
+        <items>
+            <CustomListItem>
+                <Panel headerText="Execute Export Controls Review" expandable="true" expanded="false" >
+                    <content>
+                       <f:SimpleForm id="SimpleForm_ExportControls"
+                            editable="false"
+                            layout="ResponsiveGridLayout"
+                            title=""
+                            labelSpanXL="4"
+                            labelSpanL="4"
+                            labelSpanM="4"
+                            labelSpanS="12"
+                            adjustLabelSpan="false"
+                            emptySpanXL="0"
+                            emptySpanL="0"
+                            emptySpanM="0"
+                            emptySpanS="0"
+                            columnsXL="3"
+                            columnsL="2"
+                            columnsM="2"
+                            singleContainerFullSize="false" >
+                            <f:content>
+                                <Label text="Receiving Supervisor" />
+                                <Input
+                                                    id="receivingSupervisor"
+                                                    placeholder="Enter Name"
+                                                    showValueHelp="true" />
+                                <Label text="CC List" />
+                                <Input
+                                                    id="ccTo"
+                                                    placeholder="Enter CC recepients"
+                                                    showValueHelp="true"/>
+                                <Label text="Comments to Recepient" />
+                                <Input
+                                                    id="recepientsComments"
+                                                    placeholder="Leave a comment for Export Controls request's recipient" />
+                            </f:content>
+            
+		</f:SimpleForm>
+                    </content>
+                </Panel>
+            </CustomListItem>
+        </items>
+        </List>        
 	</VBox>
                     </content>       
                 </Panel>

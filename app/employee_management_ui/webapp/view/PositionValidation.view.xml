@@ -22,7 +22,19 @@
                 </f:snappedContent>
                 <f:content>
 						<OverflowToolbar>
-                            <OverflowToolbarButton icon="sap-icon://validate" tooltip="Validate" type="Default"/>
+                            <GenericTag
+                            text="Due in"
+                            status="Success"
+                            press=""
+                            design="StatusIconHidden"
+                        >
+                            <ObjectNumber
+                                number="2"
+                                unit="Days"
+                                emphasized="false"
+                                state="Error"
+                            />
+                        </GenericTag>
 						</OverflowToolbar>
 					</f:content>
             </f:DynamicPageTitle>
@@ -219,11 +231,30 @@
 				<Input id="initiator"
                        value="Mary A Popp"
                        showValueHelp="true"
-                       editable="false" />
-                <core:Title text="" />
-                <Text text="If you have any questions, please contact Jason (Jason) White " />           
+                       editable="false" />          
                 </form:content>    
             </form:SimpleForm>
+            <form:SimpleForm
+                    id="SimpleFormChange485"
+                    layout="ResponsiveGridLayout"
+                    adjustLabelSpan="false"
+                    labelSpanXL="3" 
+                    labelSpanL="3" 
+                    labelSpanM="5" 
+                    labelSpanS="12" 
+                    emptySpanXL="0" 
+                    emptySpanL="0" 
+                    emptySpanM="0" 
+                    emptySpanS="0" 
+                    columnsXL="1" 
+                    columnsL="1" 
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <form:content>
+                        <FormattedText id="noteDetails" htmlText="{i18n>detailValidateDataWarning}" />
+                    </form:content>
+                </form:SimpleForm>
             </VBox>    
             </f:content>
         	<f:footer>

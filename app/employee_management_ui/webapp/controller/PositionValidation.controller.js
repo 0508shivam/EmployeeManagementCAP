@@ -61,6 +61,11 @@ function (Controller, JSONModel, Fragment) {
                     title: "Confirm Delegation",
                     actions: [sap.m.MessageBox.Action.YES, sap.m.MessageBox.Action.NO],
                     onClose: function (sAction) {
+                        if (this._oExtendedNeedDialog) {
+                            this._oExtendedNeedDialog.close();
+                            this._oExtendedNeedDialog.destroy();
+                            this._oExtendedNeedDialog = null;
+                        }    
                         if (sAction === sap.m.MessageBox.Action.YES) {
                             // Logic for what happens if the user confirms
                             sap.m.MessageToast.show(" selected!");
