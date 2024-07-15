@@ -5,20 +5,21 @@
     xmlns:f="sap.f"
     xmlns:layout="sap.ui.layout"
     xmlns:sf="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
 >
     <f:DynamicPage id="dynamicPageId" class="sapUiNoContentPadding" showFooter="true">
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
                     <Title
-                        text="Notify Employee: Heather (Heather) Renee Wilcott"
+                        text="LITNA Check and Export Controls"
                     />
                 </f:heading>
                 <f:expandedContent>
-                    <Label text="This is a subheading" />
+                    <Label text="Name of Need" />
                 </f:expandedContent>
                 <f:snappedContent>
-                    <Label text="This is a subheading" />
+                    <Label text="Name of Need" />
                 </f:snappedContent>
                 <f:content>
                     <OverflowToolbar>
@@ -42,41 +43,17 @@
         <f:header>
             <f:DynamicPageHeader pinnable="true">
                 <FlexBox>
-                    <Text
-                        text="Welcome Sending Supervisor, you have a current employee moving into a new position. Notifiying the employee of their new assignment is an exciting responsibility. Talent Exchange has provided all the details of the new position below for your use in the notification process. Once you have confirmed the employee has been notified, Talent Exchange will inform the Receiving Supervisor to start executing their portion of the process."
-                    />
+                    <Text text="{i18n>ExportControlHead}"/>
                 </FlexBox>
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
         <VBox class="sapUiSmallMargin">
                 <sf:SimpleForm
-                    id="SimpleFormChange480"
-                    layout="ResponsiveGridLayout"
-                    title="Your Immediate Actions"
-                    adjustLabelSpan="false"
-                    labelSpanXL="3" 
-                    labelSpanL="3" 
-                    labelSpanM="5" 
-                    labelSpanS="12" 
-                    emptySpanXL="4" 
-                    emptySpanL="4" 
-                    emptySpanM="4" 
-                    emptySpanS="0" 
-                    columnsXL="1" 
-                    columnsL="1" 
-                    columnsM="1"
-                    singleContainerFullSize="false"
-                >
-                    <sf:content>
-                        <Text text="{i18n>ActionsTextNotifyEmployee}" />
-                    </sf:content>
-                </sf:SimpleForm>
-                <sf:SimpleForm
                     id="SimpleFormChange480-2"
                     editable="true"
                     layout="ResponsiveGridLayout"
-                    title="Position Information"
+                    title="Export Control Information"
                     labelSpanXL="4"
                     labelSpanL="4"
                     labelSpanM="12"
@@ -92,47 +69,19 @@
                     singleContainerFullSize="false"
                 >
                     <sf:content>
-                        <Label text="Position Title" />
-                        <Text text="GSC - GLOBAL - 34" />
-                        <Label text="Effective Date" />
-                        <Text text="{ path: 'i18n>Date', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' }  }" />
-                        <Label text="Country" />
-                        <Text text="USA" />
-                        <Label text="City" />
-                        <Text text="Rodrigo Crespo" />
-                        <Label text="Office Location" />
-                        <Text text="" />
-                        <Label text="Function" />
-                        <Text text="" />
-                        <Label text="Secondment Text" />
-                        <Text text="Yes" />
-                        <Label text="Assignment Type" />
-                        <Text text="10557168" />
-                        <Label text="Expat Type" />
-                        <Text text="9876543210" />
-                        <Label text="Expat End Date" />
-                        <Text text="1863 - EXXONMOBIL RESEARCH" />
-                        <Label text="Rotational Schedule" />
-                        <Text text="" />
-                        <Label text="Job Role" />
-                        <Text text="Thailand" />
-                        <Label text="Primary Job Family" />
-                        <Text text="" />
-                        <Label text="Career Community" />
-                        <Text text="" />
-                        <Label text="Relocation" />
-                        <Text text="" />
-                        <Label text="Employee is Repatriating to Home Country" />
-                        <Text text="" />
-                        <Label text="Current Incumbent" />
-                        <Text text="" />
+                        <Label text="LITNA of Employee" />
+                        <Input showSuggestion="true" showValueHelp="true" id="employeeLitna" />
+                        <Label text="Function of New Position" />
+                        <Input showSuggestion="true" showValueHelp="true" id="positionFunction" />
+                        <Label text="Country of New Position" />
+                        <Input showSuggestion="true" showValueHelp="true" id="positionCountry" />
                     </sf:content>
                 </sf:SimpleForm>
                 <sf:SimpleForm
                     id="SimpleFormChange480-3"
                     editable="true"
                     layout="ResponsiveGridLayout"
-                    title="Reporting Relationships"
+                    title="Additonal Information (Subject to change based on Screen shot)"
                     labelSpanXL="4"
                     labelSpanL="4"
                     labelSpanM="12"
@@ -145,18 +94,28 @@
                     columnsXL="2"
                     columnsL="2"
                     columnsM="1"
-                    singleContainerFullSize="false"
-                >
+                    singleContainerFullSize="false" >
                     <sf:content>
-                        <Label text="Functional Guidance" />
-                        <Text text="Robin (Robin) David Fauquier" />
-                        <Label text="Administrative Supervisor" />
-                        <Text text="Robin (Robin) David Fauquier" />
+                        <core:Title text="Office" />
+                        <Label text="Name" />
+                        <Text text="Name" />
+                        <Label text="Street/No." />
+                        <Text text="Street" />
+                        <Label text="ZIP Code/City" />
+                        <Text text="Zip Code" />
+                        <Label text="Country" />
+                        <Text text="Country" />
+                        <core:Title text="Online" />
+                        <Label text="Web" />
+                        <Text text="URL" />
+                        <Label text="Twitter" />
+                        <Text text="Twitter Website" />
                     </sf:content>
                 </sf:SimpleForm>
                 <sf:SimpleForm
                     id="SimpleFormChange481"
                     layout="ResponsiveGridLayout"
+                    title="Confirming Export Control Results"
                     adjustLabelSpan="false"
                     labelSpanXL="3" 
                     labelSpanL="3" 
@@ -172,16 +131,46 @@
                     singleContainerFullSize="false"
                 >
                     <sf:content>
-                        <FormattedText id="id_notificationWarning" htmlText="{i18n>detailValidateDataWarning}" />
+                        <VBox>
+                            <FormattedText id="question1" htmlText="{i18n>Question1}" />
+                            <Label text="Answer" labelFor="groupA" />
+                            <RadioButtonGroup id="groupA" valueState="Information">
+                                <RadioButton text="Yes" />
+                                <RadioButton text="No" selected="true" />
+                            </RadioButtonGroup>
+                            <ToolbarSeparator />
+                            <FormattedText id="question2" htmlText="{i18n>Question2}" />
+                            <Label text="Answer" labelFor="groupB" />
+                            <RadioButtonGroup id="groupB" valueState="Information">
+                                <RadioButton text="Yes" />
+                                <RadioButton text="No" selected="true" />
+                            </RadioButtonGroup>
+                            <ToolbarSeparator />
+                            <FormattedText id="question3" htmlText="{i18n>Question3}" />
+                            <Label text="Answer" labelFor="groupC" />
+                            <RadioButtonGroup id="groupC" valueState="Information">
+                                <RadioButton text="Yes" />
+                                <RadioButton text="No" selected="true" />
+                            </RadioButtonGroup>
+                            <ToolbarSeparator />
+                            <FormattedText id="question4" htmlText="{i18n>Question4}" />
+                            <Label text="Answer" labelFor="groupD" />
+                            <RadioButtonGroup id="groupD" valueState="Information">
+                                <RadioButton text="Yes" />
+                                <RadioButton text="No" selected="true" />
+                            </RadioButtonGroup>
+                            <Label id="question5" text="{i18n>MitigationQuestion}" required="true" class="sapUiSmallMarginTop" />
+                            <TextArea growing="true" growingMaxLines="4" width="100%" placeholder="{i18n>MitigationExample1}" />
+                        </VBox>
                     </sf:content>
                 </sf:SimpleForm>
-            </VBox>
+        </VBox>
         </f:content>
         <f:footer>
             <Toolbar>
                 <ToolbarSpacer />
-                <Button type="Success" text="EmployeeNotified" press="handleEmployeeNotify"/>
-                <Button type="Reject" text="Notified with Concerns" press="handleNotifyConcerns"/>
+                <Button type="Success" text="Submit" press="handleExportControl"/>
+                <!-- <Button type="Reject" text="Notified with Concerns" press="handleNotifyConcerns"/> -->
             </Toolbar>
         </f:footer>
     </f:DynamicPage>

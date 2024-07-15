@@ -139,18 +139,22 @@
                     "target": "Tasks"
                 },
                 {
-                    "pattern": "positionValidation/{title}",
+                    "pattern": "Position Validation/{title}",
                     "name": "Position Validation",
                     "target": "Validation"
                 },
                 {
-                    "pattern": "exportControlsReview/{title}",
+                    "pattern": "Export Controls Review/{title}",
                     "name": "Export Controls Review",
                     "target": "ExportControl"
                 },
                 {
-                    "pattern": "notifyEmployee/{title}",
+                    "pattern": "Notify Employee & Confirm/{title}",
                     "name": "Notify Employee & Confirm",
+                    "target": "NotifyEmployee"
+                },
+                {
+                    "pattern": "Notify Employee and Confirm/{title}",
                     "target": "NotifyEmployee"
                 }
             ],

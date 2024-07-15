@@ -1,0 +1,188 @@
+<mvc:View
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Notification"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:sf="sap.ui.layout.form"
+>
+    <f:DynamicPage id="dynamicPageId" class="sapUiNoContentPadding" showFooter="true">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="Notify Employee: Heather (Heather) Renee Wilcott"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label text="This is a subheading" />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="This is a subheading" />
+                </f:snappedContent>
+                <f:content>
+                    <OverflowToolbar>
+                        <GenericTag
+                            text="Due"
+                            status="Error"
+                            press=""
+                            design="StatusIconHidden"
+                        >
+                            <ObjectNumber
+                                number="2"
+                                unit="Days"
+                                emphasized="false"
+                                state="Error"
+                            />
+                        </GenericTag>
+                    </OverflowToolbar>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox>
+                    <Text
+                        text="Welcome Sending Supervisor, you have a current employee moving into a new position. Notifiying the employee of their new assignment is an exciting responsibility. Talent Exchange has provided all the details of the new position below for your use in the notification process. Once you have confirmed the employee has been notified, Talent Exchange will inform the Receiving Supervisor to start executing their portion of the process."
+                    />
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+        <VBox class="sapUiSmallMargin">
+                <sf:SimpleForm
+                    id="SimpleFormChange480"
+                    layout="ResponsiveGridLayout"
+                    title="Your Immediate Actions"
+                    adjustLabelSpan="false"
+                    labelSpanXL="3" 
+                    labelSpanL="3" 
+                    labelSpanM="5" 
+                    labelSpanS="12" 
+                    emptySpanXL="4" 
+                    emptySpanL="4" 
+                    emptySpanM="4" 
+                    emptySpanS="0" 
+                    columnsXL="1" 
+                    columnsL="1" 
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Text text="{i18n>ActionsTextNotifyEmployee}" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange480-2"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Position Information"
+                    labelSpanXL="4"
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Label text="Position Title" />
+                        <Text text="GSC - GLOBAL - 34" />
+                        <Label text="Effective Date" />
+                        <Text text="{ path: 'i18n>Date', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' }  }" />
+                        <Label text="Country" />
+                        <Text text="USA" />
+                        <Label text="City" />
+                        <Text text="Rodrigo Crespo" />
+                        <Label text="Office Location" />
+                        <Text text="" />
+                        <Label text="Function" />
+                        <Text text="" />
+                        <Label text="Secondment Text" />
+                        <Text text="Yes" />
+                        <Label text="Assignment Type" />
+                        <Text text="10557168" />
+                        <Label text="Expat Type" />
+                        <Text text="9876543210" />
+                        <Label text="Expat End Date" />
+                        <Text text="1863 - EXXONMOBIL RESEARCH" />
+                        <Label text="Rotational Schedule" />
+                        <Text text="" />
+                        <Label text="Job Role" />
+                        <Text text="Thailand" />
+                        <Label text="Primary Job Family" />
+                        <Text text="" />
+                        <Label text="Career Community" />
+                        <Text text="" />
+                        <Label text="Relocation" />
+                        <Text text="" />
+                        <Label text="Employee is Repatriating to Home Country" />
+                        <Text text="" />
+                        <Label text="Current Incumbent" />
+                        <Text text="" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange480-3"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Reporting Relationships"
+                    labelSpanXL="4"
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Label text="Functional Guidance" />
+                        <Text text="Robin (Robin) David Fauquier" />
+                        <Label text="Administrative Supervisor" />
+                        <Text text="Robin (Robin) David Fauquier" />
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="SimpleFormChange481"
+                    layout="ResponsiveGridLayout"
+                    adjustLabelSpan="false"
+                    labelSpanXL="3" 
+                    labelSpanL="3" 
+                    labelSpanM="5" 
+                    labelSpanS="12" 
+                    emptySpanXL="0" 
+                    emptySpanL="0" 
+                    emptySpanM="0" 
+                    emptySpanS="0" 
+                    columnsXL="1" 
+                    columnsL="1" 
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <FormattedText id="id_notificationWarning" htmlText="{i18n>detailValidateDataWarning}" />
+                    </sf:content>
+                </sf:SimpleForm>
+            </VBox>
+        </f:content>
+        <f:footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button type="Success" text="EmployeeNotified" press="handleEmployeeNotify"/>
+                <Button type="Reject" text="Notified with Concerns" press="handleNotifyConcerns"/>
+            </Toolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>
