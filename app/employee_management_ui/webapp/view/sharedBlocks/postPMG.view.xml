@@ -10,8 +10,12 @@
     controllerName="sap.deloitte.employeemanagement.employeemanagementui.view.sharedBlocks.postPMG">
 
     <!-- Wizard for the Post-PMG process -->
-    
-    <List>
+    <Button id="postPMG"
+            text="Kick Off Post PMG"
+            press="onKickOffPress">
+    </Button>
+    <List id="postPMGActivities"
+          visible="false">
         <items>
             <CustomListItem>
                 <Panel headerText="LINA and Export Controls" expandable="true" expanded="false">
@@ -168,6 +172,12 @@
                             </f:content>
             
 		</f:SimpleForm>
+        <Toolbar>
+            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+            <Title text="" />
+                    <Button text="Request Export Controls Review" icon="sap-icon://approvals" type="Emphasized" class= "buttonColor"/>
+            </HBox>
+        </Toolbar>
                     </content>
                 </Panel>
             </CustomListItem>
