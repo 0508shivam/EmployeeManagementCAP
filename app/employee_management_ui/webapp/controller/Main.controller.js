@@ -297,7 +297,7 @@ function (Controller, JSONModel, Fragment) {
 
         _handleItemPress: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("Need");
+            oRouter.navTo("Main/{item}");
         },
 
         onExtendedNeedPress: function (oEvent) {
@@ -307,6 +307,7 @@ function (Controller, JSONModel, Fragment) {
             this.getView().addDependent(this._oExtendedNeedDialog);
             var oModel = this.getView().getModel();
             this._oExtendedNeedDialog.open();
+
         },
 
         closeExtendedNeed: function(oEvent) {
@@ -316,10 +317,16 @@ function (Controller, JSONModel, Fragment) {
                 this._oExtendedNeedDialog = null;
             }
         },
+
         onExpandSelection: function() {
-			var oTreeTable = chFragment.byId("_IDExtendedHierary","TreeTableBasic");
+			var oTreeTable = Fragment.byId("_IDExtendedHierarchy","TreeTableBasic");
 			oTreeTable.expandToLevel(1);
-		}
+		},
+
+        onCollapseAll: function() {
+            var oTreeTable = Fragment.byId("_IDExtendedHierarchy","TreeTableBasic");
+			oTreeTable.collapseAll();
+        }
 
     });
 });

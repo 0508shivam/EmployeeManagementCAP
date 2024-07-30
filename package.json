@@ -25,7 +25,7 @@
   },
   "cds": {
     "requires": {
-      "db": "hana-cloud",
+      "db": "sqlite",
       "[production]": {
         "db": "hana-cloud",
         "auth": "xsuaa"
