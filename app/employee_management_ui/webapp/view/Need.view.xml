@@ -116,7 +116,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Candidate" showTitle="false">
 						<blocks>
-							<info:Candidates />
+							<info:Candidates add="onPress" />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
@@ -144,7 +144,7 @@
 
 
 
-			<ObjectPageSection anchorBarButtonColor="Negative" titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
+			<ObjectPageSection titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Authorization" showTitle="false">
 						<blocks>	

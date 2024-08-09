@@ -1,222 +1,222 @@
 {
-    "_version": "1.59.0",
-    "sap.app": {
-        "id": "sap.deloitte.employeemanagement.employeemanagementui",
-        "type": "application",
-        "i18n": "i18n/i18n.properties",
-        "applicationVersion": {
-            "version": "0.0.1"
-        },
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "resources": "resources.json",
-        "sourceTemplate": {
-            "id": "@sap/generator-fiori:basic",
-            "version": "1.13.4",
-            "toolsId": "c2bf8dd9-c03f-4c86-a064-30cb66f9fc71"
-        },
-        "dataSources": {
-            "mainService": {
-                "uri": "/Employees/",
-                "type": "OData",
-                "settings": {
-                    "odataVersion": "4.0"
-                }
-            }
-        }
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "sap.deloitte.employeemanagement.employeemanagementui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
     },
-    "sap.ui": {
-        "technology": "UI5",
-        "icons": {
-            "icon": "",
-            "favIcon": "",
-            "phone": "",
-            "phone@2": "",
-            "tablet": "",
-            "tablet@2": ""
-        },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        }
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.4",
+      "toolsId": "c2bf8dd9-c03f-4c86-a064-30cb66f9fc71"
     },
-    "sap.ui5": {
-        "flexEnabled": false,
-        "config": {
-			"sample": {
-				"files": [
-					"model/cardManifests.json",
-					"manifest.json"
-				]
-			}
-		},
-        "dependencies": {
-            "minUI5Version": "1.124.1",
-            "libs": {
-                "sap.m": {},
-                "sap.ui.core": {},
-                "sap.f": {},
-                "sap.suite.ui.generic.template": {},
-                "sap.ui.comp": {},
-                "sap.ui.generic.app": {},
-                "sap.ui.table": {},
-                "sap.ushell": {}
-            }
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
-        "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "settings": {
-                    "bundleName": "sap.deloitte.employeemanagement.employeemanagementui.i18n.i18n"
-                }
-            },
-            "mainModel": {
-                "type": "sap.ui.model.odata.v4.ODataModel",
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "synchronizationMode": "None",
-                    "operationMode": "Server",
-                    "autoExpandSelect": true,
-                    "earlyRequests": true,
-                    "groupId": "$auto"
-                }
-            }
-        },
-        "resources": {
-            "css": [
-                {
-                    "uri": "css/style.css"
-                }
-            ]
-        },
-        "routing": {
-            "config": {
-                "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "async": true,
-                "viewPath": "sap.deloitte.employeemanagement.employeemanagementui.view",
-                "controlAggregation": "pages",
-                "controlId": "mainContents",
-                "path": "sap.deloitte.employeemanagement.employeemanagementui.view"
-            },
-            "routes": [
-                {
-                    "pattern": "",
-                    "name": "Default",
-                    "target": "Home"
-                },
-                {
-                    "pattern": "home",
-                    "name": "home",
-                    "target": "Home"
-                },
-                {
-                    "pattern": "needsObjectPage/{name}",
-                    "name": "needsObjectPage",
-                    "target": "needsObjectPage" 
-                },
-                {
-                    "pattern": "Main/{name}",
-                    "name": "Main",
-                    "target": "Need" 
-                },
-                {
-                    "name": "Need",
-                    "pattern": "need",
-                    "target": [
-                        "Main"
-                    ]
-                },
-                {
-                    "pattern": "my-tasks",
-                    "name": "tasks",
-                    "target": "Tasks"
-                },
-                {
-                    "pattern": "Position Validation/{title}",
-                    "name": "Position Validation",
-                    "target": "Validation"
-                },
-                {
-                    "pattern": "Export Controls Review/{title}",
-                    "name": "Export Controls Review",
-                    "target": "ExportControl"
-                },
-                {
-                    "pattern": "Notify Employee & Confirm/{title}",
-                    "name": "Notify Employee & Confirm",
-                    "target": "NotifyEmployee"
-                },
-                {
-                    "pattern": "Notify Employee and Confirm/{title}",
-                    "target": "NotifyEmployee"
-                }
-            ],
-            "targets": {
-                "Home": {
-                    "viewId": "Home",
-                    "viewName": "Home",
-                    "controlAggregation": "pages"
-                },
-                "Main": {
-                    "transition": "slide",
-                    "viewId": "Main",
-                    "viewName": "Main",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                },
-                "Need": {
-                    "transition": "slide",
-                    "viewId": "Need",
-                    "viewName": "Need",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                },
-                "Tasks": {
-                    "transition": "slide",
-                    "viewId": "Tasks",
-                    "viewName": "Tasks",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                },
-                "Validation": {
-                    "transition": "slide",
-                    "viewId": "PositionValidation",
-                    "viewName": "PositionValidation",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                },
-                "ExportControl": {
-                    "transition": "slide",
-                    "viewId": "ExportControl",
-                    "viewName": "ExportControl",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                },
-                "NotifyEmployee": {
-                    "transition": "slide",
-                    "viewId": "Notification",
-                    "viewName": "Notification",
-                    "viewType": "XML",
-                    "controlAggregation": "pages"
-                }      
-            }
-        },
-        "rootView": {
-            "viewName": "sap.deloitte.employeemanagement.employeemanagementui.view.App",
-            "type": "XML",
-            "async": true,
-            "id": "App"
+    "dataSources": {
+      "mainService": {
+        "uri": "/Employees/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
         }
-    },
-    "sap.cloud": {
-        "public": true,
-        "service": "EmployeeManagementRouter"
+      }
     }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "config": {
+      "sample": {
+        "files": [
+          "model/cardManifests.json",
+          "manifest.json"
+        ]
+      }
+    },
+    "dependencies": {
+      "minUI5Version": "1.124.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.deloitte.employeemanagement.employeemanagementui.i18n.i18n"
+        }
+      },
+      "mainModel": {
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupId": "$auto"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "sap.deloitte.employeemanagement.employeemanagementui.view",
+        "controlAggregation": "pages",
+        "controlId": "mainContents",
+        "path": "sap.deloitte.employeemanagement.employeemanagementui.view"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "Default",
+          "target": "Home"
+        },
+        {
+          "pattern": "home",
+          "name": "home",
+          "target": "Home"
+        },
+        {
+          "pattern": "needsObjectPage/{name}",
+          "name": "needsObjectPage",
+          "target": "needsObjectPage"
+        },
+        {
+          "pattern": "Main/{name}",
+          "name": "Main",
+          "target": "Need"
+        },
+        {
+          "name": "Need",
+          "pattern": "need",
+          "target": [
+            "Main"
+          ]
+        },
+        {
+          "pattern": "my-tasks",
+          "name": "tasks",
+          "target": "Tasks"
+        },
+        {
+          "pattern": "Position Validation/{title}",
+          "name": "Position Validation",
+          "target": "Validation"
+        },
+        {
+          "pattern": "Export Controls Review/{title}",
+          "name": "Export Controls Review",
+          "target": "ExportControl"
+        },
+        {
+          "pattern": "Notify Employee & Confirm/{title}",
+          "name": "Notify Employee & Confirm",
+          "target": "NotifyEmployee"
+        },
+        {
+          "pattern": "Notify Employee and Confirm/{title}",
+          "target": "NotifyEmployee"
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewId": "Home",
+          "viewName": "Home",
+          "controlAggregation": "pages"
+        },
+        "Main": {
+          "transition": "slide",
+          "viewId": "Main",
+          "viewName": "Main",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        },
+        "Need": {
+          "transition": "slide",
+          "viewId": "Need",
+          "viewName": "Need",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        },
+        "Tasks": {
+          "transition": "slide",
+          "viewId": "Tasks",
+          "viewName": "Tasks",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        },
+        "Validation": {
+          "transition": "slide",
+          "viewId": "PositionValidation",
+          "viewName": "PositionValidation",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        },
+        "ExportControl": {
+          "transition": "slide",
+          "viewId": "ExportControl",
+          "viewName": "ExportControl",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        },
+        "NotifyEmployee": {
+          "transition": "slide",
+          "viewId": "Notification",
+          "viewName": "Notification",
+          "viewType": "XML",
+          "controlAggregation": "pages"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.deloitte.employeemanagement.employeemanagementui.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "EmployeeManagementRouter"
+  }
 }

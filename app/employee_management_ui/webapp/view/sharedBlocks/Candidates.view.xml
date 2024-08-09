@@ -2,7 +2,8 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
-	xmlns="sap.m">
+	xmlns="sap.m"
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Candidates">
 	<List headerText="Candidates">
         <headerToolbar>
             <Toolbar>

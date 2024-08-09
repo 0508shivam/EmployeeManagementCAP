@@ -1,0 +1,168 @@
+<core:FragmentDefinition
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.ui.table"
+>
+    <m:Dialog
+        id="_IDAddCandidate"
+        contentHeight="60%"
+        contentWidth="40%"
+        title="Add Candidate"
+    >
+        <m:customHeader>
+            <m:Bar>
+                <m:contentMiddle>
+                    <m:Title text="Add Candidate" />
+                </m:contentMiddle>
+                <m:contentRight>
+                    <m:Button
+                        type="Reject"
+                        icon="sap-icon://decline"
+                        press="closeAddCandidate"
+                        tooltip="Close the dialog"
+                    />
+                </m:contentRight>
+            </m:Bar>
+        </m:customHeader>
+        <m:content>
+            <m:Page showHeader="false">
+                <m:IconTabBar class="sapUiResponsiveContentPadding">
+                    <m:items>
+                        <m:IconTabFilter
+                            text="Candidates"
+                            key="candidates"
+                        >
+                            <m:SearchField width="70%" />
+                            <Table
+                                selectionMode="MultiToggle"
+                                class="sapUiSmallMarginTop"
+                                rows="{/Candidates}"
+                                ariaLabelledBy="title"
+                                enableCellFilter="true"
+                                sort="sortColumn"
+                            >
+                                <columns>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Candidate Name"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text
+                                                text="{name}"
+                                                wrapping="false"
+                                            />
+                                        </template>
+                                    </Column>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Job Title"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text text="{jobTitle}" wrapping="false"/>
+                                        </template>
+                                    </Column>
+                                </columns>
+                            </Table>
+                        </m:IconTabFilter>
+                        <m:IconTabFilter
+                            text="Talent Pools"
+                            key="talentPool"
+                        >
+                             <m:SearchField width="70%" />
+                            <Table
+                                selectionMode="MultiToggle"
+                                class="sapUiSmallMarginTop"
+                                rows="{/Candidates}"
+                                ariaLabelledBy="title"
+                                enableCellFilter="true"
+                                sort="sortColumn"
+                            >
+                                <columns>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Talent Pool"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text
+                                                text="{talentPool}"
+                                                wrapping="false"
+                                            />
+                                        </template>
+                                    </Column>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Candidate Name"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text text="{name}" wrapping="false"/>
+                                        </template>
+                                    </Column>
+                                </columns>
+                            </Table>
+                        </m:IconTabFilter>
+                        <m:IconTabFilter
+                            text="Succession Plans"
+                            key="succession"
+                        >
+                             <m:SearchField width="70%" />
+                            <Table
+                                selectionMode="MultiToggle"
+                                class="sapUiSmallMarginTop"
+                                rows="{/Candidates}"
+                                ariaLabelledBy="title"
+                                enableCellFilter="true"
+                                sort="sortColumn"
+                            >
+                                <columns>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Successors"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text
+                                                text="{name}"
+                                                wrapping="false"
+                                            />
+                                        </template>
+                                    </Column>
+                                    <Column>
+                                        <m:Label
+                                            textAlign="Center"
+                                            text="Job Title"
+                                            width="100%"
+                                        />
+                                        <template>
+                                            <m:Text text="{jobTitle}" wrapping="false"/>
+                                        </template>
+                                    </Column>
+                                </columns>
+                            </Table>
+                        </m:IconTabFilter>
+                    </m:items>
+                </m:IconTabBar>
+            </m:Page>
+        </m:content>
+        <m:beginButton>
+            <m:Button
+                type="Emphasized"
+                icon="sap-icon://add"
+                text="Add"
+                tooltip="Add Candidate"
+                press="onAddCandidate"
+            />
+        </m:beginButton>
+    </m:Dialog>
+</core:FragmentDefinition>
