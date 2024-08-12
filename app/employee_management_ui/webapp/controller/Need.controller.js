@@ -64,12 +64,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Strategic Talent"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "John Smith",
+                        "jobTitle": "Senior Project Manager",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -77,12 +78,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Talent Management"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Jane Doe",
+                        "jobTitle": "Marketing Director",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -90,12 +92,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Market Research"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Michael Johnson",
+                        "jobTitle": "Chief Financial Officer",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -103,12 +106,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Risk Management"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Emily Davis",
+                        "jobTitle": "Human Resources Manager",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -116,12 +120,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Strategic Talent"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "David Brown",
+                        "jobTitle": "Software Engineer",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -129,12 +134,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Digital Transformation"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Sarah Wilson",
+                        "jobTitle": "Business Analyst",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -142,12 +148,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Talent Management"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "James Miller",
+                        "jobTitle": "Sales Director",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -155,12 +162,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Market Research"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Laura Taylor",
+                        "jobTitle": "Operations Manager",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -168,12 +176,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Risk Management"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Robert Anderson",
+                        "jobTitle": "IT Support Specialist",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -181,12 +190,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Strategic Talent"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Jessica Martinez",
+                        "jobTitle": "Product Manager",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -194,12 +204,13 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Digital Transformation"
                     },
                     {
                         "status": "Created",
-                        "name": "Casey D Robertson",
-                        "jobTitle": "Processing Monitoring Engineer",
+                        "name": "Olivia Thompson",
+                        "jobTitle": "UX/UI Designer",
                         "availableDate": "June 14, 2024",
                         "mobile": "+01 9876543210",
                         "address": "Malaysia",
@@ -207,7 +218,8 @@ function (Controller, JSONModel) {
                         "function": "Research & Engineering",
                         "career": "",
                         "primaryCouncil":"Not Assigned",
-                        "comments": ""
+                        "comments": "",
+                        "talentPool": "Strategic Talent"
                     }
                     
                 ]
@@ -219,6 +231,23 @@ function (Controller, JSONModel) {
             console.log("Hi");
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("Edit Need");
-        }
+        },
+
+        onPress: function() {
+            this._oAddCandidateDialog = new sap.ui.xmlfragment("_IDAddCandidate", 
+            "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddCandidate", this);
+            this.getView().addDependent(this._oAddCandidateDialog);
+            var oModel = this.getView().getModel();
+            this._oAddCandidateDialog.open();
+        },
+
+        closeAddCandidate: function(oEvent) {
+            if (this._oAddCandidateDialog) {
+                this._oAddCandidateDialog.close();
+                this._oAddCandidateDialog.destroy();
+                this._oAddCandidateDialog = null;
+            }
+        },
+
     });
 });

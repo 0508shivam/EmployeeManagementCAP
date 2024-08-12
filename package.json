@@ -25,15 +25,7 @@
   },
   "cds": {
     "requires": {
-      "db": "hana-cloud",
-      "[production]": {
-        "db": "hana-cloud",
-        "auth": "xsuaa"
-      },
-      "[hybrid]": {
-        "db": "hana-cloud",
-        "auth": "xsuaa"
-      }
+      "db": "sqlite"
     }
   },
   "sapux": [

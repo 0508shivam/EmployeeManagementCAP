@@ -12,6 +12,12 @@
 		<l:VerticalLayout
 			class="sapUiContentPadding"
 			width="100%">
+			<Breadcrumbs>
+				<Link press="onPress" text="Home"/>
+				<currentLocation>
+					<Link press="onPress" text="Needs" />
+				</currentLocation>
+			</Breadcrumbs>
 			<f:GridList
 				id="gridList"
 				itemPress="_handleItemPress"

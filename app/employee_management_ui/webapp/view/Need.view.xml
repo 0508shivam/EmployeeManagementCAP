@@ -38,6 +38,15 @@
 							<m:Label text="610020203"/>
 						</m:VBox>
 				</actions>
+				<breadcrumbs>
+                    <m:Breadcrumbs>
+                        <m:Link press="onPress" text="Home"/>
+                        <m:Link press="onPress" text="Needs" />
+                        <m:currentLocation>
+                            <m:Link press="onPress" text="ITM Planning and Integration Manager" />
+                        </m:currentLocation>
+                    </m:Breadcrumbs>
+                </breadcrumbs>
 			</ObjectPageDynamicHeaderTitle>
 		</headerTitle>
 
@@ -109,7 +118,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Candidate" showTitle="false">
 						<blocks>
-							<info:Candidates />
+							<info:Candidates add="onPress" />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
@@ -137,7 +146,7 @@
 
 
 
-			<ObjectPageSection anchorBarButtonColor="Negative" titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
+			<ObjectPageSection titleUppercase="false" id="Authorization" title="Authorization" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Authorization" showTitle="false">
 						<blocks>	
