@@ -117,21 +117,14 @@
                     "target": "Home"
                 },
                 {
-                    "pattern": "main/{name}",
-                    "name": "needsMainPage",
-                    "target": "Main" 
-                },
-                {
-                    "pattern": "Main/{name}",
-                    "name": "Main",
-                    "target": "Main" 
-                },
-                {
-                    "name": "Need",
                     "pattern": "need",
-                    "target": [
-                        "Need"
-                    ]
+                    "name": "needsObjectPage",
+                    "target": "Need" 
+                },
+                {
+                    "pattern": "main/{name}",
+                    "name": "CouncilMain",
+                    "target": "Main" 
                 },
                 {
                     "name": "Main",
@@ -175,13 +168,6 @@
                     "viewId": "Home",
                     "viewName": "Home",
                     "controlAggregation": "pages"
-                },
-                "needsObjectPage": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "needsObjectPage",
-                    "viewName": "needsObjectPage"
                 },
                 "Main": {
                     "transition": "slide",
