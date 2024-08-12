@@ -296,6 +296,7 @@ function (Controller, JSONModel, Fragment) {
         },
 
         _handleItemPress: function () {
+            console.log("hello card!")
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("Need");
         },

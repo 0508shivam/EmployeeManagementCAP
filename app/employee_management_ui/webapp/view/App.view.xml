@@ -57,7 +57,7 @@
         <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="true" itemSelect="onItemSelect">
         <tnt:NavigationList id="_IDGenNavigationList1">
             <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" href="#/home" key="home" />
-            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" href="#/need" key="need" /> 
+            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" href="#/main" key="main" /> 
             <!-- <tnt:NavigationListItem id="_IDGenNavigationListItem2a" text="Create Need" icon="sap-icon://add-activity" href="#/create-needs" /> -->
             <tnt:NavigationListItem id="_IDGenNavigationListItem4" text="My Tasks" icon="sap-icon://activity-assigned-to-goal" href="#/my-tasks" key="my-tasks" />
         </tnt:NavigationList>

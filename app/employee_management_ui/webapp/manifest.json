@@ -117,18 +117,25 @@
                     "target": "Home"
                 },
                 {
-                    "pattern": "needsObjectPage/{name}",
-                    "name": "needsObjectPage",
-                    "target": "needsObjectPage" 
+                    "pattern": "main/{name}",
+                    "name": "needsMainPage",
+                    "target": "Main" 
                 },
                 {
                     "pattern": "Main/{name}",
                     "name": "Main",
-                    "target": "Need" 
+                    "target": "Main" 
                 },
                 {
                     "name": "Need",
                     "pattern": "need",
+                    "target": [
+                        "Need"
+                    ]
+                },
+                {
+                    "name": "Main",
+                    "pattern": "main",
                     "target": [
                         "Main"
                     ]
@@ -156,6 +163,11 @@
                 {
                     "pattern": "Notify Employee and Confirm/{title}",
                     "target": "NotifyEmployee"
+                },
+                {
+                    "pattern": "EditNeed",
+                    "name": "Edit Need",
+                    "target": "EditNeedNav"
                 }
             ],
             "targets": {
@@ -210,6 +222,13 @@
                     "transition": "slide",
                     "viewId": "Notification",
                     "viewName": "Notification",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "EditNeedNav": {
+                    "transition": "slide",
+                    "viewId": "EditNeed",
+                    "viewName": "EditNeed",
                     "viewType": "XML",
                     "controlAggregation": "pages"
                 }      
