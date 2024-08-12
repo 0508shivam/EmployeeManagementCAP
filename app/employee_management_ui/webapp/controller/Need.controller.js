@@ -228,7 +228,7 @@ function (Controller, JSONModel) {
             this.getView().setModel(oModel);
         },
 
-        onPress: function() {
+        onAddCandidate: function() {
             this._oAddCandidateDialog = new sap.ui.xmlfragment("_IDAddCandidate", 
             "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddCandidate", this);
             this.getView().addDependent(this._oAddCandidateDialog);

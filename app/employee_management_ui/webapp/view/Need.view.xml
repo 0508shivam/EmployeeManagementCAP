@@ -116,7 +116,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Candidate" showTitle="false">
 						<blocks>
-							<info:Candidates add="onPress" />
+							<info:Candidates add="onAddCandidate" />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
