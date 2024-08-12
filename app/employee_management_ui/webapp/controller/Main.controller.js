@@ -296,8 +296,9 @@ function (Controller, JSONModel, Fragment) {
         },
 
         _handleItemPress: function () {
+            console.log("hello card!")
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("Main/{item}");
+            oRouter.navTo("needsObjectPage");
         },
 
         onExtendedNeedPress: function (oEvent) {
@@ -326,6 +327,11 @@ function (Controller, JSONModel, Fragment) {
         onCollapseAll: function() {
             var oTreeTable = Fragment.byId("_IDExtendedHierarchy","TreeTableBasic");
 			oTreeTable.collapseAll();
+        },
+
+        onPressHome: function() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("home");
         }
 
     });

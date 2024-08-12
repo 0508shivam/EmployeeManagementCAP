@@ -227,6 +227,11 @@ function (Controller, JSONModel) {
             var oModel = new JSONModel(mData);
             this.getView().setModel(oModel);
         },
+        onEditNeedPress: function() {
+            console.log("Hi");
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo("Edit Need");
+        },
 
         onAddCandidate: function() {
             this._oAddCandidateDialog = new sap.ui.xmlfragment("_IDAddCandidate", 

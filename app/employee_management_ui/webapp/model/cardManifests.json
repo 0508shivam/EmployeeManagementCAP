@@ -10,7 +10,7 @@
 					"searchQuery": {
 						"type": "Search",
 						"label": "name",
-						"placeholder": "Enter a position"
+						"placeholder": "Enter a council"
 					}
 				},
 				"data": {
@@ -22,7 +22,7 @@
 				},	
 			"type": "List",
 			"header": {
-				"title": "Need Master List",
+				"title": "S&D Councils",
 				"status": {
 					"text": "3 of 4"
 				}
@@ -36,32 +36,24 @@
 				"data": {
 					"json": [
                         {
-							"name": "Sales Manager",
+							"name": "Council XYZ",
 							"icon": "sap-icon://add-employee",
-							"description": "Houston Texas, USA",
-							"info": "Lead Case",
-							"infoState": "Information"
+							"description": "Houston Texas, USA"
 						},
 						{
-							"name": "Project Manager",
+							"name": "Council ABC",
 							"icon": "sap-icon://add-employee",
-							"description": "Houston, Texas, USA",
-							"info": "Final Reviewed",
-                            "infoState": "Success"
+							"description": "Houston, Texas, USA"
 						},
 						{
-							"name": "Product Specialist",
+							"name": "Council DEF",
 							"icon": "sap-icon://add-employee",
-							"description": "Houston Texas, USA",
-							"info": "In Progress",
-							"infoState": "Information"
+							"description": "Houston Texas, USA"
 						},
 						{
-							"name": "Employee Central Consultant",
+							"name": "Council GHI",
 							"icon": "sap-icon://add-employee",
-							"description": "Hyderabad, Telangana, India",
-							"info": "Rejected",
-							"infoState": "Error"
+							"description": "Hyderabad, Telangana, India"
 						}
 					]
 				},
@@ -83,7 +75,7 @@
 						{
 						  "type": "Navigation",
 						  "parameters": {
-							"url": "#/Main/{name}",
+							"url": "#/main/{name}",
 							"target": "_self"
 						  }
 						}

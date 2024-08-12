@@ -22,7 +22,7 @@ sap.ui.define([
             },
             onAction: function(oEvent) {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("needsObjectPage/{name}");
+                oRouter.navTo("Main/{name}");
             },
 
             onSideNavButtonPress: function(oEvent) {

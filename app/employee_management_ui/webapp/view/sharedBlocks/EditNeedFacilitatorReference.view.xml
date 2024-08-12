@@ -1,0 +1,51 @@
+<mvc:View
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange480_12120Dual"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title=""
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="" />
+				<Label text="Position Contact" />
+				<Input value="{SupplierName}" />
+				<Label text="Position Details" />
+				<TextArea value="{Street}" />
+				<Label text="Target Next Assignment Date" />
+				<Input value="{HouseNumber}">
+				</Input>
+				<Label text="Current Incumbent" />
+				<Input value="{HouseNumber}">
+				</Input>
+				<core:Title text="" />
+				<Label text="Incumbent Status" />
+				<Input value="{Url}" type="Url" />
+				<Label text="Incumbent Council" />
+				<Input value="{Twitter}" />
+				<Label text="Incumbent Council Lead Facilitator" />
+				<Input value="{Twitter}" />
+				<Label text="Origin" />
+				<Input value="{Twitter}" />
+				<Label text="Order" />
+				<Input value="{Twitter}" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</mvc:View>

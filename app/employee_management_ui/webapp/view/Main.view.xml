@@ -13,9 +13,9 @@
 			class="sapUiContentPadding"
 			width="100%">
 			<Breadcrumbs>
-				<Link press="onPress" text="Home"/>
+				<Link press="onPressHome" text="Home"/>
 				<currentLocation>
-					<Link press="onPress" text="Needs" />
+					<Link text="Needs" />
 				</currentLocation>
 			</Breadcrumbs>
 			<f:GridList
@@ -37,6 +37,7 @@
 						<Button type="Transparent" icon="sap-icon://filter"/>
 						<Button type="Transparent" icon="sap-icon://sort"/>
 						<Button type="Emphasized" icon="sap-icon://collaborate" text="Extended Team's Need" tooltip="Extended Team's Need" press="onExtendedNeedPress" />
+						<Button type="Emphasized" icon="sap-icon://meeting-room" text="View Councils" tooltip="View your councils" press="onViewPress" />
 					</Toolbar>
 				</f:headerToolbar>
 				<f:customLayout>
@@ -44,7 +45,7 @@
 				</f:customLayout>
 
 				<f:GridListItem type="Active">
-					<f:Card>
+					<f:Card >
 						<f:header>
 							<card:Header
 								title="{title}"
