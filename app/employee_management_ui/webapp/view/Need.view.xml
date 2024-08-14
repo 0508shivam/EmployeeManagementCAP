@@ -40,8 +40,8 @@
 				</actions>
 				<breadcrumbs>
                     <m:Breadcrumbs>
-                        <m:Link press="onPress" text="Home"/>
-                        <m:Link press="onPress" text="Needs" />
+                        <m:Link press="onPressHome" text="Home"/>
+                        <m:Link press="onPressNeeds" text="Needs" />
                         <m:currentLocation>
                             <m:Link press="onPress" text="ITM Planning and Integration Manager" />
                         </m:currentLocation>

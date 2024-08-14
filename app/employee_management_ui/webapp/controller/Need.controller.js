@@ -227,8 +227,8 @@ function (Controller, JSONModel) {
             var oModel = new JSONModel(mData);
             this.getView().setModel(oModel);
         },
+
         onEditNeedPress: function() {
-            console.log("Hi");
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("Edit Need");
         },
@@ -248,6 +248,16 @@ function (Controller, JSONModel) {
                 this._oAddCandidateDialog = null;
             }
         },
+
+        onPressHome: function() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("home");
+        },
+
+        onPressNeeds: function() {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("Main");
+        }
 
     });
 });
