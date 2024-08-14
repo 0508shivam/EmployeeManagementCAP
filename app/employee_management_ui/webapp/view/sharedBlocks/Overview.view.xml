@@ -219,9 +219,9 @@
                 <Text text="Senior Principal" />
 				<Label text="New Position" />
                 <Text text="No" />
-                <Label text="SHARP Position Title" />
+                <Label text="Position Title" />
                 <Text text="SR. PRINCIPAL _ GEOSCIENCE" />
-                <Label text="SHARP Position ID" />
+                <Label text="Position ID" />
                 <Text text="10557168" />
                 <Label text="Current Incumbent" />
                 <Text text="Alexander Martinez" />
@@ -235,11 +235,11 @@
                 <Text text="Rodrigo Crespo" />
                 <Label text="Division" />
                 <Text text="Technology and Engineering" />
-				<Label text="Function" />
+				<Label text="Business" />
                 <Text text="Technology and Engineering" />
-                <Label text="Sub Function" />
+                <Label text="Business Line" />
                 <Text text="Technology and Engineering - Subsurface and Subsea" />
-                <Label text="Department" />
+                <Label text="Business Unit" />
                 <Text text="Technology and Engineering - Geoscience" />
 
                 <core:Title text="Relocation/ Expat Information" />
@@ -283,5 +283,22 @@
                 <Text text="No" />
 			</f:content>
 		</f:SimpleForm>
+        <Table>
+        <headerToolbar>
+            <Toolbar>
+            <Title text="Skills" />
+            <ToolbarSpacer />
+            <Button type="Transparent" icon="sap-icon://filter" ariaLabelledBy="actionButtonLabel" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+        <Column width="100%">
+            <Label textAlign="Center" text="Skill Name" />
+        </Column>
+        <Column width="100%">
+            <Label textAlign="Center" text="Expected Job Role Proficiency" />
+        </Column>
+        </columns>
+        </Table>
     </VBox>
 </mvc:View>
