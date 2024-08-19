@@ -6,6 +6,7 @@
 	xmlns:info="sap.deloitte.employeemanagement.employeemanagementui.controller.sharedBlocks"
 	xmlns:core="sap.ui.core"
 	xmlns:f="sap.f"
+	xmlns:layout="sap.ui.layout"
 	height="100%">
 
 <ObjectPageLayout id="EditNeedObjectPageLayout"
@@ -23,42 +24,61 @@
 
 						<m:VBox>
 							<m:Title text="ITM Planning and Integration Manager" wrapping="true"/>
-							<m:Label text="Target Effective Date: Aug 8, 2022"/>
+							<m:Label text="Need ID: 12345678"/>
 						</m:VBox>
 					</m:HBox>
 				</snappedHeading>
 
 				<expandedContent>
-					<m:Label text="Target Effective Date: Aug 8, 2022"/>
+					<m:Label text="Need ID: 12345678"/>
 				</expandedContent>
-				<actions>
-						<m:VBox>
-							<m:Title text="" wrapping="true"/>
-							<m:Title text="Incumbent"/>
-							<m:Label text="610020203"/>
-						</m:VBox>
-				</actions>
 			</ObjectPageDynamicHeaderTitle>
 		</headerTitle>
 
 		<headerContent>
-			<m:FlexBox wrap="Wrap" fitContainer="true">
-				
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Need ID:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" 12345678"/>
-					</m:HBox>
-				</m:VBox>
-			</m:FlexBox>
 		</headerContent>
-
 		<sections>
 		<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="FacilitatorReference" title="Facilitator Reference Details" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Facilitator Reference Details" showTitle="false">
 						<blocks>
-							<info:EditNeedFacilitatorReference />
+							<info:EditNeedFacilitatorReference class="sapUiTinyMarginTop" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="PositionInformation" title="Position Information" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Position Information" showTitle="false">
+						<blocks>
+							<info:EditNeedPositionInformation class="sapUiTinyMarginTop" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="EmployeeMove" title="Employee Move Details" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Employee Move Details" showTitle="false">
+						<blocks>
+							<info:EditNeedEmployeeMove class="sapUiTinyMarginTop" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="TalentMobility" title="Talent Mobility" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="Talent Mobility" showTitle="false">
+						<blocks>
+							<info:EditNeedTalentMobility class="sapUiTinyMarginTop" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="Gpat" title="GPAT Integration" class="bgcolorops">
+				<subSections>
+					<ObjectPageSubSection title="GPAT Integration" showTitle="false">
+						<blocks>
+							<info:EditNeedGPAT class="sapUiTinyMarginTop" />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>

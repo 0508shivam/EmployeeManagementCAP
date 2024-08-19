@@ -1,0 +1,55 @@
+<mvc:View
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChangeColumn_oneGroup"
+			editable="true"
+			layout="ColumnLayout" >
+			<f:content>
+				<Label text="Target Effective Date" />
+				<Input value="{SupplierName}" editable="true" required="true" />
+				<Label text="Event Reason" />
+				<ComboBox required="true">
+				<items>
+				<core:Item key="1" text="Global Assignment" />
+				<core:Item key="2" text="Transfer to new organization" />
+				<core:Item key="3" text="Transfer to new company" />
+				<core:Item key="4" text="Transfer with supervisor change" />
+				</items>
+			</ComboBox>
+				<Label text="Employee Group" />
+				<ComboBox required="true">
+				<items>
+				<core:Item key="1" text="Expatriate" />
+				<core:Item key="2" text="Rotator" />
+				<core:Item key="3" text="Transborder" />
+				<core:Item key="4" text="Regular" />
+				</items>
+			</ComboBox>
+				<Label text="Worker Class" />
+				<ComboBox required="true">
+				<items>
+				<core:Item key="1" text="Regular" />
+				<core:Item key="2" text="Loan Out" />
+				</items>
+			</ComboBox>
+				<Label text="Capability Manager" />
+				<Input value="{HouseNumber}" editable="true" required="false">
+				</Input>
+				<Label text="Capability Manager's Career Orientation" />
+				<Input value="{Url}" type="Url" editable="false" />
+				<Label text="Aligned with Individual Development Plan" />
+				<Input value="{Twitter}" editable="true" required="true"/>
+				<Label text="HR DM Action" />
+				<Input value="{Twitter}" editable="true" />
+				<Label text="Secondment to 3rd Party" />
+				<Input value="{Twitter}" editable="true"/>
+				<Label text="Secondment Company" />
+				<Input value="{Twitter}" editable="true"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</mvc:View>
