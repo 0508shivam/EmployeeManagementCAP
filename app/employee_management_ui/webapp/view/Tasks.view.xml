@@ -14,7 +14,7 @@
 			class="sapUiContentPadding"
 			width="100%">
 			<Breadcrumbs>
-				<Link press="onPress" text="Home"/>
+				<Link press="onPressHome" text="Home"/>
 				<currentLocation>
 					<Link press="onPress" text="My Tasks" />
 				</currentLocation>

@@ -6,7 +6,7 @@
 	xmlns:core="sap.ui.core"
 >
     <VBox class="sapUiSmallMargin">
-        <f:SimpleForm
+        <!-- <f:SimpleForm
             id="SimpleFormChange480_12120"
             editable="true"
             layout="ResponsiveGridLayout"
@@ -181,6 +181,124 @@
                     text=""
                 />
             </f:content>
-        </f:SimpleForm>
+        </f:SimpleForm> -->
+        <f:SimpleForm id="SimpleFormDisplay480_12120"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Position Information"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="Need Information" />
+				<Label text="SD Council" />
+				<Text text="TEST - LEAD FAC - 25" />
+				<Label text="Position Contract" />
+				<Text text="Linda S Roberts" />
+				<Label text="Target Date" />
+				<Text text="Aug 1 2024" />
+				<Label text="Country" />
+				<Text text="United States" />
+                <Label text="City" />
+				<Text text="Spring" />
+                <Label text="Position Description" />
+				<Text text="" />
+
+				<core:Title text="Position Data" />
+                <Label text="Position Title" />
+                <Text text="Senior Principal" />
+				<Label text="New Position" />
+                <Text text="No" />
+                <Label text="Position Title" />
+                <Text text="SR. PRINCIPAL _ GEOSCIENCE" />
+                <Label text="Position ID" />
+                <Text text="10557168" />
+                <Label text="Current Incumbent" />
+                <Text text="Alexander Martinez" />
+                <Label text="Supervising Employees" />
+                <Text text="No" />
+
+                <core:Title text="Reporting Relationships" />
+                <Label text="Functional Guidance" />
+                <Text text="Sara O Lloyd" />
+				<Label text="Administrative Support" />
+                <Text text="Rodrigo Crespo" />
+                <Label text="Division" />
+                <Text text="Technology and Engineering" />
+				<Label text="Business" />
+                <Text text="Technology and Engineering" />
+                <Label text="Business Line" />
+                <Text text="Technology and Engineering - Subsurface and Subsea" />
+                <Label text="Business Unit" />
+                <Text text="Technology and Engineering - Geoscience" />
+
+                <core:Title text="Relocation/ Expat Information" />
+                <Label text="Domestic Relocation Required" />
+                <Text text="No" />
+				<Label text="Rotational Schedule" />
+                <Text text="" />
+                <Label text="Expat Assignment Type" />
+                <Text text="" />
+				<Label text="Expat Reason" />
+                <Text text="" />
+                <Label text="Duration (End Date)" />
+                <Text text="" />
+
+                <core:Title text="Job Information" />
+                <Label text="Career Community" />
+                <Text text="Geoscience" />
+				<Label text="Current Job Family" />
+                <Text text="Generalist" />
+                <Label text="Job Role" />
+                <Text text="Senior Technical Consultant" />
+				<Label text="Job Role Description" />
+                <Text text="More Information" />
+
+                <core:Title text="Others" />
+                <Label text="Employee Group" />
+                <Text text="" />
+				<Label text="Executive Move" />
+                <Text text="No" />
+                <Label text="Return from Leave" />
+                <Text text="No" />
+				<Label text="Min CL" />
+                <Text text="" />
+                <Label text="Max CL" />
+                <Text text="" />
+                <Label text="Work Company/ Affiliate" />
+                <Text text="0985 - ExxonMobil Upstream Integrated Solutions Company" />
+                <Label text="Cost Center" />
+                <Text text="09850000180020" />
+                <Label text="Secondment to 3rd Party" />
+                <Text text="No" />
+			</f:content>
+		</f:SimpleForm>
+        <Table>
+        <headerToolbar>
+            <Toolbar>
+            <Title text="Skills" />
+            <ToolbarSpacer />
+            <Button type="Transparent" icon="sap-icon://filter" ariaLabelledBy="actionButtonLabel" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+        <Column width="100%">
+            <Label textAlign="Center" text="Skill Name" />
+        </Column>
+        <Column width="100%">
+            <Label textAlign="Center" text="Expected Job Role Proficiency" />
+        </Column>
+        </columns>
+        </Table>
     </VBox>
 </mvc:View>
