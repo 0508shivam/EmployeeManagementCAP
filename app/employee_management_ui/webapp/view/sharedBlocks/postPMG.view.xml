@@ -1,13 +1,13 @@
 <mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
     xmlns:main="sap.ui.webc.main"
     xmlns:smartForm="sap.ui.comp.smartform" 
     xmlns:smartMultiInput="sap.ui.comp.smartmultiinput"
-    controllerName="sap.deloitte.employeemanagement.employeemanagementui.view.sharedBlocks.postPMG">
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.sharedBlocks.postPMGController">
 
     <!-- Wizard for the Post-PMG process -->
     <Button id="postPMG"
@@ -15,7 +15,7 @@
             press="onKickOffPress">
     </Button>
     <List id="postPMGActivities"
-          visible="false">
+          visible="{viewModel>/isKickOffPmg}">
         <items>
             <CustomListItem>
                 <Panel headerText="LINA and Export Controls" expandable="true" expanded="false">
@@ -106,14 +106,14 @@
                             <f:content>
                                 <Label text="Sending Supervisor" />
                                 <Input
-                                                    id="sendingSupervisor"
-                                                    placeholder="Enter Name"
-                                                    showValueHelp="true" />
+                                    id="sendingSupervisor"
+                                    placeholder="Enter Name"
+                                    showValueHelp="true" />
                                 <Label text="CC List" />
                                 <Input
-                                                    id="ccList"
-                                                    placeholder="Enter CC recepients"
-                                                    showValueHelp="true"/>
+                                    id="ccList"
+                                    placeholder="Enter CC recepients"
+                                    showValueHelp="true"/>
                                 <Label text="Comments to Recepient" />
                                 <Input
                                                     id="comments"
@@ -214,64 +214,44 @@
 			columnsL="2"
 			columnsM="2"
 			singleContainerFullSize="false" >
-            <f:toolbar>
-        <Toolbar>
-            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-                <Title text="Actions" />
-                <HBox>
-                    <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
-                    <ToolbarSpacer width="10px"/>
-                    <Button text="Notify Sending Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
-                    <ToolbarSpacer width="10px"/>
-                    <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
-                </HBox>
-            </HBox>
-        </Toolbar>
-    </f:toolbar>
+
 			<f:content>
-				<core:Title text="Email Information" />
 				<Label text="Sending Org Contact" />
-				<main:Input
-				                    id="suggestionsInput2"
-				                    placeholder="Enter Name"
-				                    showSuggestions="true"
-				                    suggestionItems="{/ProductCollection}"
-				                    suggestionItemPreview="handleSuggestionItemPreview"
-				                    suggestionItemSelect="handleSuggestionItemSelect"
-				                    ariaLabelledBy="suggestionsInputLabel">
-				                <main:suggestionItems>
-					                <main:SuggestionItem text="{Name}"></main:SuggestionItem>
-				                </main:suggestionItems>
-			                    </main:Input>
+                <Input
+                    id="sendingOrgContactInput"
+                    placeholder="Enter Name"
+                    showValueHelp="true"/>
+
 				<Label text="Sender CC List" />
-				<main:Input
-				                    id="senderCCList2"
-				                    placeholder="Enter CC recepients"
-				                    showSuggestions="true"
-				                    suggestionItems="{/ProductCollection}"
-				                    suggestionItemPreview="handleSuggestionItemPreview"
-				                    suggestionItemSelect="handleSuggestionItemSelect"
-				                    ariaLabelledBy="senderCCListLabel">
-				                <main:suggestionItems>
-					                <main:SuggestionItem text="{Name}"></main:SuggestionItem>
-				                </main:suggestionItems>
-			                    </main:Input>
+                <MultiInput 
+                    id="ccReceivingOrgMultiInput" 
+                    placeholder="Enter CC recepients"
+
+                    showValueHelp="true" valueHelpRequest="_empSearchRequest"/>
+
 				<Label text="Comments to Recepient" />
-				<main:Input
-				                    id="senderCCList3"
-				                    placeholder="Leave a comment for the sending orgaization's contact"
-				                    showSuggestions="true"
-				                    suggestionItems="{/ProductCollection}"
-				                    suggestionItemPreview="handleSuggestionItemPreview"
-				                    suggestionItemSelect="handleSuggestionItemSelect"
-				                    ariaLabelledBy="senderCCListLabel"
-                                    maxlength="1000">
-				                <main:suggestionItems>
-					                <main:SuggestionItem text="{Name}"></main:SuggestionItem>
-				                </main:suggestionItems>
-			                    </main:Input>
+                <TextArea id="id_SendingOrgRecipientComments" 
+                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
+                    placeholder="Leave a comment for the Sending Organization's contact" 
+                    visible="true" maxLength="1000"/>
+
+	
+                
 			</f:content>
-            
+            <f:toolbar>
+                <Toolbar>
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+                        <Title text="Actions" />
+                        <HBox>
+                            <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Notify Sending Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
+                        </HBox>
+                    </HBox>
+                </Toolbar>
+            </f:toolbar>
 		</f:SimpleForm>
                     </content>
                 </Panel>
@@ -304,69 +284,42 @@
 			columnsL="2"
 			columnsM="2"
 			singleContainerFullSize="false" >
+            <f:toolbar>
+                <Toolbar>
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+                        <Title text="Actions" />
+                        <HBox>
+                            <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Notify Receiving Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
+                        </HBox>
+                    </HBox>
+                </Toolbar>
+            </f:toolbar>
 			<f:content>
-				<core:Title text="Employee Information" />
-				<Label text="Employee" />
-				<Text text="Aron Jones" />
-				<Label text="Personal Number" />
-                <Text text="xxxxxxxx" />
-				<core:Title text="Contact" />
-				<Label text="Council Contact" />
-				<Text text="Crystal C Hamilton" />
-                <core:Title text="Validate Information" />
-                <Label text="Position Title" />
-				<Input value="CH Test - No LITNA to US" 
-                        showValueHelp="true"/>
-                <Label text="Effective Date" />
-				<DatePicker
-                    id="dateInput"
-                    value="June 10, 2024"
-                    displayFormat="long"
-                    valueFormat="yyyy-MM-dd"
-                    change="onDateChange"/>
-                <Label text="Returning from Leave" />
-				<Switch
-                    id="simpleSwitch"
-                    state="false"
-                    customTextOn="Yes"
-                    customTextOff="No"
-                    change="onSwitchChange" />
-                <Label text="Company Code" />
-				<Input value="xxxx - Exxon Mobil Services" /> 
-                <Label text="Cost Center" />
-				<Input value="554xxxxx" 
-                       showValueHelp="true"/> 
-                <core:Title text="Supervisors" /> 
-                <Label text="Functional Guidance" />
-				<Text text="Crystal C Hamilton" />  
-                <Label text="Administrative Supervisor" />
-				<Input value="Crystal C Hamilton" 
-                       showValueHelp="true"/> 
-                <core:Title text="Competency" />
-                <Label text="Career Community" />
-				<Input value="Information Technology"
-                       showValueHelp="true" />
-                <core:Title text="Announcement" />
-                <Label text="Generate Draft" />
-				<Switch
-                    id="switchAnnouncement"
-                    state="false"
-                    customTextOn="Yes"
-                    customTextOff="No"
-                    change="onSwitchChange" />
+				<Label text="Receiving Org Contact" />
+                <Input
+                    id="receivingOrgContactInput"
+                    placeholder="Enter Name"
+                    showValueHelp="true"/>
+				<Label text="Receiving CC List" />
+                <MultiInput 
+                    placeholder="Enter CC recepients"
+
+                    showValueHelp="true" valueHelpOnly="false" valueHelpRequest="_empSearchRequest"/>
+
+				<Label text="Comments to Recepient" />
+                <TextArea
+                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
+                    placeholder="Leave a comment for the Receiving Organization's contact" 
+                    visible="true" maxLength="1000"/>
+
 			</f:content>
+ 
 		</f:SimpleForm>
-        <Toolbar>
-            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-                <Title text="" />
-                <HBox>
-                    <Button text="Save Changes" icon="sap-icon://save" type="Emphasized"/>
-                    <ToolbarSpacer width="10px"/>
-                    <Button text="Cancel" icon="sap-icon://sys-cancel-2" type="Emphasized" />
-                </HBox>
-            </HBox>
-        </Toolbar>
-	</VBox>
+	    </VBox>
                     </content>
                 </Panel>
             </CustomListItem>

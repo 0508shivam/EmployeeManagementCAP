@@ -1,0 +1,54 @@
+<mvc:View
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChangeColumn_oneGroup"
+			editable="true"
+			layout="ColumnLayout" >
+			<f:content>
+				<Label text="Local Position Title" />
+				<Input value="Free Text" editable="true" required="true" />
+				<Label text="EC Position Title" />
+				<TextArea value="Engineer 1" editable="false"/>
+				<Label text="Job Tier" />
+				<ComboBox required="true">
+				<items>
+				<core:Item key="1" text="Job Tier 1" />
+				</items>
+			</ComboBox>
+				<Label text="Job Role" />
+				<Input value="{HouseNumber}" editable="true" required="true">
+				</Input>
+				<Label text="Business" />
+				<ComboBox required="true">
+				<items>
+				<core:Item key="1" text="Business 1" />
+				</items>
+			</ComboBox>
+                <Label text="Business Line" />
+				<Input value="Business Line" editable="true" required="true">
+				</Input>
+                <Label text="Business Unit" />
+				<Input value="Business Unit" editable="true" required="true">
+				</Input>
+				<Label text="Functional Guidance" />
+				<Input value="FG Name" type="Url" editable="true" required="true"/>
+				<Label text="Admininstrative Supervisor" />
+				<Input value="AS Name" editable="true" required="true" />
+				<Label text="Company Code" />
+				<Input value="64532" editable="false"/>
+				<Label text="Cost Center" />
+				<Input value="CC0434" editable="true" required="true" />
+				<Label text="Country" />
+				<Input value="USA" editable="false" />
+                <Label text="City" />
+				<Input value="Houston"  editable="true" required="true"/>
+                <Label text="Facility" />
+				<Input value="North Houston" editable="true" required="true" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</mvc:View>

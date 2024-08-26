@@ -225,7 +225,11 @@ function (Controller, JSONModel) {
                 ]
             };
             var oModel = new JSONModel(mData);
+
+            var viewModel = new JSONModel({isKickOffPmg: false});
+
             this.getView().setModel(oModel);
+            this.getView().setModel(viewModel, 'viewModel');
         },
 
         onEditNeedPress: function() {

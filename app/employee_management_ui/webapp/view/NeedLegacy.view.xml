@@ -1,0 +1,485 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns:l="sap.ui.layout" xmlns:semantic="sap.f.semantic" controllerName="generated.app.controller.NeedDetail" id="NeedDetailViewId">
+	<semantic:SemanticPage id="detailNeedPage" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}" headerPinnable="false" showFooter="true" modelContextChange="_handleNeedBindingChange">
+		<semantic:titleHeading>
+			<m:Title class="sapUiSmallMargin" text="{NeedId}: {EmployeeTitle}"/>
+		</semantic:titleHeading>
+		<semantic:headerContent>
+			<m:ObjectHeader intro="" title="{EmployeeTitle}" number="{CurrentIncumbentUserFullName}" numberUnit="Incumbent" backgroundDesign="Transparent" condensed="false">
+				<m:attributes>
+					<m:ObjectAttribute text="Target Effective Date: { path: 'TargetDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' } }"/>
+				</m:attributes>
+				<m:statuses>
+					<m:ObjectStatus text="{NeedId}"/>
+				</m:statuses>
+			</m:ObjectHeader>
+			<m:HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="SpaceBetween" renderType="Div" visible="true" displayInline="false">
+				<m:items>
+					<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false">
+						<m:items>
+							<m:ObjectAttribute title="{i18n>JobFamilyId}" text="{JobFamilyText}" active="false" tooltip="{i18n>JobFamilyId}"/>
+							<m:ObjectAttribute title="{i18n>PrimaryCountryText}" text="{PrimaryCountryText}" active="false"/>
+							<m:ObjectAttribute title="{i18n>CLRange}" text="{CL_Min} - {CL_Max}" active="false"/>
+						</m:items>
+						<m:layoutData/>
+					</m:VBox>
+					<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false">
+						<m:items>
+							<m:ObjectAttribute title="{i18n>SubFunctionText}" text="{SubFunctionText}" active="false"/>
+							<m:ObjectAttribute title="{i18n>DepartmentText}" text="{DepartmentText}" active="false"/>
+							<m:ObjectAttribute title="{i18n>ContactUserFullName}" text="{ContactUserFullName}" id="__attribute43"/>
+						</m:items>
+						<m:layoutData/>
+					</m:VBox>
+				</m:items>
+				<m:layoutData/>
+			</m:HBox>
+		</semantic:headerContent>
+		<!--                       <m:Panel headerText="{NeedId}: {EmployeeTitle} | { path: 'TargetDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' } }" expandable="true" expanded="false" backgroundDesign="Transparent">
+                                
+                    </m:Panel> -->
+		<semantic:content>
+			<m:IconTabBar id="tb_tabs" backgroundDesign="Transparent" expandable="false" expanded="true" applyContentPadding="false" upperCase="false" visible="true" selectedKey="Ok" select="_onTabSelected" width="auto">
+				<m:items>
+					<m:IconTabFilter icon="sap-icon://warning" id="tab_MultiIncumbent" key="tab_MultiIncumbent" iconColor="Critical" text="Duplicate" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="false" iconDensityAware="false">
+						<m:content>
+							<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+								<m:content>
+									<m:Title text="Duplicate Needs Warning" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+									<m:ToolbarSpacer width=""/>
+								</m:content>
+								<m:tooltip/>
+							</m:Toolbar>
+							<m:MessageStrip showIcon="true" showCloseButton="false" type="Error" class="sapUiSmallMargin" text="{path: 'CurrentIncumbentUserFullName', formatter: '.formatter.MultiIncumbentWarningText'}"/>
+							<m:Table id="MultiCurrentIncumbentTable" inset="false" items="{path: 'MultiCurrentIncumbentJsonModel>/results'}">
+								<m:headerToolbar/>
+								<m:columns>
+									<m:Column vAlign="Middle">
+										<m:Text text="Need ID" tooltip=""/>
+									</m:Column>
+									<m:Column vAlign="Middle">
+										<m:Text text="Creation Date" tooltip=""/>
+									</m:Column>
+									<m:Column vAlign="Middle">
+										<m:Text text="Primary Council" tooltip=""/>
+									</m:Column>
+									<m:Column vAlign="Middle" hAlign="Center">
+										<m:Text text="S&amp;D Council Facilitator" tooltip="For questions regarding this position, contact the S&amp;D Council Facilitator(s) named"/>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem>
+										<m:cells>
+											<m:Text text="{ path: 'MultiCurrentIncumbentJsonModel>NeedId' }"/>
+											<m:Text text="{ path: 'MultiCurrentIncumbentJsonModel>CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium', UTC: 'true' }}"/>
+											<m:Text text="{ path: 'MultiCurrentIncumbentJsonModel>CouncilName' }"/>
+											<m:Button icon="sap-icon://collaborate" press="_onViewJSONCouncilFacilitatorPressed" type="Transparent" class="sapUiNoMarginTop sapUiNoMarginBottom" tooltip="View Council Facilitators"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</m:content>
+					</m:IconTabFilter>
+					<m:IconTabFilter icon="sap-icon://group" id="tab_Candidates" iconColor="Default" text="Candidates" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<m:content>
+							<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+								<m:content>
+									<m:Title text="Candidates" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+									<m:ToolbarSpacer width=""/>
+									<m:Button id="btn_AddCandidate" text="" tooltip="{i18n>tooltipAddCandidate}" type="Transparent" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onAddCandidatePressed"/>
+								</m:content>
+								<m:tooltip/>
+							</m:Toolbar>
+							<!--_onListItemPress1-->
+							<m:List id="lst_Candidates" mode="None" width="100%" headerText="" footerText="" noDataText="No Candidates have been added to this Need" backgroundDesign="Solid" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" itemPress="_onCandidatePressed" items="{path:'NeedCandidateInfoDetails'}" updateFinished="_onCandidateListUpdated" busyIndicatorDelay="200">
+								<m:infoToolbar>
+									<m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<m:content>
+											<m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:content>
+									</m:Toolbar>
+								</m:infoToolbar>
+								<m:headerToolbar/>
+								<m:items>
+									<m:ObjectListItem intro="{CandidateNeedStatusText}" title="{CandidateName}" icon="{path: 'CandidateId', formatter: '.formatter.employeeIcon'}" number="{ path: 'CandidateAvailabilityDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' } }" numberUnit="Availability Date" numberState="None" type="{path: 'CandidateNeedStatusText', formatter: '.formatter.candidateDetailsNav'}" selected="false">
+										<m:attributes>
+											<m:ObjectAttribute title="" text="{CandidateJobTitle}" active="false"/>
+										</m:attributes>
+										<m:firstStatus>
+											<m:ObjectStatus state="Warning" icon="{parts: [{path: 'CandidateInNeedStatusId'}, {path: 'LeadCandidatureCount', type: 'sap.ui.model.type.Integer'}], formatter: '.formatter.candidateLeadCaseOtherNeedIcon'}" tooltip="{i18n>tooltipCandidateLeadInAnotherNeed}"/>
+										</m:firstStatus>
+										<m:secondStatus>
+											<m:ObjectStatus text="" icon="{statusIcon}"/>
+										</m:secondStatus>
+									</m:ObjectListItem>
+								</m:items>
+							</m:List>
+						</m:content>
+					</m:IconTabFilter>
+					<m:IconTabFilter icon="sap-icon://compare-2" id="tab_Compare" iconColor="Default" text="Compare" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<m:content>
+							<core:Fragment fragmentName="generated.app.fragments.CompareTable" type="XML"/>
+							<m:Table id="tab_Compare_Mobile" visible="false" width="auto" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" busyIndicatorDelay="0">
+								<m:infoToolbar>
+									<m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<m:content>
+											<m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:content>
+									</m:Toolbar>
+								</m:infoToolbar>
+								<m:headerToolbar>
+									<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+										<m:content>
+											<m:Title text="Candidates" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+											<m:ToolbarSpacer width=""/>
+											<m:Button text="" type="Transparent" icon="sap-icon://add-filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onOpenCompareFilterDialog" tooltip="{i18n>tooltipAddFilter}"/>
+											<m:Button text="" type="Transparent" icon="sap-icon://clear-filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_clearAllFilters" tooltip="{i18n>tooltipClearFilters}"/>
+											<m:Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onOpenCompareProvisionDialog" tooltip="{i18n>tooltipSelectVisibleColumns}"/>
+										</m:content>
+										<m:tooltip/>
+									</m:Toolbar>
+								</m:headerToolbar>
+								<m:columns>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Candidate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Title" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="CL" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Avail Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Years End Service" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Mobile" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Home/Payroll Country" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Location" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Function" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Career Steward" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Primary Job" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+										<m:header>
+											<m:Text text="Comment" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" visible="false" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Performance Assessment" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" visible="false" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Potential" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" visible="false" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="YEE" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" visible="false" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Candidate Id" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+								</m:columns>
+								<m:items id="mobile_items">
+									<m:ColumnListItem id="colItem_Compare" press="_onRowPress">
+										<m:cells>
+											<m:Text text="{CandidateNeedStatusText}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:ObjectIdentifier title="" text="{CandidateName}" titleActive="false" visible="true"/>
+											<m:Text text="{CandidateJobTitle}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CL}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{ path: 'CandidateAvailabilityDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' } }" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:ObjectNumber number="" unit="{path: 'Candidates/YearsofService', type: 'sap.ui.model.type.String'}" emphasized="true" state="None"/>
+											<m:Link text="{Mobility}" enabled="{MobilityEnabled}" press="_openDetailedEmployeeConsiderations"/>
+											<m:Text text="{HomeCountryPayroll}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{Location}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{Function}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CareerSteward}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{PrimaryJobFamily}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{Comment}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{PA}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{Potential}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{YEE}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CandidateId}" width="100%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</m:content>
+					</m:IconTabFilter>
+					<!--                                                                    
+###############################################
+############# OVERVIEW TAB  ###################  
+###############################################                                                                          
+-->
+
+					<m:IconTabFilter icon="sap-icon://multi-select" id="tab_CheckList" key="tab_Checklist" iconColor="Default" text="Post-PMG" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="false" iconDensityAware="false">
+						<m:content>
+							<m:VBox id="form_PostPMGOverview">
+								<m:Text class="sapUiTinyMargin" text="{i18n>StartPostPMGProcessOverview}"/>
+								<m:FormattedText class="sapUiTinyMargin" id="txt_additionalNotesForGermanEmployees" htmlText="{i18n>PostPMGNotesForGermanEmployees}"/>
+								<m:FormattedText class="sapUiTinyMargin" id="txt_additionalNotesForCanadaInvolved" htmlText="{i18n>PostPMGNotesForCanadaInvolved}"/>
+							</m:VBox>
+							<m:FlexBox id="flex_PostPMGKickoff" alignContent="Center" justifyContent="Center" alignItems="Center">
+								<m:Button id="btn_KickOffPostPMGProcesses" text="Kickoff Post-PMG processes" type="Emphasized" press="_checkIfDECRequired"/>
+							</m:FlexBox>
+							<form:SimpleForm visible="true" layout="ResponsiveGridLayout" labelSpanL="6" labelSpanXL="6" labelSpanM="6" labelSpanS="3" emptySpanM="0" columnsM="2">
+								<m:Label text="{i18n>EndorsedEmployee}"/>
+								<m:Text text="{LeadCandidateName}"/>
+							</form:SimpleForm>
+							<m:MessageStrip showIcon="true" showCloseButton="true" type="Warning" class="sapUiSmallMargin" visible="false" text="Send to Sharp will initiate position management changes in SHARP. The following items must be complete prior to checking this Button: PMG final review, LITNA and export controls screening if required, position notification to the employee, effective date and position information confirmed. Pressing this button will begin workflows to notify Data Management and initiate communications to implement this position appointment."/>
+							<m:IconTabBar id="icb_PostPMGActivities" visible="true">
+								<m:items>
+									<m:IconTabFilter text="{i18n>Tasks}" id="itf_PostPMGActions">
+										<m:content>
+											<m:Panel id="pan_PostPMGAutomations" headerText="{i18n>TaskAutomation}" expandable="false" expanded="true">
+												<!--<m:MessageStrip showIcon="true" showCloseButton="false" type="Warning" class="sapUiSmallMargin"-->
+												<!--        text="{i18n>AutomationWarning}"/>-->
+												<m:Text text="{i18n>TaskAutomationLongText}"/>
+												<m:List id="list_PostPmgAutomation" mode="MultiSelect" selectionChange="_postPmgAutomationItemSelected" items="{path: 'TaskInfoDetails', sorter:{path: 'CreatedOn', descending:false}}" updateFinished="_updateListPostPMGAutomationFinished">
+													<m:headerToolbar>
+														<m:OverflowToolbar>
+															<m:content>
+																<m:Title text="{i18n>AutomateConfiguredTasks}" level="H2"/>
+																<m:ToolbarSpacer/>
+																<m:Button id="btn_PostPmgAutomationSelectAll" text="{i18n>btn_SelectAll}" enabled="false" press="_postPmgAutomationSelectAllPressed" icon="sap-icon://multiselect-all"/>
+																<m:Button id="btn_PostPmgAutomationSave" text="{i18n>btn_SaveAutomation}" enabled="false" type='Emphasized' press="_postPmgAutomationSavePressed" icon="sap-icon://save"/>
+																<m:Button id="btn_PostPmgAutomationHelp" text="{i18n>btn_Help}" press="_onPostPMGAutomationHelpPressed" icon="sap-icon://question-mark"/>
+															</m:content>
+														</m:OverflowToolbar>
+													</m:headerToolbar>
+													<m:items>
+														<m:StandardListItem title="{path: 'TaskType', formatter: '.formatter.taskTitle'}" highlight="{path: 'TaskStatus', formatter: '.formatter.taskStates'}" description="Recipient: {RecipientName}" info="{path: 'NotificationCount', formatter: '.formatter.notificationCounts'}" selected="{= ${IsAutomated}==='TRUE' ? true : false}" blocked="{= ${TaskStatus}==='PENDING' ? false : true}"/>
+													</m:items>
+												</m:List>
+											</m:Panel>
+
+											<m:Panel id="pan_SendingOrg" expandable="true" expanded="false">
+												<m:headerToolbar>
+													<m:Toolbar>
+														<m:Title text="Sending Organization - Notify Employee"/>
+														<m:ToolbarSpacer/>
+														<m:ObjectStatus text="{tasksModel>/sSendingOrgStatusText}" state="{tasksModel>/sSendingOrgStatusState}"/>
+													</m:Toolbar>
+												</m:headerToolbar>
+												<m:infoToolbar>
+													<m:Toolbar design="Transparent">
+														<!--<m:CheckBox text="Automatically notify Receiving Org" selected="true" tooltip="This should generally be checked. Once the Sending Orgnaization has confirmed notification to the employee with no issues, Talent Exchange will automatically send an email to the receiving organzation."/>-->
+														<m:ToolbarSpacer/>
+														<m:Button text="Process Guidance" icon="sap-icon://question-mark" type="Default" press="_notifProcessGuidance"/>
+													</m:Toolbar>
+												</m:infoToolbar>
+												<form:SimpleForm layout="ResponsiveGridLayout" id="notificationWithConcerns">
+													<form:content>
+														<m:MessageStrip id="ms_NotificationIssue" showIcon="false" showCloseButton="false" type="Error" class="sapUiSmallMargin" visible="false" text="An issue occurred when notifying the employee."/>
+														<m:Label text="Type of Issue"/>
+														<m:Text id="text_NotifyIssueType" text="{NotifyIssueText}"/>
+														<m:Label text="Comments from Sending Supervisor" labelFor="text_NotifyIssueComments"/>
+														<m:Text id="text_NotifyIssueComments" text="{NotifyIssueComment}"/>
+														<m:Button text="Concern has been Resolved" tooltip="This will allow the process to continue" press="_concernsResolved" type="Emphasized"/>
+													</form:content>
+													<form:layoutData>
+														<l:GridData span="L6 M6 S12"/>
+													</form:layoutData>
+												</form:SimpleForm>
+												<form:SimpleForm layout="ResponsiveGridLayout">
+													<form:content>
+														<m:MessageStrip id="ms_defSupSending" showIcon="false" showCloseButton="false" type="Error" class="sapUiSmallMargin" visible="false" text="{i18n>MissingDefaultSup}"/>
+														<m:Label text="Sending Org. Contact"/>
+														<m:Input id="id_SendingOrgRecepient" value="{taskNotifSendOrgJsonModel>/RecipientName}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="_empSearchRequest"/>
+														<m:Label text="Sending Org. cc list"/>
+														<m:MultiInput id="ccSendingOrgMultiInput" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="_empSearchRequest"/>
+														<m:Label text="Comments to Recepient"/>
+														<m:TextArea id="id_SendingOrgRecipientComments" value="{taskNotifSendOrgJsonModel>/Comments}" placeholder="Leave a comment for the Sending Organization's contact" visible="true" maxLength="1000"/>
+													</form:content>
+													<form:layoutData>
+														<l:GridData span="L6 M6 S12"/>
+													</form:layoutData>
+												</form:SimpleForm>
+												<m:HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="SpaceBetween" renderType="Div" visible="true" displayInline="false">
+													<m:items>
+														<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+															<m:items>
+																<m:Button id="btn_saveSendingOrgEmailDraft" text="Configure Automation" icon="sap-icon://wrench" type="Default" press="_saveSendingOrgConfigurationPressed"/>
+															</m:items>
+														</m:VBox>
+														<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+															<m:items>
+																<m:Button id="btn_deleteSendingOrgTask" class="sapUiTinyMarginEnd" type="Default" text="Delete Task" icon="sap-icon://delete" press="_deleteSendingOrgPressed"/>
+																<m:Button id="btn_requestNotifySendingOrg" text="Notify Sending Org" icon="sap-icon://email" type="Emphasized" press="_requestSendingOrgNotificationPressed"/>
+															</m:items>
+														</m:VBox>
+													</m:items>
+												</m:HBox>
+											</m:Panel>
+
+
+
+
+											<m:Panel id="pan_ReceivingOrg" expandable="true" expanded="false">
+												<m:headerToolbar>
+													<m:Toolbar>
+														<m:Title text="Receiving Organization - Position Validation"/>
+														<m:ToolbarSpacer/>
+														<m:ObjectStatus text="{tasksModel>/sReceivingOrgStatusText}" state="{tasksModel>/sReceivingOrgStatusState}"/>
+													</m:Toolbar>
+												</m:headerToolbar>
+												<m:infoToolbar>
+													<m:Toolbar design="Transparent">
+														<!--<m:CheckBox text="Automatically notify Receiving Org" selected="true" tooltip="This should generally be checked. Once the Sending Orgnaization has confirmed notification to the employee with no issues, Talent Exchange will automatically send an email to the receiving organzation."/>-->
+														<m:HBox alignItems="Center" direction="Row" fitContainer="false" width="100%" height="auto" justifyContent="SpaceBetween" renderType="Bare" visible="true" displayInline="false" alignContent="Center">
+															<m:HBox visible="{= ${taskNotifRecOrgJsonModel>/DelegateGUID} !== null &amp;&amp; ${taskNotifRecOrgJsonModel>/DelegateGUID} !== undefined}" alignContent="Center" alignItems="Center" renderType="Bare" justifyContent="SpaceAround">
+																<m:Label id="lbl_ValidateRecOrgTaskDelegatedTo" class="sapUiTinyMarginEnd" text="{i18n>lbl_TaskDelegatedTo}"/>
+																<m:Text id="text_ValidateRecOrgTaskDelegatedTo" text="{taskNotifRecOrgJsonModel>/DelegateName}"/>
+															</m:HBox>
+															<m:Button text="Process Guidance" icon="sap-icon://question-mark" type="Default" press="_notifProcessGuidance"/>
+														</m:HBox>
+													</m:Toolbar>
+												</m:infoToolbar>
+												<form:SimpleForm layout="ResponsiveGridLayout">
+													<form:content>
+													
+                                                    	<m:Label text="Receiving Org. Contact"/>
+														<m:Input id="id_ReceivingOrgRecepient" value="{taskNotifRecOrgJsonModel>/RecipientName}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="_empSearchRequest"/>
+														
+                                                        <m:Label text="Receiving Org. cc list"/>
+														<m:MultiInput id="ccReceivingOrgMultiInput" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="_empSearchRequest"/>
+														
+                                                        <m:Label text="Comments to Recipient"/>
+														<m:TextArea id="id_RecOrgRecipientComments" value="{taskNotifRecOrgJsonModel>/Comments}" placeholder="Leave a comment for the Receiving Organization's contact" visible="true" maxLength="1000"/>
+														
+                                                        <m:Label text="Announcement initiator"/>
+														<m:Input id="id_Announcer" enabled="{= ${taskNotifRecOrgJsonModel>/TaskStatus}==='PENDING' || ${taskNotifRecOrgJsonModel>/TaskStatus}===undefined || ${taskNotifRecOrgJsonModel>/TaskStatus}===null}" value="{= ${AnnouncerId}===null || ${AnnouncerId}===undefined ? ${taskNotifRecOrgJsonModel>/RecipientName} : ${AnnouncerUserFullName}}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="_empSearchRequest"/>
+													
+                                                    </form:content>
+													<form:layoutData>
+														<l:GridData span="L6 M6 S12"/>
+													</form:layoutData>
+												</form:SimpleForm>
+                                                
+												<m:HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="SpaceBetween" renderType="Div" visible="true" displayInline="false">
+													<m:items>
+														<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+															<m:items>
+																<m:Button id="btn_saveReceivingOrgEmailDraft" text="Configure Automation" icon="sap-icon://wrench" type="Default" press="_saveReceivingOrgConfigurationPressed"/>
+															</m:items>
+														</m:VBox>
+														<m:VBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd" alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="End" renderType="Div" visible="true" displayInline="false">
+															<m:items>
+																<m:Button id="btn_deleteReceivingOrgTask" class="sapUiTinyMarginEnd" type="Default" text="Delete Task" icon="sap-icon://delete" press="_deleteReceivingOrgPressed"/>
+																<m:Button id="btn_requestReceivingOrgTask" text="Notify Receiving Org" icon="sap-icon://email" type="Emphasized" press="_requestReceivingOrgValidationPressed"/>
+															</m:items>
+														</m:VBox>
+													</m:items>
+												</m:HBox>
+											</m:Panel>
+
+
+
+										</m:content>
+									</m:IconTabFilter>
+									
+								</m:items>
+							</m:IconTabBar>
+						</m:content>
+					</m:IconTabFilter>
+					
+				</m:items>
+				<m:content/>
+			</m:IconTabBar>
+		</semantic:content>
+		<semantic:messagesIndicator>
+			<semantic:MessagesIndicator id="mi_Messages" press="onMessageButtonPress"/>
+			<!--        <m:Button id="btn_messages" visible="false" press="_onShowMessages" type="Emphasized" icon="sap-icon://message-popup" text="{viewProperties>/messagesLength}"/> -->
+		</semantic:messagesIndicator>
+		<semantic:footerCustomActions>
+			<m:Button id="btn_SendSharp" text="Send to SHARP" icon="sap-icon://complete" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="false" iconDensityAware="false" press="_onSendToSharpPressed"/>
+			<m:Button id="btn_EditNeed" text="Edit Need" icon="sap-icon://edit" type="Default" iconFirst="true" width="auto" enabled="true" iconDensityAware="false" press="_onEditNeedPress"/>
+			<m:Button id="btn_Overflow" icon="sap-icon://overflow" press="_onOverflowPressed" tooltip="More options"/>
+			<!--                       <m:ActionSheet title="Additional Actions" id="as_additionalActions" placement="Top">
+                                                                <m:buttons>
+                                                                                <m:Button id="btn_ShareNeed" text="Share Need" icon="sap-icon://share-2" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onShareNeedPressed"/>
+                                                                                <m:Button id="btn_SendNeed" text="Transfer Need" icon="sap-icon://paper-plane" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onTransferPressed"/>
+                                                                                <m:Button id="btn_ExternalReq" text="{= ${ExternalRequisitionStatus}===null?'External Requisition':'External Requisition Requested'}" icon="sap-icon://sys-find" type="Default" iconFirst="true" width="auto" enabled="{= ${ExternalRequisitionStatus}===null}" visible="false" iconDensityAware="false" press="_onExternalReqPressed"/>
+                                                                                <m:Button id="btn_CloseNeed" text="{i18n>CloseNeed}" icon="sap-icon://cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onCloseNeedPressed"/>
+                                                                </m:buttons>
+                                                </m:ActionSheet> 
+                                                <m:Button id="btn_ShareNeed" text="Share Need" icon="sap-icon://share-2" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onShareNeedPressed"/>
+                                                                                <m:Button id="btn_SendNeed" text="Transfer Need" icon="sap-icon://paper-plane" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onTransferPressed"/>
+                                                                                <m:Button id="btn_ExternalReq" text="{= ${ExternalRequisitionStatus}===null?'External Requisition':'External Requisition Requested'}" icon="sap-icon://sys-find" type="Default" iconFirst="true" width="auto" enabled="{= ${ExternalRequisitionStatus}===null}" visible="false" iconDensityAware="false" press="_onExternalReqPressed"/>
+                                                                                <m:Button id="btn_CloseNeed" text="{i18n>CloseNeed}" icon="sap-icon://cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onCloseNeedPressed"/>
+    -->
+		</semantic:footerCustomActions>
+		<semantic:titleCustomIconActions>
+			<m:Button type="Default" icon="sap-icon://home" press="_onHomePress" tooltip="Go to Welcome Page"/>
+			<!--<m:Button type="Reject"  icon="sap-icon://source-code" visible="true" press="_testFunctionality"/>-->
+		</semantic:titleCustomIconActions>
+		<semantic:fullScreenAction>
+			<semantic:FullScreenAction id="enterFullScreen" visible="{= !${device>/system/phone} &amp;&amp; !${appView>/actionButtonsInfo/midColumn/fullScreen}}" press=".toggleFullScreen"/>
+		</semantic:fullScreenAction>
+		<semantic:exitFullScreenAction>
+			<semantic:ExitFullScreenAction id="exitFullScreen" visible="{= !${device>/system/phone} &amp;&amp; ${appView>/actionButtonsInfo/midColumn/fullScreen}}" press=".toggleFullScreen"/>
+		</semantic:exitFullScreenAction>
+	</semantic:SemanticPage>
+</mvc:View>
