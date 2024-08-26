@@ -205,7 +205,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Post-PMG" showTitle="false">
 						<blocks>
-						<info:postPMG />
+						<info:postPMG/>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
