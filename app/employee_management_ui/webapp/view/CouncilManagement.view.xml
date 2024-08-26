@@ -1,0 +1,15 @@
+<mvc:View xmlns:cards="sap.f.cards"
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.CouncilManagement"
+	xmlns="sap.f"
+	xmlns:mvc="sap.ui.core.mvc" 
+    >
+    
+    <FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+        <beginColumnPages>
+			<mvc:XMLView id="beginView" viewName="sap.deloitte.employeemanagement.employeemanagementui.view.tcm.CouncilList"/>
+		</beginColumnPages>
+        <midColumnPages>
+			<mvc:XMLView id="detailView" viewName="sap.deloitte.employeemanagement.employeemanagementui.view.tcm.CouncilDetail"/>
+		</midColumnPages>
+    </FlexibleColumnLayout>
+</mvc:View>

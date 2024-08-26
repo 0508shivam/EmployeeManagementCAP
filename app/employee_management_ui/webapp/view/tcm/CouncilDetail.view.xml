@@ -1,0 +1,85 @@
+<mvc:View 
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.CouncilDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	xmlns:semantic="sap.f.semantic"
+	xmlns:c="sap.suite.ui.commons"
+    xmlns:forms="sap.ui.layout.form"
+    >
+    <semantic:SemanticPage
+		id="mySemanticPage"
+		preserveHeaderStateOnScroll="true"
+		titleAreaShrinkRatio="1:1.6:1.6"
+        >
+
+		<!-- Title Heading-->
+		<semantic:titleHeading>
+			<Title text="ABC-Test Council" />
+		</semantic:titleHeading>
+
+		<!-- TitleExpanded content-->
+		<semantic:titleSnappedContent>
+			<Text text="Council Facilitator"/>
+		</semantic:titleSnappedContent>
+
+		<!-- TitleSnapped content-->
+		<semantic:titleExpandedContent>
+			<Text text="Council Facilitator"/>
+		</semantic:titleExpandedContent>
+
+		<!-- Header Content -->
+		<semantic:headerContent>
+			<layout:HorizontalLayout allowWrapping="true">
+				<layout:VerticalLayout class="sapUiMediumMarginEnd">
+					<ObjectAttribute title="Council Owner" text="Diana Evans"/>
+					<ObjectAttribute title="Council Chair" text="Charlie Davis"/>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout>
+					<ObjectAttribute title="Status"/>
+					<ObjectStatus text="Updated" state="Success" />
+				</layout:VerticalLayout>
+			</layout:HorizontalLayout>
+		</semantic:headerContent>
+
+		<!-- Content -->
+		<semantic:content>
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Members" icon="sap-icon://employee" key="members">
+					<Text text="Info content goes here ..." />
+				</IconTabFilter>
+				<IconTabFilter text="Pending" icon="sap-icon://pending" key="pending" count="3">
+					<Text text="Attachments go here ..." />
+				</IconTabFilter>
+				<IconTabFilter text="Status History" icon="sap-icon://history" key="history" count="12">
+					<c:Timeline
+						id="idTimeline"
+						enableDoubleSided="true"
+						groupBy="HireDate"
+						growingThreshold="0"
+						filterTitle="Name"
+						sortOldestFirst="true"
+						enableScroll="false"
+						content="{/Employees}">
+					<c:content>
+						<c:TimelineItem
+								id="idTemplateItem"
+								dateTime="{HireDate}"
+								text="{JobResponsibilities}"
+								userNameClickable="true"
+								userName="{Name}"
+								filterValue="{Name}"
+								icon="{Icon}">
+						</c:TimelineItem>
+					</c:content>
+				</c:Timeline>
+				</IconTabFilter>
+			</items>
+			</IconTabBar>
+		</semantic:content>
+
+	</semantic:SemanticPage>
+
+</mvc:View>

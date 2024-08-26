@@ -1,0 +1,90 @@
+<core:FragmentDefinition
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.ui.table"
+>
+    <m:Dialog
+        id="_IDAddAuthorization"
+        contentWidth="50%"
+        title="Add Authorization"
+    >
+        <m:customHeader>
+            <m:Bar>
+                <m:contentMiddle>
+                    <m:Title text="Add Authorization" />
+                </m:contentMiddle>
+                <m:contentRight>
+                    <m:Button
+                        type="Reject"
+                        icon="sap-icon://decline"
+                        press="closeAddAuthority"
+                        tooltip="Close the dialog"
+                    />
+                </m:contentRight>
+            </m:Bar>
+        </m:customHeader>
+        <m:content>
+            <l:Splitter>
+                <l:contentAreas>
+                    <l:VerticalLayout>
+                    <l:content>
+                    <f:SimpleForm maxContainerCols="2" layout="ResponsiveGridLayout" editable="false" visible="true">
+                    <f:content>
+                    <m:Label text="Select authority type" width="100%" textAlign="Begin" />
+                    <m:RadioButtonGroup>
+                    <m:RadioButton selected="false" id="rb_Reviewer" text="Reviewer (optional)" width="auto" valueState="None" />
+                    <m:RadioButton selected="false" id="rb_Endorser" text="PMG Endorser" width="auto" valueState="None" />
+                    <m:RadioButton selected="false" id="rb_FinalReviewer" text="PMG Final Reviewer" width="auto" valueState="None" />
+                    </m:RadioButtonGroup>
+
+                    <m:Label text="Authority Name" width="100%" textAlign="Begin" />
+                    <l:HorizontalLayout>
+                    <l:content>
+                    <m:Input id="in_Endorser" placeholder="Select a person" type="Text" showValueHelp="true" width="auto"
+                    maxLength="0" valueHelpRequest="_onEmployeeSearchValueHelp" class="sapUiSmallMarginEnd" />
+                    <m:ToolbarSpacer />
+                    <m:Button text="Add" type="Emphasized" icon="sap-icon://add" width="auto" press="_onAddApprover" />
+                    </l:content>
+                    </l:HorizontalLayout>
+
+                    <m:Label text="Comment for Authorities" />
+                    <m:TextArea rows="5" placeholder="Comments for Authorities cannot be updated once routed." cols="20"
+                    maxLength="255" visible="true" />
+
+                    </f:content>
+                    </f:SimpleForm>
+                    </l:content>
+                    </l:VerticalLayout>
+
+                    <m:List id="lst_approvers" mode="Delete" width="100%" headerText="Selected Authorities" 
+                    showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false"
+                    delete="_onApproverDeleteBeforeCreation">
+                    <m:infoToolbar>
+                    <m:Toolbar width="100%" height="auto" design="Auto" visible="false">
+                    <m:content>
+                    <m:Label text="Label" textAlign="Begin" />
+                    </m:content>
+                    </m:Toolbar>
+                    </m:infoToolbar>
+                    <m:items>
+                    <m:ObjectListItem intro="{_type}" title="Mary Clark" type="Active">
+                    </m:ObjectListItem>
+                    </m:items>
+                    </m:List>
+
+                </l:contentAreas>
+            </l:Splitter>
+        </m:content>
+        <m:beginButton>
+            <m:Button
+                type="Success"
+                text="Route to Authority"
+                tooltip="Route to Authorities"
+                press="onRoutetoAuthority"
+            />
+        </m:beginButton>
+    </m:Dialog>
+</core:FragmentDefinition>

@@ -20,7 +20,6 @@
 
 				<snappedHeading>
 					<m:HBox>
-
 						<m:VBox>
 							<m:Title text="ITM Planning and Integration Manager" wrapping="true"/>
 							<m:Label text="Target Effective Date: Aug 8, 2022"/>

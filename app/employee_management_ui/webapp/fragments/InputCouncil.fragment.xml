@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Councils"
+		search="handleValueHelpSearch"
+		confirm="handleValueHelpConfirm"
+		>
+		<StandardListItem title="ABC Council" description="072"/>
+		<StandardListItem title="XYZ Council" description="045"/>
+		<StandardListItem title="Test Council" description="387"/>
+	</SelectDialog>
+</core:FragmentDefinition>

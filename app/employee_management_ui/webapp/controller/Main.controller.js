@@ -1,9 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    'sap/ui/model/Filter',
+	'sap/ui/model/FilterOperator'
 ],
-function (Controller, JSONModel, Fragment) {
+function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
     "use strict";
 
     return Controller.extend("sap.deloitte.employeemanagement.employeemanagementui.controller.Main", {
@@ -287,6 +289,20 @@ function (Controller, JSONModel, Fragment) {
                         "jobTitle": "Legal Advisor",
                         "email": "lsharpe@exxonmobil.com"   
                     }
+                    ],
+                    "Councils": [
+                        {
+                            "CouncilID": "001",
+                            "CouncilName": "XYZ"
+                        },
+                        {
+                            "CouncilID": "001",
+                            "CouncilName": "XYZ"
+                        },
+                        {
+                            "CouncilID": "001",
+                            "CouncilName": "XYZ"
+                        }
                     ]
                 }};
                     
@@ -330,9 +346,35 @@ function (Controller, JSONModel, Fragment) {
         },
 
         onPressHome: function() {
+            var navCon = this.byId("navCon");
+			navCon.to(this.byId("p1"));
+            this._oCouncilInput = this.byId("councilInput");
+			this._oCouncilInput.setValue("");
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("home");
-        }
+        },
 
+		handleInputValueHelpOpen : function () {
+            this._oCouncilDialog = new sap.ui.xmlfragment("selectDialog", 
+            "sap.deloitte.employeemanagement.employeemanagementui.fragments.InputCouncil", this);
+            this.getView().addDependent(this._oCouncilDialog);
+            var oModel = this.getView().getModel();
+            this._oCouncilDialog.open();
+			
+		},
+
+        handleValueHelpConfirm: function (oEvent) {
+            this._oCouncilInput = this.byId("councilInput");
+			this._oCouncilInput.setValue(oEvent.getParameter("selectedItem").getTitle());
+
+            var navCon = this.byId("navCon");
+			navCon.to(this.byId("p2"));
+            
+            if (this._oCouncilDialog) {
+                this._oCouncilDialog.destroy();
+                this._oCouncilDialog = null;
+            }
+        }
+        
     });
 });

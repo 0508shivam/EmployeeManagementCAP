@@ -139,6 +139,11 @@
                     "target": "Tasks"
                 },
                 {
+                    "pattern": "manage-councils",
+                    "name": "manageCouncils",
+                    "target": "CouncilManagement"
+                },
+                {
                     "pattern": "Position Validation/{title}",
                     "name": "Position Validation",
                     "target": "Validation"
@@ -151,10 +156,6 @@
                 {
                     "pattern": "Notify Employee & Confirm/{title}",
                     "name": "Notify Employee & Confirm",
-                    "target": "NotifyEmployee"
-                },
-                {
-                    "pattern": "Notify Employee and Confirm/{title}",
                     "target": "NotifyEmployee"
                 },
                 {
@@ -215,6 +216,13 @@
                     "transition": "slide",
                     "viewId": "EditNeed",
                     "viewName": "EditNeed",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "CouncilManagement": {
+                    "transition": "slide",
+                    "viewId": "CouncilManagement",
+                    "viewName": "CouncilManagement",
                     "viewType": "XML",
                     "controlAggregation": "pages"
                 }      

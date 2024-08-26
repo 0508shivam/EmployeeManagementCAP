@@ -153,7 +153,7 @@
 							<m:HBox>
 					 			<m:HBox width="200px" class="AuthorizationList" alignItems="Center" alignContent="Center" justifyContent="Center">						
 									<m:VBox>
-										<m:Button icon="sap-icon://add" class="buttonSize" type="Transparent" iconDensityAware="false"/>
+										<m:Button icon="sap-icon://add" class="buttonSize" type="Transparent" press="onAddAuthority" iconDensityAware="false"/>
 									</m:VBox>	
 								</m:HBox>
 	                   			<m:HBox width="200px" class="AuthorizationList" alignItems="Start" alignContent="Center" justifyContent="Center">

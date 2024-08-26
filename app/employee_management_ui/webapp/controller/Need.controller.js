@@ -257,6 +257,21 @@ function (Controller, JSONModel) {
         onPressNeeds: function() {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("Main");
+        },
+
+        onAddAuthority: function() {
+            this._oAddAuthorityDialog = new sap.ui.xmlfragment("_IDAddCandidate", 
+            "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddAuthorization", this);
+            this.getView().addDependent(this._oAddAuthorityDialog);
+            this._oAddAuthorityDialog.open();
+        },
+
+        closeAddAuthority: function() {
+            if (this._oAddAuthorityDialog) {
+                this._oAddAuthorityDialog.close();
+                this._oAddAuthorityDialog.destroy();
+                this._oAddAuthorityDialog = null;
+            }
         }
 
     });

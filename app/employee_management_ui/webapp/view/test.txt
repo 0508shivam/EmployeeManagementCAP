@@ -1,0 +1,57 @@
+<l:ResponsiveSplitter defaultPane="default">
+    	<l:PaneContainer resize=".onRootContainerResize">
+			<l:SplitPane requiredParentWidth="100" id="default">
+				<l:layoutData>
+					<l:SplitterLayoutData size="{sizes>/pane1}" />
+				</l:layoutData>
+				<Panel>
+                <Breadcrumbs>
+                    <Link press="onPressHome" text="Home" />
+                    <currentLocation>
+                        <Link text="Manage Councils" />
+                    </currentLocation>
+                </Breadcrumbs>
+                    <!-- <subHeader>
+                    <OverflowToolbar>
+                        <SearchField liveChange="" width="80%" />
+                    </OverflowToolbar>
+                    </subHeader> -->
+                    <SearchField liveChange="" width="50%" />
+                    <List
+                        id="CouncilList"
+                        items="{
+                            path: '/Councils',
+                            sorter: {
+                                path: 'name'
+                            }
+                        }"
+                        >
+                        <items>
+                            <StandardListItem
+                                title="{name}"
+                                description="{viewer}"
+                                type="Navigation" />
+                        </items>
+                    </List>
+                </Panel>
+			</l:SplitPane>
+			<l:PaneContainer orientation="Vertical" resize=".onInnerContainerResize">
+				<l:SplitPane requiredParentWidth="800">
+					<l:layoutData>
+						<l:SplitterLayoutData size="{sizes>/pane2}" />
+					</l:layoutData>
+                    <Panel headerText="Minimum parent width 600">
+                        <VBox>
+                            <Select forceSelection="false"
+                                items="{
+                                    path: '/Councils/members',
+                                    sorter: { path: 'name' }
+                                }">
+                                <core:Item key="{name}" text="{name}" />
+                            </Select>
+                        </VBox>
+                    </Panel>
+				</l:SplitPane>
+			</l:PaneContainer>
+		</l:PaneContainer>
+    </l:ResponsiveSplitter>
