@@ -247,7 +247,7 @@
                             <ToolbarSpacer width="10px"/>
                             <Button text="Notify Sending Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
                             <ToolbarSpacer width="10px"/>
-                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
+                            <Button text="Delete Task" icon="sap-icon://delete" type="Reject" />
                         </HBox>
                     </HBox>
                 </Toolbar>
@@ -292,8 +292,12 @@
                             <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
                             <ToolbarSpacer width="10px"/>
                             <Button text="Notify Receiving Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
+                            
                             <ToolbarSpacer width="10px"/>
-                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
+                            
+                            <Button text="Delete Task" icon="sap-icon://delete" type="Reject" />
+                            <ToolbarSpacer width="10px"/>
+
                         </HBox>
                     </HBox>
                 </Toolbar>
@@ -315,6 +319,17 @@
                     value="{taskNotifSendingOrgJsonModel>/Comments}" 
                     placeholder="Leave a comment for the Receiving Organization's contact" 
                     visible="true" maxLength="1000"/>
+
+                <Label text="Announcement Initiator" />
+                <Input
+                    id="announcementInitiator"
+                    placeholder=""
+                    value=""
+                    showValueHelp="true" valueHelpRequest="_empSearchRequest"
+                />
+
+                <Label ></Label>
+                <CheckBox text="Automate notification"/>
 
 			</f:content>
  
