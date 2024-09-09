@@ -174,7 +174,7 @@
 										<m:Avatar id="_IDGenAvatar1" src="https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" />
 									</m:VBox>
 									<m:VBox id="_IDGenVBox2" >
-										<m:Title id="_IDGenTitle1" text="Mary Clark" wrapping="true"/>
+										<m:Title id="_IDGenName1" text="Mary Clark" wrapping="true"/>
 										<m:Title id="_IDGenTitle11" text="HR Partner" wrapping="true"/>
 										<m:HBox>
 											<m:Label id="_IDGenLabel1" class="AuthorizationListLabelBottom" text="Endorsor"/>

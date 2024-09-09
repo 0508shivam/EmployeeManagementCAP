@@ -108,7 +108,7 @@
             "routes": [
                 {
                     "pattern": "",
-                    "name": "Default",
+                    "name": "",
                     "target": "Home"
                 },
                 {
@@ -162,6 +162,11 @@
                     "pattern": "EditNeed",
                     "name": "Edit Need",
                     "target": "EditNeedNav"
+                },
+                {
+                    "pattern": "rosters",
+                    "name": "rosters",
+                    "target": "Rosters"
                 }
             ],
             "targets": {
@@ -225,7 +230,14 @@
                     "viewName": "CouncilManagement",
                     "viewType": "XML",
                     "controlAggregation": "pages"
-                }      
+                },
+                "Rosters": {
+                    "transition": "slide",
+                    "viewId": "Rosters",
+                    "viewName": "Rosters",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                }    
             }
         },
         "rootView": {

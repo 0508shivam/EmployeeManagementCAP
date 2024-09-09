@@ -26,7 +26,7 @@
             </Breadcrumbs>
             <Input
                 class="sapUiTinyMarginBottom"
-                id="councilInput"
+                id="councilsInput"
                 textFormatMode="KeyValue"
                 submit="handleInputSubmit"
                 placeholder="Enter Council"
@@ -50,7 +50,7 @@
             <NavContainer
                 id="navCon"
                 width="98%"
-                height="150em"
+                height="180em"
             >
 			<Page id="p1" showHeader="false">
 				<IllustratedMessage
@@ -64,13 +64,13 @@
 				showHeader="false">
 				
                 <f:GridList
-                    id="gridList"
+                    id="GridList"
                     itemPress="_handleItemPress"
                     items="{
 					path: '/items',
 					sorter: {
-						path: 'status',
-						descending: false,
+						path: 'dueDate',
+						descending: true,
 						group: true
 					}
 				}">
@@ -115,9 +115,9 @@
                             <f:header>
                                 <card:Header
                                     title="{title}"
-                                    subtitle="{subtitle}"
-                                    iconSrc="sap-icon://work-history"
+                                    subtitle="{leadCandidate}"
                                 />
+                                <!-- iconSrc="sap-icon://work-history" -->
                             </f:header>
                             <f:content>
                                 <VBox class="sapUiSmallMargin">
@@ -127,12 +127,22 @@
                                             shrinkFactor="0"
                                         />
                                     </layoutData>
-                                    <Label text="{jobDetail}" />
-                                    <ObjectNumber
-                                        class="sapUiTinyMarginTop"
-                                        number="{number}"
-                                        state="Information"
-                                    />
+                                    <HBox>
+                                        <core:Icon src="sap-icon://appointment" class="sapUiTinyMarginEnd" />
+                                        <Label text="{subtitle}" class="sapUiTinyMarginBottom" tooltip="Target Date" />
+                                    </HBox>
+                                    <HBox>
+                                        <core:Icon src="sap-icon://manager" class="sapUiTinyMarginEnd" />
+                                        <Label text="{supervisor}" tooltip="Supervisor" />
+                                    </HBox>
+                                    <HBox class="sapUiTinyMarginTop">
+                                        <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd" />
+                                        <ObjectNumber
+                                            number="{location}"
+                                            state="None"
+                                            tooltip="Location"
+                                        />
+                                    </HBox>
                                     <ObjectStatus
                                         class="sapUiTinyMarginTop"
                                         text="{status}"

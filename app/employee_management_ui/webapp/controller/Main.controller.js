@@ -14,248 +14,388 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                 "items": [
                     {
                         "title": "Project Manager",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "Jane Doe",
+                        "subtitle": "",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Target date required",
+                        "location": "West Adam",
+                        "supervisor": "Mrs. Regina Henry"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Abu Abul Akbar",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "East Joseph",
+                        "supervisor": "John Jennings"
                     },
                     {
                         "title": "SDA Anayst",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "John Smith",
+                        "subtitle": "",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Target date required",
+                        "location": "East Larryville",
+                        "supervisor": "Scott Bryant"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Alice Johnson",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30+ days",
+                        "location": "East Martin",
+                        "supervisor": "Samantha Garcia"
                     },
                     {
                         "title": "Beaumont Engineering Services",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "Bob Brown",
+                        "subtitle": "",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Target date required",
+                        "location": "East Karenfort",
+                        "supervisor": "Rick Mckinney"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Charlie Davis",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Bradshire",
+                        "supervisor": "Scott Cole"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Diana Evans",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "West Sharonside",
+                        "supervisor": "Katherine Lambert"
                     },
                     {
                         "title": "SDA Anayst",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "Evan Green",
+                        "subtitle": "",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Target date required",
+                        "location": "Tiffanyburgh",
+                        "supervisor": "Stephen Maldonado"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "Jane Smith",
+                        "subtitle": "",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Target date required",
+                        "location": "East Gregory",
+                        "supervisor": "Angela Davila MD"
                     },
                     {
                         "title": "Beaumont Engineering Services",
+                        "leadCandidate": "Chris Evans",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Port Shawnchester",
+                        "supervisor": "Diane Morgan"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Sarah Connor",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "South Ericaside",
+                        "supervisor": "Trevor Stewart"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Michael Scott",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Lake Franciscobury",
+                        "supervisor": "Joseph Gates"
                     },
                     {
                         "title": "SDA Anayst",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30 days",
+                        "location": "North Terriland",
+                        "supervisor": "John Le"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Pam Beesly",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30 days",
+                        "location": "Allenfurt",
+                        "supervisor": "Autumn Cisneros"
                     },
                     {
                         "title": "Beaumont Engineering Services",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Petersborough",
+                        "supervisor": "April Newton"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Dwight Schrute",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "New Eddie",
+                        "supervisor": "John Mccarty"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Dwight Schrute",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "West Matthewbury",
+                        "supervisor": "Cheryl Sullivan"
                     },
                     {
                         "title": "SDA Anayst",
+                        "leadCandidate": "Jane Smith",
                         "subtitle": "June 13 2024",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Craigbury",
+                        "supervisor": "Abigail Miller"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Keith Davis",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30 days",
+                        "location": "East Kim",
+                        "supervisor": "Megan Cameron"
                     },
                     {
                         "title": "Beaumont Engineering Services",
+                        "leadCandidate": "Brooke Hall",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Johnsonmouth",
+                        "supervisor": "Alan Solis"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Lisa Curtis",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Lake Bryanmouth",
+                        "supervisor": "Eddie Patterson"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Vicki Carroll",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30+ days",
+                        "location": "West Patricia",
+                        "supervisor": "Pamela Hunt"
                     },
                     {
                         "title": "SDA Anayst",
+                        "leadCandidate": "Robert Murphy",
                         "subtitle": "June 13 2024",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30 days",
+                        "location": "Whiteport",
+                        "supervisor": "Shannon Howard"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Tyler Berry",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30 days",
+                        "location": "Robertburgh",
+                        "supervisor": "Karen Joseph"
                     },
                     {
                         "title": "Beaumont Engineering Services",
+                        "leadCandidate": "Tiffany Mitchell",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Walkerville",
+                        "supervisor": "Emily Johnson"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Shannon Zimmerman",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Morrowland",
+                        "supervisor": "Michael Conley"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Ashley Brown",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "New Jesse",
+                        "supervisor": "Melinda Jackson"
                     },
                     {
                         "title": "SDA Anayst",
+                        "leadCandidate": "Michael Butler",
                         "subtitle": "June 13 2024",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "New Yvonne",
+                        "supervisor": "Ashley Bell"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30 days",
+                        "location": "West Damonburgh",
+                        "supervisor": "Linda Cooper"
                     },
                     {
                         "title": "Beaumont Engineering Services",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30 days",
+                        "location": "Lake Amber",
+                        "supervisor": "Jeffrey Gibson"
                     },
                     {
                         "title": "Project Manager",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Research and Engineering - Projects",
                         "number" : "100000563",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Russellville",
+                        "supervisor": "Cameron Waller"
                     },
                     {
                         "title": "Production Manager",
+                        "leadCandidate": "Leah Copeland",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Product - Americas",
                         "number" : "100010662",
-                        "status" :"In progress"
+                        "status" :"In progress",
+                        "dueDate": "Due in 30 days",
+                        "location": "Russellville",
+                        "supervisor": "Cameron Waller"
                     },
                     {
                         "title": "SDA Anayst",
+                        "leadCandidate": "Evan Green",
                         "subtitle": "June 13 2024",
                         "jobDetail": "human resources",
                         "number" : "100000265",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Due in 30+ days",
+                        "location": "Burtonside",
+                        "supervisor": "Traci Glover"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
+                        "leadCandidate": "Kyle Smith",
                         "subtitle": "June 13 2024",
                         "jobDetail": "Information technology",
                         "number" : "100040558",
-                        "status" :"Pending Endorser"
+                        "status" :"Pending Endorser",
+                        "dueDate": "Due in 30 days",
+                        "location": "Michelleside",
+                        "supervisor": "Christopher Hill"
                     },
                     {
                         "title": "Beaumont Engineering Services",
-                        "subtitle": "June 13 2024",
+                        "leadCandidate": "Ashley Orozco",
+                        "subtitle": "",
                         "jobDetail": "Checklist services",
                         "number" : "120000987",
-                        "status" : "Pending review"
+                        "status" : "Pending review",
+                        "dueDate": "Target date required",
+                        "location": "North Colin",
+                        "supervisor": "Pamela Day"
                     }
                 ],
                 "ExtendedView":{
@@ -293,14 +433,14 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                     "Councils": [
                         {
                             "CouncilID": "001",
-                            "CouncilName": "XYZ"
+                            "CouncilName": "ABC"
                         },
                         {
-                            "CouncilID": "001",
-                            "CouncilName": "XYZ"
+                            "CouncilID": "002",
+                            "CouncilName": "CDF"
                         },
                         {
-                            "CouncilID": "001",
+                            "CouncilID": "003",
                             "CouncilName": "XYZ"
                         }
                     ]
