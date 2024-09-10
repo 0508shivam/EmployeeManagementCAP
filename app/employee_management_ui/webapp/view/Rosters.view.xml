@@ -4,8 +4,8 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
 >
-<Page showHeader="false">
-    <l:VerticalLayout class="sapUiContentPadding" width="100%">
+<Page showHeader="false" class="sapUiContentPadding">
+    <content>
         <Breadcrumbs>
             <Link
                 press="onPressHome"
@@ -36,7 +36,8 @@
                     additionalText="{CouncilID}" />
             </suggestionItems>
         </Input>
-            <IconTabBar id="rosterTabBar" class="sapUiResponsiveContentPadding" visible="{= !!${/selectedCouncil} }">
+        <VBox width="100%">
+            <IconTabBar id="rosterTabBar" class="sapUiResponsiveContentPadding" visible="{= !!${/selectedCouncil} }" tabDensityMode="Compact" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="false">
                 <items>
                 <!-- Position Roster Begins-->
                     <IconTabFilter icon="sap-icon://provision" key="positionRoster" text="Position">
@@ -47,7 +48,7 @@
                             </OverflowToolbar>
                         </table:extension>
                         <table:rowMode>
-                            <rowmodes:Interactive />
+                            <rowmodes:Auto />
                         </table:rowMode>
                         <table:rowSettingsTemplate>
                             <table:RowSettings 
@@ -140,7 +141,9 @@
                             <table:Column width="5rem">
                                 <Label text="Progress" />
                                 <table:template>
-                                   <CheckBox selected="false" />
+                                    <HBox height="3rem">
+                                   <CheckBox selected="false" class="" />
+                                   </HBox>
                                 </table:template>
                             </table:Column>
                             <table:Column width="12rem">
@@ -331,10 +334,11 @@
                     </IconTabFilter>
                 </items>
             </IconTabBar>
+        </VBox>
         <IllustratedMessage id="illustratedMessageID" visible="{= !${/selectedCouncil} }"
 					illustrationType="{= ${/inputPopulated} ? 'sapIllus-ErrorScreen' : 'sapIllus-SearchFolder' }"
 					title="{= ${/inputPopulated} ? ${i18n>NotFoundTitle} : ${i18n>EnterCouncil} }"
 					description="{= ${/inputPopulated} ? ${i18n>NotFoundDescription} : ${i18n>EnterCouncilDescription} }"/>
-    </l:VerticalLayout>
+    </content>
 </Page>
 </mvc:View>

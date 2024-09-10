@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Need"
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Need"
    	xmlns="sap.uxap"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:m="sap.m"
@@ -11,39 +11,43 @@
 <ObjectPageLayout id="ObjectPageLayout"
 		showTitleInHeaderContent="true" class="bgcolorops"
 		upperCaseAnchorBar="false"
-		showFooter="true">
+		showFooter="true" headerContentPinned="true" useIconTabBar="true">
 		<headerTitle>
 			<ObjectPageDynamicHeaderTitle>
 				<expandedHeading>
-					<m:Title text="ITM Planning and Integration Manager" wrapping="true" />
+					<m:Title text="ITM Planning and Integration Manager (9673420)" wrapping="true" />
 				</expandedHeading>
 
 				<snappedHeading>
-					<m:HBox>
-
-						<m:VBox>
-							<m:Title text="ITM Planning and Integration Manager" wrapping="true"/>
-							<m:Label text="Target Effective Date: Aug 8, 2022"/>
-						</m:VBox>
-					</m:HBox>
+					<m:FlexBox fitContainer="true" alignItems="Center">
+						<m:Title text="ITM Planning and Integration Manager (9673420)" wrapping="true"/>
+					</m:FlexBox>
 				</snappedHeading>
 
 				<expandedContent>
-					<m:Label text="Target Effective Date: Aug 8, 2022"/>
+					<m:ObjectStatus title="Target Effective Date" text="Q2+2024"/>
 				</expandedContent>
+
+				<snappedContent>
+					<m:ObjectStatus title="Target Effective Date" text="Q2+2024"/>
+				</snappedContent>
+
 				<actions>
-						<m:VBox>
-							<m:Title text="" wrapping="true"/>
-							<m:Title text="Incumbent"/>
-							<m:Label text="610020203"/>
-						</m:VBox>
+					<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+						<layout:layoutData>
+							<ObjectPageHeaderLayoutData visibleS="false" visibleM="false"/>
+						</layout:layoutData>
+						<m:ObjectStatus title="Status" text="In Progress" state="Success"/>
+						<m:ObjectStatus title="Lead Candidate" text="John Smith"/>
+					</layout:VerticalLayout>
 				</actions>
+
 				<breadcrumbs>
                     <m:Breadcrumbs>
                         <m:Link press="onPressHome" text="Home"/>
                         <m:Link press="onPressNeeds" text="Needs" />
                         <m:currentLocation>
-                            <m:Link press="onPress" text="ITM Planning and Integration Manager" />
+                            <m:Link press="onPress" text="9673420 : ITM Planning and Integration Manager" />
                         </m:currentLocation>
                     </m:Breadcrumbs>
                 </breadcrumbs>
@@ -51,70 +55,66 @@
 		</headerTitle>
 
 		<headerContent>
-			<m:FlexBox wrap="Wrap" fitContainer="true">
+			<m:FlexBox wrap="Wrap">
+				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<m:ObjectStatus title="Job Role" text="Audit Manager"/>
+					<m:ObjectStatus title="Position CL" text="22-27"/>
+					<m:ObjectStatus title="Position Location" text="United States"/>
+					<m:ObjectStatus title="Position Supervisor" text="John Doe"/>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<m:ObjectStatus title="Council" text="Test Council - 19"/>
+					<m:ObjectStatus title="Business Line" text="Information Technology - Projects"/>
+					<m:ObjectStatus title="Business Unit" text="Information Technology - Integrated Talent Management Contact"/>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<m:ObjectStatus title="Incumbent" text="Chris Evans (610020203)" />
+					<m:ObjectStatus title="Changed By" text="John Miller"/>
+					<m:ObjectStatus title="Changed On" text="February 20, 2020" />
+				</layout:VerticalLayout>
 				
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Job Family:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" Projects"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Country:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" United States"/>
-					</m:HBox>
-
-					<m:HBox>
-						<m:Label text="CL Range:" class="sapUiTinyMarginEnd"/>
-						<m:Link text=" 26 - 27" press="onExternalApplicationLinkPress"/>
-					</m:HBox>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Sub Function:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" Information Technology - Projects"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Department:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" Information Technology - Integrated Talent Management Contact"/>
-					</m:HBox>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom">
-						<m:Label text="Created By:" class="sapUiSmallMarginEnd"/>
-						<m:Link text="Julie Armstrong" press="handleTitleSelectorPress"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Created On:" class="sapUiSmallMarginEnd"/>
-						<m:Text text=" February 20, 2020"/>
-					</m:HBox>
-
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom">
-						<m:Label text="Changed By:" class="sapUiSmallMarginEnd"/>
-						<m:Link text="John Miller" press="handleTitleSelectorPress"/>
-					</m:HBox>
-
-					<m:HBox renderType="Bare">
-						<m:Label text="Changed On:" class="sapUiSmallMarginEnd"/>
-						<m:Text text=" February 20, 2020"/>
-					</m:HBox>
-				</m:VBox>
+					<!-- Lead Candidate
+					Need Status -->
 
 			</m:FlexBox>
 		</headerContent>
 
 		<sections>
-		
+		<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="EditNeed" title="Edit Need">
+			<subSections>
+				<!-- <ObjectPageSubSection title="Facilitator Reference Details">
+					<blocks>
+						<info:EditNeedFacilitatorReference class="sapUiTinyMarginTop" />
+					</blocks>
+				</ObjectPageSubSection>
+				<ObjectPageSubSection title="Position Information">
+					<blocks>
+						<info:EditNeedPositionInformation class="sapUiTinyMarginTop" />
+					</blocks>
+				</ObjectPageSubSection>
+				<ObjectPageSubSection title="Employee Move Details">
+					<blocks>
+						<info:EditNeedEmployeeMove class="sapUiTinyMarginTop" />
+					</blocks>
+				</ObjectPageSubSection>
+			
+				<ObjectPageSubSection title="Talent Mobility">
+					<blocks>
+						<info:EditNeedTalentMobility class="sapUiTinyMarginTop" />
+					</blocks>
+				</ObjectPageSubSection>
+				<ObjectPageSubSection title="GPAT Integration" class="sapUiTinyMarginBottom">
+					<blocks>
+						<info:EditNeedGPAT />
+					</blocks>
+				</ObjectPageSubSection> -->
+			</subSections>
+		</ObjectPageSection>
 			
 
-		<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="Candidate" title="Candidate" class="bgcolorops">
+		<ObjectPageSection titleUppercase="false" id="Candidate" title="Candidate" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Candidate" showTitle="false">
 						<blocks>
@@ -134,7 +134,7 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection  titleUppercase="false" id="Overview" title="Overview"  class="bgcolorops"> 
+			<!-- <ObjectPageSection  titleUppercase="false" id="Overview" title="Overview"  class="bgcolorops"> 
 				<subSections>
 					<ObjectPageSubSection title="Overview" showTitle="false">
 						<blocks>
@@ -142,7 +142,7 @@
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
-			</ObjectPageSection>
+			</ObjectPageSection> -->
 
 
 
@@ -211,17 +211,7 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection titleUppercase="false" id="Checklist" title="Checklist" class="bgcolorops">
-				<subSections>
-					<ObjectPageSubSection title="Checklist" showTitle="false">
-						<blocks>
-							<info:Checklist />
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-
-			<ObjectPageSection titleUppercase="false" id="Discussion" title="Discussion" class="bgcolorops">
+			<!-- <ObjectPageSection titleUppercase="false" id="Discussion" title="Discussion" class="bgcolorops">
 				<subSections>
 					<ObjectPageSubSection title="Discussion" showTitle="false">
 						<blocks>
@@ -229,7 +219,7 @@
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
-			</ObjectPageSection>
+			</ObjectPageSection> -->
 
 			<ObjectPageSection titleUppercase="false" id="StatusHistory" title="Status History" class="bgcolorops">
 				<subSections>
@@ -241,11 +231,11 @@
 				</subSections>
 			</ObjectPageSection>
 		</sections>
-		<footer>
+		<!-- <footer>
 			<m:Toolbar >
 				<m:ToolbarSpacer />
 				<m:Button text="Edit Need" icon="sap-icon://edit" type="Success" press="onEditNeedPress"/>
 			</m:Toolbar>
-		</footer>
+		</footer> -->
 	</ObjectPageLayout>
 </mvc:View>

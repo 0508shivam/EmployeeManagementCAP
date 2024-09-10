@@ -1,40 +1,70 @@
 <mvc:View
-	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form"
-	xmlns="sap.m">
+    xmlns="sap.m"
+>
     <VBox class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormChangeColumn_oneGroup"
-			editable="true"
-			layout="ColumnLayout" >
-			<f:content>
-				<Label text="Duration" />
-				<Input value="{SupplierName}" editable="true" required="true" />
-				<Label text="Expat Reason" />
-				<TextArea value="{Street}" editable="true" required="true"/>
-				<Label text="Assignment Type" />
-				<Input value="{HouseNumber}" editable="true" required="true">
-				</Input>
-				<Label text="Domestic Relocation Required?" />
-					<Switch state="false" customTextOn="Yes" customTextOff="No" >
-				<layoutData>
-					<FlexItemData growFactor="1" />
-				</layoutData>
-			</Switch>
-				<Label text="Domestic Relocation Type" />
-				<Input value="{HouseNumber}" editable="true" required="true">
-				</Input>
+        <f:SimpleForm
+            id="EditNeedSimpleForm4"
+            editable="true"
+            layout="ColumnLayout"
+        >
+            <f:content>
+                <Label text="Duration" />
+                <Input
+                    value="{SupplierName}"
+                    editable="true"
+                    required="true"
+                />
+                <Label text="Expat Reason" />
+                <TextArea
+                    value="{Street}"
+                    editable="true"
+                    required="true"
+                />
+                <Label text="Assignment Type" />
+                <Input
+                    value="{HouseNumber}"
+                    editable="true"
+                    required="true"
+                />
+                <Label text="Domestic Relocation Required?" />
+                <Switch
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                >
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </Switch>
+                <Label text="Domestic Relocation Type" />
+                <Input
+                    value="{HouseNumber}"
+                    editable="true"
+                    required="true"
+                />
                 <Label text="Is employee repatriating to Home Country?" />
-					<Switch state="false" customTextOn="Yes" customTextOff="No">
-				<layoutData>
-					<FlexItemData growFactor="1" />
-				</layoutData>
-			</Switch>
+                <Switch
+                    state="false"
+                    customTextOn="Yes"
+                    customTextOff="No"
+                >
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </Switch>
                 <Label text="Rotational Schedule" />
-				<Input value="{HouseNumber}" editable="true" required="true">
-				</Input>
-			</f:content>
-		</f:SimpleForm>
-	</VBox>
+                <Input
+                    value="{HouseNumber}"
+                    editable="true"
+                    required="true"
+                />
+				<Label text="Notes for Data Management" />
+				<TextArea value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." growing="true" width="100%" />
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
 </mvc:View>

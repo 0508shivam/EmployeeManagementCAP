@@ -1,43 +1,77 @@
 <mvc:View
-	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form"
-	xmlns="sap.m">
+    xmlns="sap.m"
+>
     <VBox class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormChangeColumn_oneGroup"
-			editable="true"
-			layout="ColumnLayout" >
-			<f:content>
-				<Label text="Position Contact"/>
-				<Input value="John Mayer" editable="true" required="true" />
-				<Label text="Position Details" />
-				<TextArea value="XYZABS" editable="true" />
-				<Label text="Target Next Assignment Date" />
-				<Input value="Q1+2025" editable="false">
-				</Input>
-				<Label text="Current Incumbent" />
-				<Input value="Luke Combs" editable="false">
-				</Input>
-				<Label text="Incumbent Status" />
-				<ComboBox required="false">
-				<items>
-				<core:Item key="1" text="In-progress" />
-				</items>
-			</ComboBox>
-				<Label text="Incumbent Council" />
-				<Input value="Council ABS" editable="false" />
-				<Label text="Incumbent Council Lead Facilitator" />
-				<Input value="John Wright" editable="false"/>
-				<Label text="Origin" />
-				<ComboBox required="false">
-				<items>
-				<core:Item key="1" text="Planned" />
-				</items>
-			</ComboBox>
-				<Label text="Order" />
-				<Input value="Free text" editable="true"/>
-			</f:content>
-		</f:SimpleForm>
-	</VBox>
+        <f:SimpleForm
+            id="EditNeedSimpleForm2"
+            editable="true"
+            layout="ColumnLayout"
+        >
+            <f:content>
+                <Label text="Position Contact" />
+                <Input
+                    value="John Mayer"
+                    editable="true"
+                    required="true"
+                />
+                <Label text="Position Details" />
+                <TextArea
+                    value="XYZABS"
+                    editable="true"
+                />
+                <Label text="Target Next Assignment Date" />
+                <Input
+                    value="Q1+2025"
+                    editable="false"
+                />
+                <Label text="Current Incumbent" />
+                <Input
+                    value="Luke Combs"
+                    editable="false"
+                />
+                <Label text="Incumbent Status" />
+                <ComboBox required="false">
+                    <items>
+                        <core:Item
+                            key="1"
+                            text="In-progress"
+                        />
+                    </items>
+                </ComboBox>
+				<Label text="Incumbent Target Effective Date" />
+                <Input
+                    value="Q1+2025"
+                    editable="true"
+                />
+                <Label text="Incumbent Council" />
+                <Input
+                    value="Council ABS"
+                    editable="false"
+                />
+                <Label text="Incumbent Council Lead Facilitator" />
+                <Input
+                    value="John Wright"
+                    editable="false"
+                />
+                <Label text="Origin" />
+                <ComboBox required="false">
+                    <items>
+                        <core:Item
+                            key="1"
+                            text="Planned"
+                        />
+                    </items>
+                </ComboBox>
+                <Label text="Order" />
+                <Input
+                    value="Free text"
+                    editable="true"
+                />
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
 </mvc:View>

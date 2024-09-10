@@ -75,7 +75,7 @@
 						{
 						  "type": "Navigation",
 						  "parameters": {
-							"url": "#/main/{name}",
+							"url": "#/rosters/{name}",
 							"target": "_self"
 						  }
 						}

@@ -5,14 +5,14 @@
     xmlns:f="sap.ui.layout.form"
 	xmlns="sap.m">
     <VBox class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormChangeColumn_oneGroup"
+		<f:SimpleForm id="EditNeedSimpleForm3"
 			editable="true"
 			layout="ColumnLayout" >
 			<f:content>
 				<Label text="Local Position Title" />
 				<Input value="Free Text" editable="true" required="true" />
 				<Label text="EC Position Title" />
-				<TextArea value="Engineer 1" editable="false"/>
+				<Input value="Engineer 1" editable="false"/>
 				<Label text="Job Tier" />
 				<ComboBox required="true">
 				<items>
@@ -46,6 +46,8 @@
 				<Input value="USA" editable="false" />
                 <Label text="City" />
 				<Input value="Houston"  editable="true" required="true"/>
+				<Label text="Site Name" />
+				<Input value="XYZ"  editable="true" required="true"/>
                 <Label text="Facility" />
 				<Input value="North Houston" editable="true" required="true" />
 			</f:content>

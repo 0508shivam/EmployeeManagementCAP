@@ -15,7 +15,7 @@
             class="sapUiContentPadding"
             width="100%"
         >
-            <Breadcrumbs>
+            <!-- <Breadcrumbs>
                 <Link
                     press="onPressHome"
                     text="Home"
@@ -62,7 +62,7 @@
 			<Page
 				id="p2"
 				showHeader="false">
-				
+				 -->
                 <f:GridList
                     id="GridList"
                     itemPress="_handleItemPress"
@@ -131,9 +131,13 @@
                                         <core:Icon src="sap-icon://appointment" class="sapUiTinyMarginEnd" />
                                         <Label text="{subtitle}" class="sapUiTinyMarginBottom" tooltip="Target Date" />
                                     </HBox>
-                                    <HBox>
+                                    <HBox class="sapUiTinyMarginBottom">
                                         <core:Icon src="sap-icon://manager" class="sapUiTinyMarginEnd" />
                                         <Label text="{supervisor}" tooltip="Supervisor" />
+                                    </HBox>
+                                    <HBox>
+                                        <core:Icon src="sap-icon://people-connected" class="sapUiTinyMarginEnd" />
+                                        <Label text="{council}" tooltip="Council" />
                                     </HBox>
                                     <HBox class="sapUiTinyMarginTop">
                                         <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd" />
@@ -155,8 +159,8 @@
                         </f:Card>
                     </f:GridListItem>
                 </f:GridList>
-				</Page>
-            </NavContainer>
+				<!-- </Page>
+            </NavContainer> -->
         </l:VerticalLayout>
     </Page>
 </mvc:View>

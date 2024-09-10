@@ -10,86 +10,289 @@
     controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.sharedBlocks.postPMGController">
 
     <!-- Wizard for the Post-PMG process -->
-    <Button id="postPMG"
+  <l:VerticalLayout width="inherit">
+    <FlexBox alignItems="Center" justifyContent="Center" width="inherit">
+        <Button
+            id="postPMG"
             text="Kick Off Post PMG"
-            press="onKickOffPress">
-    </Button>
-    <List id="postPMGActivities"
-          visible="{viewModel>/isKickOffPmg}">
+            press="onKickOffPress"
+            type="Emphasized"
+        />
+    </FlexBox>
+    <List
+        id="postPMGActivities"
+        visible="{viewModel>/isKickOffPmg}"
+    >
         <items>
             <CustomListItem>
-                <Panel headerText="LINA and Export Controls" expandable="true" expanded="false">
+                <Panel
+                    headerText="LINA and Export Controls"
+                    expandable="true"
+                    expanded="false"
+                >
                     <headerToolbar>
                         <Toolbar>
-                            <Title text="LITNA and Export Controls" level="H2" />
+                            <Title
+                                text="LITNA and Export Controls"
+                                level="H2"
+                            />
                             <ToolbarSpacer />
-                        <ObjectStatus text="Completed" state="Success"></ObjectStatus>    
+                            <ObjectStatus
+                                text="Completed"
+                                state="Success"
+                            />
                         </Toolbar>
                     </headerToolbar>
                     <content>
                         <VBox class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormDisplay480_Trial"
-			editable="false"
-			layout="ResponsiveGridLayout"
-			title="Details"
-			labelSpanXL="4"
-			labelSpanL="4"
-			labelSpanM="4"
-			labelSpanS="12"
-			adjustLabelSpan="false"
-			emptySpanXL="0"
-			emptySpanL="0"
-			emptySpanM="0"
-			emptySpanS="0"
-			columnsXL="3"
-			columnsL="2"
-			columnsM="2"
-			singleContainerFullSize="false" >
-            <f:toolbar>
-            <Toolbar>
-        <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-            <Title text="Details"></Title>
-            <Button text="Process Guidance" icon="sap-icon://learning-assistant" type="Emphasized" />
-        </HBox>
-        </Toolbar>
-    </f:toolbar>
-			<f:content>
-				<core:Title text="Current Assignment Information" />
-				<Label text="Current Home Pay" />
-				<Text text="USA" />
-				<Label text="Current Host Pay" />
-				<Text text="USA" />
-				<core:Title text="New Position Information" />
-				<Label text="Position Title" />
-				<Text text="Sales Manager, Chemicals" />
-				<Label text="Function" />
-				<Text text="Industries" />
-				<Label text="Country of Position" />
-                <Text text="USA" />
-				<core:Title text="Employee Information" />
-				<Label text="Nationality" />
-                <Text text="USA" />
-                <Label text="LITNA" />
-                <Text text="No data" />
-                <Label text="LITNA Last Modified" />
-                <Text text="No data" />
-			</f:content>    
-		</f:SimpleForm>      
-        <Toolbar>
-            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-            <Title text="" />
-                    <Button text="Acknowledge and Skip Process" icon="sap-icon://approvals" type="Emphasized"/>
-            </HBox>
-        </Toolbar>
-        <List>
-        <items>
+                            <f:SimpleForm
+                                id="SimpleFormDisplay480_Trial"
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                title="Details"
+                                labelSpanXL="4"
+                                labelSpanL="4"
+                                labelSpanM="4"
+                                labelSpanS="12"
+                                adjustLabelSpan="false"
+                                emptySpanXL="0"
+                                emptySpanL="0"
+                                emptySpanM="0"
+                                emptySpanS="0"
+                                columnsXL="3"
+                                columnsL="2"
+                                columnsM="2"
+                                singleContainerFullSize="false"
+                            >
+                                <f:toolbar>
+                                    <Toolbar>
+                                        <HBox
+                                            alignItems="Center"
+                                            justifyContent="SpaceBetween"
+                                            width="100%"
+                                        >
+                                            <Title text="Details" />
+                                            <Button
+                                                text="Process Guidance"
+                                                icon="sap-icon://learning-assistant"
+                                                type="Emphasized"
+                                            />
+                                        </HBox>
+                                    </Toolbar>
+                                </f:toolbar>
+                                <f:content>
+                                    <core:Title
+                                        text="Current Assignment Information"
+                                    />
+                                    <Label text="Current Home Pay" />
+                                    <Text text="USA" />
+                                    <Label text="Current Host Pay" />
+                                    <Text text="USA" />
+                                    <core:Title
+                                        text="New Position Information"
+                                    />
+                                    <Label text="Position Title" />
+                                    <Text text="Sales Manager, Chemicals" />
+                                    <Label text="Function" />
+                                    <Text text="Industries" />
+                                    <Label text="Country of Position" />
+                                    <Text text="USA" />
+                                    <core:Title text="Employee Information" />
+                                    <Label text="Nationality" />
+                                    <Text text="USA" />
+                                    <Label text="LITNA" />
+                                    <Text text="No data" />
+                                    <Label text="LITNA Last Modified" />
+                                    <Text text="No data" />
+                                </f:content>
+                            </f:SimpleForm>
+                            <Toolbar>
+                                <HBox
+                                    alignItems="Center"
+                                    justifyContent="SpaceBetween"
+                                    width="100%"
+                                >
+                                    <Title text="" />
+                                    <Button
+                                        text="Acknowledge and Skip Process"
+                                        icon="sap-icon://approvals"
+                                        type="Emphasized"
+                                    />
+                                </HBox>
+                            </Toolbar>
+                            <List>
+                                <items>
+                                    <CustomListItem>
+                                        <Panel
+                                            headerText="Execute LITNA Review/Request"
+                                            expandable="true"
+                                            expanded="false"
+                                        >
+                                            <content>
+                                                <f:SimpleForm
+                                                    id="SimpleForm_LITNA"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    title=""
+                                                    labelSpanXL="4"
+                                                    labelSpanL="4"
+                                                    labelSpanM="4"
+                                                    labelSpanS="12"
+                                                    adjustLabelSpan="false"
+                                                    emptySpanXL="0"
+                                                    emptySpanL="0"
+                                                    emptySpanM="0"
+                                                    emptySpanS="0"
+                                                    columnsXL="3"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                    singleContainerFullSize="false"
+                                                >
+                                                    <f:content>
+                                                        <Label
+                                                            text="Sending Supervisor"
+                                                        />
+                                                        <Input
+                                                            id="sendingSupervisor"
+                                                            placeholder="Enter Name"
+                                                            showValueHelp="true"
+                                                        />
+                                                        <Label text="CC List" />
+                                                        <Input
+                                                            id="ccList"
+                                                            placeholder="Enter CC recepients"
+                                                            showValueHelp="true"
+                                                        />
+                                                        <Label
+                                                            text="Comments to Recepient"
+                                                        />
+                                                        <Input
+                                                            id="comments"
+                                                            placeholder="Leave a comment for LITNA request recipient"
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                                <Toolbar>
+                                                    <HBox
+                                                        alignItems="Center"
+                                                        justifyContent="SpaceBetween"
+                                                        width="100%"
+                                                    >
+                                                        <Title text="" />
+                                                        <Button
+                                                            text="Request LITNA"
+                                                            icon="sap-icon://approvals"
+                                                            type="Emphasized"
+                                                            class="buttonColor"
+                                                        />
+                                                    </HBox>
+                                                </Toolbar>
+                                            </content>
+                                        </Panel>
+                                    </CustomListItem>
+                                </items>
+                            </List>
+                            <List>
+                                <items>
+                                    <CustomListItem>
+                                        <Panel
+                                            headerText="Execute Export Controls Review"
+                                            expandable="true"
+                                            expanded="false"
+                                        >
+                                            <content>
+                                                <f:SimpleForm
+                                                    id="SimpleForm_ExportControls"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    title=""
+                                                    labelSpanXL="4"
+                                                    labelSpanL="4"
+                                                    labelSpanM="4"
+                                                    labelSpanS="12"
+                                                    adjustLabelSpan="false"
+                                                    emptySpanXL="0"
+                                                    emptySpanL="0"
+                                                    emptySpanM="0"
+                                                    emptySpanS="0"
+                                                    columnsXL="3"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                    singleContainerFullSize="false"
+                                                >
+                                                    <f:content>
+                                                        <Label
+                                                            text="Receiving Supervisor"
+                                                        />
+                                                        <Input
+                                                            id="receivingSupervisor"
+                                                            placeholder="Enter Name"
+                                                            showValueHelp="true"
+                                                        />
+                                                        <Label text="CC List" />
+                                                        <Input
+                                                            id="ccTo"
+                                                            placeholder="Enter CC recepients"
+                                                            showValueHelp="true"
+                                                        />
+                                                        <Label
+                                                            text="Comments to Recepient"
+                                                        />
+                                                        <Input
+                                                            id="recepientsComments"
+                                                            placeholder="Leave a comment for Export Controls request's recipient"
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                                <Toolbar>
+                                                    <HBox
+                                                        alignItems="Center"
+                                                        justifyContent="SpaceBetween"
+                                                        width="100%"
+                                                    >
+                                                        <Title text="" />
+                                                        <Button
+                                                            text="Request Export Controls Review"
+                                                            icon="sap-icon://approvals"
+                                                            type="Emphasized"
+                                                            class="buttonColor"
+                                                        />
+                                                    </HBox>
+                                                </Toolbar>
+                                            </content>
+                                        </Panel>
+                                    </CustomListItem>
+                                </items>
+                            </List>
+                        </VBox>
+                    </content>
+                </Panel>
+            </CustomListItem>
             <CustomListItem>
-                <Panel headerText="Execute LITNA Review/Request" expandable="true" expanded="false" >
+                <Panel
+                    headerText="Sending Organization - Notify Employee"
+                    expandable="true"
+                    expanded="false"
+                >
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title
+                                text="Sending Organization - Notify Employee"
+                                level="H2"
+                            />
+                            <ToolbarSpacer />
+                            <ObjectStatus
+                                text="Ready to Start"
+                                state="Information"
+                            />
+                        </Toolbar>
+                    </headerToolbar>
                     <content>
-                       <f:SimpleForm id="SimpleForm_LITNA"
+                        <f:SimpleForm
+                            id="SimpleFormDisplay_Email"
                             editable="false"
                             layout="ResponsiveGridLayout"
-                            title=""
+                            title="Details"
                             labelSpanXL="4"
                             labelSpanL="4"
                             labelSpanM="4"
@@ -102,227 +305,166 @@
                             columnsXL="3"
                             columnsL="2"
                             columnsM="2"
-                            singleContainerFullSize="false" >
+                            singleContainerFullSize="false"
+                        >
                             <f:content>
-                                <Label text="Sending Supervisor" />
+                                <Label text="Sending Org Contact" />
                                 <Input
-                                    id="sendingSupervisor"
+                                    id="sendingOrgContactInput"
                                     placeholder="Enter Name"
-                                    showValueHelp="true" />
-                                <Label text="CC List" />
-                                <Input
-                                    id="ccList"
+                                    showValueHelp="true"
+                                />
+
+                                <Label text="Sender CC List" />
+                                <MultiInput
+                                    id="idccReceivingOrgMultiInput"
                                     placeholder="Enter CC recepients"
-                                    showValueHelp="true"/>
+                                    showValueHelp="true"
+                                    valueHelpRequest="_empSearchRequest"
+                                />
+
                                 <Label text="Comments to Recepient" />
-                                <Input
-                                                    id="comments"
-                                                    placeholder="Leave a comment for LITNA request recipient" />
+                                <TextArea
+                                    id="idSendingOrgRecipientComments"
+                                    value="{taskNotifSendingOrgJsonModel>/Comments}"
+                                    placeholder="Leave a comment for the Sending Organization's contact"
+                                    visible="true"
+                                    maxLength="1000"
+                                />
                             </f:content>
-            
-		</f:SimpleForm>
-         <Toolbar>
-            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-            <Title text="" />
-                    <Button text="Request LITNA" icon="sap-icon://approvals" type="Emphasized" class= "buttonColor"/>
-            </HBox>
-        </Toolbar>
+                            <f:toolbar>
+                                <Toolbar>
+                                    <HBox
+                                        alignItems="Center"
+                                        justifyContent="SpaceBetween"
+                                        width="100%"
+                                    >
+                                        <Title text="Actions" />
+                                        <HBox>
+                                            <Button
+                                                text="Save"
+                                                icon="sap-icon://save"
+                                                type="Emphasized"
+                                            />
+                                            <ToolbarSpacer width="10px" />
+                                            <Button
+                                                text="Notify Sending Org"
+                                                icon="sap-icon://marketing-campaign"
+                                                type="Emphasized"
+                                            />
+                                            <ToolbarSpacer width="10px" />
+                                            <Button
+                                                text="Delete Task"
+                                                icon="sap-icon://delete"
+                                                type="Emphasized"
+                                            />
+                                        </HBox>
+                                    </HBox>
+                                </Toolbar>
+                            </f:toolbar>
+                        </f:SimpleForm>
                     </content>
                 </Panel>
             </CustomListItem>
-        </items>
-        </List> 
-        <List>
-        <items>
             <CustomListItem>
-                <Panel headerText="Execute Export Controls Review" expandable="true" expanded="false" >
-                    <content>
-                       <f:SimpleForm id="SimpleForm_ExportControls"
-                            editable="false"
-                            layout="ResponsiveGridLayout"
-                            title=""
-                            labelSpanXL="4"
-                            labelSpanL="4"
-                            labelSpanM="4"
-                            labelSpanS="12"
-                            adjustLabelSpan="false"
-                            emptySpanXL="0"
-                            emptySpanL="0"
-                            emptySpanM="0"
-                            emptySpanS="0"
-                            columnsXL="3"
-                            columnsL="2"
-                            columnsM="2"
-                            singleContainerFullSize="false" >
-                            <f:content>
-                                <Label text="Receiving Supervisor" />
-                                <Input
-                                                    id="receivingSupervisor"
-                                                    placeholder="Enter Name"
-                                                    showValueHelp="true" />
-                                <Label text="CC List" />
-                                <Input
-                                                    id="ccTo"
-                                                    placeholder="Enter CC recepients"
-                                                    showValueHelp="true"/>
-                                <Label text="Comments to Recepient" />
-                                <Input
-                                                    id="recepientsComments"
-                                                    placeholder="Leave a comment for Export Controls request's recipient" />
-                            </f:content>
-            
-		</f:SimpleForm>
-        <Toolbar>
-            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-            <Title text="" />
-                    <Button text="Request Export Controls Review" icon="sap-icon://approvals" type="Emphasized" class= "buttonColor"/>
-            </HBox>
-        </Toolbar>
-                    </content>
-                </Panel>
-            </CustomListItem>
-        </items>
-        </List>        
-	</VBox>
-                    </content>       
-                </Panel>
-            </CustomListItem>
-            <CustomListItem>
-                <Panel headerText="Sending Organization - Notify Employee" expandable="true" expanded="false">
+                <Panel
+                    headerText="Receiving Organization - Position Validation"
+                    expandable="true"
+                    expanded="false"
+                >
                     <headerToolbar>
                         <Toolbar>
-                            <Title text="Sending Organization - Notify Employee" level="H2" />
+                            <Title
+                                text="Receiving Organization - Position Validation"
+                                level="H2"
+                            />
                             <ToolbarSpacer />
-                        <ObjectStatus text="Ready to Start" state="Information"></ObjectStatus>    
+                            <ObjectStatus
+                                text="Not Started"
+                                state="None"
+                            />
                         </Toolbar>
                     </headerToolbar>
                     <content>
-                <f:SimpleForm id="SimpleFormDisplay_Email"
-			editable="false"
-			layout="ResponsiveGridLayout"
-			title="Details"
-			labelSpanXL="4"
-			labelSpanL="4"
-			labelSpanM="4"
-			labelSpanS="12"
-			adjustLabelSpan="false"
-			emptySpanXL="0"
-			emptySpanL="0"
-			emptySpanM="0"
-			emptySpanS="0"
-			columnsXL="3"
-			columnsL="2"
-			columnsM="2"
-			singleContainerFullSize="false" >
+                        <VBox class="sapUiSmallMargin">
+                            <f:SimpleForm
+                                id="SimpleFormChangeDual"
+                                editable="true"
+                                layout="ResponsiveGridLayout"
+                                title="Position Validation"
+                                labelSpanXL="4"
+                                labelSpanL="4"
+                                labelSpanM="12"
+                                labelSpanS="12"
+                                adjustLabelSpan="false"
+                                emptySpanXL="0"
+                                emptySpanL="0"
+                                emptySpanM="0"
+                                emptySpanS="0"
+                                columnsXL="2"
+                                columnsL="2"
+                                columnsM="2"
+                                singleContainerFullSize="false"
+                            >
+                                <f:toolbar>
+                                    <Toolbar>
+                                        <HBox
+                                            alignItems="Center"
+                                            justifyContent="SpaceBetween"
+                                            width="100%"
+                                        >
+                                            <Title text="Actions" />
+                                            <HBox>
+                                                <Button
+                                                    text="Save"
+                                                    icon="sap-icon://save"
+                                                    type="Emphasized"
+                                                />
+                                                <ToolbarSpacer width="10px" />
+                                                <Button
+                                                    text="Notify Receiving Org"
+                                                    icon="sap-icon://marketing-campaign"
+                                                    type="Emphasized"
+                                                />
+                                                <ToolbarSpacer width="10px" />
+                                                <Button
+                                                    text="Delete Task"
+                                                    icon="sap-icon://delete"
+                                                    type="Emphasized"
+                                                />
+                                            </HBox>
+                                        </HBox>
+                                    </Toolbar>
+                                </f:toolbar>
+                                <f:content>
+                                    <Label text="Receiving Org Contact" />
+                                    <Input
+                                        id="receivingOrgContactInput"
+                                        placeholder="Enter Name"
+                                        showValueHelp="true"
+                                    />
+                                    <Label text="Receiving CC List" />
+                                    <MultiInput
+                                        placeholder="Enter CC recepients"
+                                        showValueHelp="true"
+                                        valueHelpRequest="_empSearchRequest"
+                                    />
 
-			<f:content>
-				<Label text="Sending Org Contact" />
-                <Input
-                    id="sendingOrgContactInput"
-                    placeholder="Enter Name"
-                    showValueHelp="true"/>
-
-				<Label text="Sender CC List" />
-                <MultiInput 
-                    id="ccReceivingOrgMultiInput" 
-                    placeholder="Enter CC recepients"
-
-                    showValueHelp="true" valueHelpRequest="_empSearchRequest"/>
-
-				<Label text="Comments to Recepient" />
-                <TextArea id="id_SendingOrgRecipientComments" 
-                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
-                    placeholder="Leave a comment for the Sending Organization's contact" 
-                    visible="true" maxLength="1000"/>
-
-	
-                
-			</f:content>
-            <f:toolbar>
-                <Toolbar>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-                        <Title text="Actions" />
-                        <HBox>
-                            <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
-                            <ToolbarSpacer width="10px"/>
-                            <Button text="Notify Sending Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
-                            <ToolbarSpacer width="10px"/>
-                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
-                        </HBox>
-                    </HBox>
-                </Toolbar>
-            </f:toolbar>
-		</f:SimpleForm>
-                    </content>
-                </Panel>
-            </CustomListItem>
-            <CustomListItem>
-                <Panel headerText="Receiving Organization - Position Validation" expandable="true" expanded="false">
-                    <headerToolbar>
-                        <Toolbar>
-                            <Title text="Receiving Organization - Position Validation" level="H2" />
-                            <ToolbarSpacer />
-                        <ObjectStatus text="Not Started" state="None"></ObjectStatus>     
-                        </Toolbar>
-                    </headerToolbar>
-                    <content>
-                        	<VBox class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormChange480_12120Dual"
-			editable="true"
-			layout="ResponsiveGridLayout"
-			title="Position Validation"
-			labelSpanXL="4"
-			labelSpanL="4"
-			labelSpanM="12"
-			labelSpanS="12"
-			adjustLabelSpan="false"
-			emptySpanXL="0"
-			emptySpanL="0"
-			emptySpanM="0"
-			emptySpanS="0"
-			columnsXL="2"
-			columnsL="2"
-			columnsM="2"
-			singleContainerFullSize="false" >
-            <f:toolbar>
-                <Toolbar>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
-                        <Title text="Actions" />
-                        <HBox>
-                            <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
-                            <ToolbarSpacer width="10px"/>
-                            <Button text="Notify Receiving Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
-                            <ToolbarSpacer width="10px"/>
-                            <Button text="Delete Task" icon="sap-icon://delete" type="Emphasized" />
-                        </HBox>
-                    </HBox>
-                </Toolbar>
-            </f:toolbar>
-			<f:content>
-				<Label text="Receiving Org Contact" />
-                <Input
-                    id="receivingOrgContactInput"
-                    placeholder="Enter Name"
-                    showValueHelp="true"/>
-				<Label text="Receiving CC List" />
-                <MultiInput 
-                    placeholder="Enter CC recepients"
-
-                    showValueHelp="true" valueHelpOnly="false" valueHelpRequest="_empSearchRequest"/>
-
-				<Label text="Comments to Recepient" />
-                <TextArea
-                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
-                    placeholder="Leave a comment for the Receiving Organization's contact" 
-                    visible="true" maxLength="1000"/>
-
-			</f:content>
- 
-		</f:SimpleForm>
-	    </VBox>
+                                    <Label text="Comments to Recepient" />
+                                    <TextArea
+                                        value="{taskNotifSendingOrgJsonModel>/Comments}"
+                                        placeholder="Leave a comment for the Receiving Organization's contact"
+                                        visible="true"
+                                        maxLength="1000"
+                                    />
+                                </f:content>
+                            </f:SimpleForm>
+                        </VBox>
                     </content>
                 </Panel>
             </CustomListItem>
         </items>
     </List>
+</l:VerticalLayout>
+
 </mvc:View>
