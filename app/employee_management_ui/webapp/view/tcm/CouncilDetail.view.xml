@@ -45,7 +45,7 @@
 
 		<!-- Content -->
 		<semantic:content>
-			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding" tabDensityMode="Compact" stretchContentHeight="true" applyContentPadding="false">
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" tabDensityMode="Compact" stretchContentHeight="true" applyContentPadding="true">
 			<items>
 				<IconTabFilter text="Members" icon="sap-icon://employee" key="members" count="{/Employees/length}">
 
@@ -118,7 +118,6 @@
 				<IconTabFilter text="Status History" icon="sap-icon://history" key="history" count="{/Employees/length}">
 					<c:Timeline
 						id="idTimelineforCM"
-						enableDoubleSided="true"
 						groupBy="HireDate"
 						growingThreshold="0"
 						filterTitle="Name"

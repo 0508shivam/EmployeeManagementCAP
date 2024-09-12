@@ -74,9 +74,6 @@
 					<m:ObjectStatus title="Changed By" text="John Miller"/>
 					<m:ObjectStatus title="Changed On" text="February 20, 2020" />
 				</layout:VerticalLayout>
-				
-					<!-- Lead Candidate
-					Need Status -->
 
 			</m:FlexBox>
 		</headerContent>
@@ -84,6 +81,297 @@
 		<sections>
 		<ObjectPageSection anchorBarButtonColor="Default" titleUppercase="false" id="EditNeed" title="Edit Need">
 			<subSections>
+				<ObjectPageSubSection>
+				<m:VBox class="sapUiSmallMargin">
+					<forms:SimpleForm
+					id="EditNeedSimpleFormERD"
+					title="Facilitator Reference Details"
+					editable="true"
+					layout="ColumnLayout" >
+					<forms:content>
+						<m:Label text="Position Contact" />
+						<m:Input
+							value="John Mayer"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Position Details" />
+						<m:TextArea
+							value="XYZABS"
+							editable="true"
+						/>
+						<m:Label text="Target Next Assignment Date" />
+						<m:Input
+							value="Q1+2025"
+							editable="false"
+						/>
+						<m:Label text="Current Incumbent" />
+						<m:Input
+							value="Luke Combs"
+							editable="false"
+						/>
+						<m:Label text="Incumbent Status" />
+						<m:ComboBox required="false" value="In Progress">
+							<m:items>
+								<core:Item
+									key="1"
+									text="In Progress"
+								/>
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Incumbent Target Effective Date" />
+						<m:Input
+							value="Q1+2025"
+							editable="true"
+						/>
+						<m:Label text="Incumbent Council" />
+						<m:Input
+							value="Council ABS"
+							editable="false"
+						/>
+						<m:Label text="Incumbent Council Lead Facilitator" />
+						<m:Input
+							value="John Wright"
+							editable="false"
+						/>
+						<m:Label text="Origin" />
+						<m:ComboBox required="false">
+							<m:items>
+								<core:Item
+									key="1"
+									text="Planned"
+								/>
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Order" />
+						<m:Input
+							value="Free text"
+							editable="true"
+						/>
+					</forms:content>
+				</forms:SimpleForm>
+				<forms:SimpleForm id="EditNeedSimpleFormPI"
+					title="Position Information"
+					editable="true"
+					layout="ColumnLayout" >
+					<forms:content>
+						<m:Label text="Local Position Title" />
+						<m:Input value="Free Text" editable="true" required="true" />
+						<m:Label text="EC Position Title" />
+						<m:Input value="Engineer 1" editable="false"/>
+						<m:Label text="Job Tier" />
+						<m:ComboBox required="true">
+							<m:items>
+							<core:Item key="1" text="Job Tier 1" />
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Job Role" />
+						<m:Input value="{HouseNumber}" editable="true" required="true" />
+						<m:Label text="Business" />
+						<m:ComboBox required="true">
+							<m:items>
+							<core:Item key="1" text="Business 1" />
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Business Line" />
+						<m:Input value="Business Line" editable="true" required="true" />
+						<m:Label text="Business Unit" />
+						<m:Input value="Business Unit" editable="true" required="true" />
+						<m:Label text="Functional Guidance" />
+						<m:Input value="FG Name" type="Url" editable="true" required="true"/>
+						<m:Label text="Admininstrative Supervisor" />
+						<m:Input value="AS Name" editable="true" required="true" />
+						<m:Label text="Company Code" />
+						<m:Input value="64532" editable="false"/>
+						<m:Label text="Cost Center" />
+						<m:Input value="CC0434" editable="true" required="true" />
+						<m:Label text="Country" />
+						<m:Input value="USA" editable="false" />
+						<m:Label text="City" />
+						<m:Input value="Houston"  editable="true" required="true"/>
+						<m:Label text="Site Name" />
+						<m:Input value="XYZ"  editable="true" required="true"/>
+						<m:Label text="Facility" />
+						<m:Input value="North Houston" editable="true" required="true" />
+					</forms:content>
+				</forms:SimpleForm>
+				<forms:SimpleForm
+					id="EditNeedSimpleFormNEM"
+					editable="true"
+					layout="ColumnLayout" 
+					title="Employee Move Details">
+					<forms:content>
+						<m:Label text="Target Effective Date" />
+						<m:Input
+							value="{SupplierName}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Worker Class" />
+						<m:ComboBox required="true">
+							<m:items>
+								<core:Item
+									key="1"
+									text="Regular"
+								/>
+								<core:Item
+									key="2"
+									text="Loan Out"
+								/>
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Capability Manager" />
+						<m:Input
+							value="{HouseNumber}"
+							editable="true"
+							required="false"
+						/>
+						<m:Label text="Capability Manager's Career Orientation" />
+						<m:Input
+							value="{Url}"
+							type="Url"
+							editable="false"
+						/>
+						<m:Label text="Aligned with Individual Development Plan" />
+						<m:Input
+							value="{Twitter}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Secondment to 3rd Party" />
+						<m:Input
+							value="{Twitter}"
+							editable="true"
+						/>
+						<m:Label text="Secondment Company" />
+						<m:Input
+							value="{Twitter}"
+							editable="true"
+						/>
+					</forms:content>
+				</forms:SimpleForm>
+				<forms:SimpleForm
+					id="EditNeedSimpleFormTM"
+					editable="true"
+					layout="ColumnLayout"
+					title="Talent Mobility">
+					<forms:content>
+						<m:Label text="Global Assignment" />
+						<m:Switch
+							state="false"
+							customTextOn="Yes"
+							customTextOff="No"
+						>
+							<m:layoutData>
+								<m:FlexItemData growFactor="1" />
+							</m:layoutData>
+						</m:Switch>
+						<m:Label text="Employee Group" />
+						<m:ComboBox required="true">
+							<m:items>
+								<core:Item
+									key="1"
+									text="Expatriate"
+								/>
+								<core:Item
+									key="2"
+									text="Rotator"
+								/>
+								<core:Item
+									key="3"
+									text="Transborder"
+								/>
+								<core:Item
+									key="4"
+									text="Regular"
+								/>
+							</m:items>
+						</m:ComboBox>
+						<m:Label text="Duration" />
+						<m:Input
+							value="{SupplierName}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Expat Reason" />
+						<m:TextArea
+							value="{Street}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Assignment Type" />
+						<m:Input
+							value="{HouseNumber}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Domestic Relocation Required?" />
+						<m:Switch
+							state="false"
+							customTextOn="Yes"
+							customTextOff="No"
+						>
+							<m:layoutData>
+								<m:FlexItemData growFactor="1" />
+							</m:layoutData>
+						</m:Switch>
+						<m:Label text="Domestic Relocation Type" />
+						<m:Input
+							value="{HouseNumber}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Is employee repatriating to Home Country?" />
+						<m:Switch
+							state="false"
+							customTextOn="Yes"
+							customTextOff="No"
+						>
+							<m:layoutData>
+								<m:FlexItemData growFactor="1" />
+							</m:layoutData>
+						</m:Switch>
+						<m:Label text="Rotational Schedule" />
+						<m:Input
+							value="{HouseNumber}"
+							editable="true"
+							required="true"
+						/>
+						<m:Label text="Notes for Data Management/ TMO" />
+						<m:TextArea value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." growing="true" width="100%" />
+					</forms:content>
+				</forms:SimpleForm>
+				 <forms:SimpleForm
+					id="EditNeedSimpleFormGPAT"
+					editable="true"
+					layout="ColumnLayout"
+					title="GPAT Integration">
+					<forms:content>
+						<m:Label text="Return from Leave" />
+						<m:Switch
+							state="false"
+							customTextOn="Yes"
+							customTextOff="No"
+						>
+							<m:layoutData>
+								<m:FlexItemData growFactor="1" />
+							</m:layoutData>
+						</m:Switch>
+						<m:Label text="Executive Move" />
+						<m:Switch
+							state="false"
+							customTextOn="Yes"
+							customTextOff="No"
+						>
+							<m:layoutData>
+								<m:FlexItemData growFactor="1" />
+							</m:layoutData>
+						</m:Switch>
+					</forms:content>
+				</forms:SimpleForm>
+				</m:VBox>
+			</ObjectPageSubSection>
+
 				<!-- <ObjectPageSubSection title="Facilitator Reference Details">
 					<blocks>
 						<info:EditNeedFacilitatorReference class="sapUiTinyMarginTop" />
@@ -231,11 +519,11 @@
 				</subSections>
 			</ObjectPageSection>
 		</sections>
-		<!-- <footer>
+		<footer>
 			<m:Toolbar >
 				<m:ToolbarSpacer />
 				<m:Button text="Edit Need" icon="sap-icon://edit" type="Success" press="onEditNeedPress"/>
 			</m:Toolbar>
-		</footer> -->
+		</footer>
 	</ObjectPageLayout>
 </mvc:View>

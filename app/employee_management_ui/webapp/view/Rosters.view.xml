@@ -40,11 +40,11 @@
         </Toolbar>
     </customHeader>
     <content>
-        <IconTabBar id="rosterTabBar" class="sapUiResponsiveContentPadding" visible="{= !!${/selectedCouncil} }" tabDensityMode="Compact" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="false">
+        <IconTabBar id="rosterTabBar" visible="{= !!${/selectedCouncil} }" tabDensityMode="Compact" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="true">
             <items>
             <!-- Position Roster Begins-->
                 <IconTabFilter icon="sap-icon://provision" key="positionRoster" text="Position">
-                    <table:Table class="sapUiSizeCompact" rows="{/PositionRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true">
+                    <table:Table rows="{/PositionRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true" enableCellFilter="true">
                     <table:extension>
                         <OverflowToolbar style="Clear">
                         <Title text="{i18n>PositionRoster}" />
@@ -181,11 +181,11 @@
                         <OverflowToolbar style="Clear">
                         <Title text="{i18n>EmployeeRoster}" />
                         <ToolbarSpacer />
-                        <Button id="addCandidateFromRoster" press="onAdd" text="Add Candidate" icon="sap-icon://add" type="Emphasized" />
+                        <Button id="addCandidateFromRoster" press="onAdd" text="Add Employee" icon="sap-icon://add" type="Emphasized" />
                         </OverflowToolbar>
                     </table:extension>
                     <table:rowMode>
-                        <rowmodes:Interactive />
+                        <rowmodes:Auto />
                     </table:rowMode>
                     <table:rowSettingsTemplate>
                         <table:RowSettings 

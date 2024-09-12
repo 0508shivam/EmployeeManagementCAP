@@ -9,8 +9,7 @@
         <f:SimpleForm
             id="SimpleFormChangeColumn_oneGroup"
             editable="true"
-            layout="ColumnLayout"
-        >
+            layout="ColumnLayout">
             <f:content>
                 <Label text="Return from Leave" />
                 <Switch

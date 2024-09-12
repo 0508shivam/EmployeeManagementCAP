@@ -9,8 +9,7 @@
         <f:SimpleForm
             id="EditNeedSimpleForm4"
             editable="true"
-            layout="ColumnLayout"
-        >
+            layout="ColumnLayout">
             <f:content>
                 <Label text="Duration" />
                 <Input
