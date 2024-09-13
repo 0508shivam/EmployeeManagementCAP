@@ -6,7 +6,7 @@
     xmlns:layout="sap.ui.layout"
     xmlns:sf="sap.ui.layout.form"
 >
-    <f:DynamicPage id="dynamicPageId" class="sapUiNoContentPadding" showFooter="true">
+    <f:DynamicPage id="NotificationdynamicPageId" class="sapUiNoContentPadding" showFooter="true">
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
@@ -82,7 +82,7 @@
                     </sf:content>
                 </sf:SimpleForm>
                 <sf:SimpleForm
-                    id="SimpleFormChange480-2"
+                    id="SimpleFormChange480-1"
                     editable="true"
                     layout="ResponsiveGridLayout"
                     title="Position Information"
@@ -138,7 +138,7 @@
                     </sf:content>
                 </sf:SimpleForm>
                 <sf:SimpleForm
-                    id="SimpleFormChange480-3"
+                    id="SimpleFormChange480-4"
                     editable="true"
                     layout="ResponsiveGridLayout"
                     title="Reporting Relationships"
@@ -164,7 +164,7 @@
                     </sf:content>
                 </sf:SimpleForm>
                 <sf:SimpleForm
-                    id="SimpleFormChange481"
+                    id="SimpleFormChange480-6"
                     layout="ResponsiveGridLayout"
                     adjustLabelSpan="false"
                     labelSpanXL="3" 

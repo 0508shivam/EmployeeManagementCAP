@@ -167,6 +167,11 @@
                     "pattern": "rosters",
                     "name": "rosters",
                     "target": "Rosters"
+                },
+                {
+                    "pattern": "rosters/{name}",
+                    "name": "PositionRoaster",
+                    "target": "Rosters" 
                 }
             ],
             "targets": {

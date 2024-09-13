@@ -45,7 +45,7 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 						"notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 					  },
 					  {
-						"origin": "Planned",
+						"origin": "Unplanned",
 						"targetNextAssignment": "Q2-2024",
 						"positionId": "23456799",
 						"functionalSupervisor": "Jane Smith",
@@ -125,7 +125,7 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 						"status": "Completed"
 					  },
 					  {
-						"origin": "Planned",
+						"origin": "Unplanned",
 						"targetNextAssignment": "Q3-2025",
 						"positionId": "23456804",
 						"functionalSupervisor": "Ethan Foster",
@@ -173,7 +173,7 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 						"status": "Completed"
 					  },
 					  {
-						"origin": "Planned",
+						"origin": "Unplanned",
 						"targetNextAssignment": "Q2-2026",
 						"positionId": "23456807",
 						"functionalSupervisor": "Hannah Johnson",

@@ -45,18 +45,79 @@
 
 		<!-- Content -->
 		<semantic:content>
-			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" tabDensityMode="Compact" stretchContentHeight="true" applyContentPadding="true">
 			<items>
-				<IconTabFilter text="Members" icon="sap-icon://employee" key="members">
-					<Text text="Info content goes here ..." />
+				<IconTabFilter text="Members" icon="sap-icon://employee" key="members" count="{/Employees/length}">
+
+					<List
+						id="CouncilMembersList"
+						items="{/Employees}"
+						includeItemInSelection="true"
+						mode="None"
+						width="100%">
+						<headerToolbar>
+							<OverflowToolbar>
+								<content>
+									<Title text="Council Members" level="H2"/>
+									<ToolbarSpacer />
+									<Button
+										icon="sap-icon://add-employee"
+										press="handleAddMember"
+										tooltip="Add Member" />
+									<Button
+										icon="sap-icon://delete"
+										press="handleDeleteMembers"
+										 />
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+						<ObjectListItem
+							title="{Name}"
+							iconDensityAware="false">
+							<firstStatus>
+								<ObjectStatus text="{role}" icon="{path: 'role', formatter: '.formatCouncilMemberIcon' }" />
+							</firstStatus>
+							<ObjectAttribute text="{role}" />
+						</ObjectListItem>
+					</List>
+
 				</IconTabFilter>
 				<IconTabFilter text="Pending" icon="sap-icon://pending" key="pending" count="3">
-					<Text text="Attachments go here ..." />
+					<List
+						id="CouncilPendingList"
+						items="{/Employees}"
+						includeItemInSelection="true"
+						mode="None"
+						width="100%">
+						<headerToolbar>
+							<OverflowToolbar>
+								<content>
+									<Title text="Pending Council Requests" level="H2"/>
+									<ToolbarSpacer />
+									<Button
+										icon="sap-icon://delete"
+										press="handleDeleteRequests"
+										 />
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+						<ObjectListItem
+							title="{Name}"
+							iconDensityAware="false">
+							<firstStatus>
+								<ObjectStatus text="{role}" />
+							</firstStatus>
+							<secondStatus>
+								<ObjectStatus title="Status" text="{status}" state="{path: 'status', formatter: '.formatter.approvalStage'}" />
+							</secondStatus>
+							<ObjectAttribute text="{path: 'changedOn', type: 'sap.ui.model.type.Date'}" />
+							<ObjectAttribute text="{changedBy}" />
+						</ObjectListItem>
+					</List>
 				</IconTabFilter>
-				<IconTabFilter text="Status History" icon="sap-icon://history" key="history" count="12">
+				<IconTabFilter text="Status History" icon="sap-icon://history" key="history" count="{/Employees/length}">
 					<c:Timeline
-						id="idTimeline"
-						enableDoubleSided="true"
+						id="idTimelineforCM"
 						groupBy="HireDate"
 						growingThreshold="0"
 						filterTitle="Name"
@@ -65,7 +126,7 @@
 						content="{/Employees}">
 					<c:content>
 						<c:TimelineItem
-								id="idTemplateItem"
+								id="idTimelineItem"
 								dateTime="{HireDate}"
 								text="{JobResponsibilities}"
 								userNameClickable="true"
@@ -79,6 +140,18 @@
 			</items>
 			</IconTabBar>
 		</semantic:content>
+		
+		<semantic:titleCustomTextActions>
+			<Button id="idCouncilEdit" icon="sap-icon://edit" text="Update" />
+		</semantic:titleCustomTextActions>
+
+		<semantic:titleCustomTextActions>
+			<Button id="idCouncilDelete" icon="sap-icon://delete" text="Delete" />
+		</semantic:titleCustomTextActions>
+
+		<semantic:titleCustomIconActions>
+			<OverflowToolbarButton id="idCouncilHint" icon="sap-icon://hint" />
+		</semantic:titleCustomIconActions>
 
 	</semantic:SemanticPage>
 

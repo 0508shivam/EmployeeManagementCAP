@@ -21,7 +21,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Target date required",
                         "location": "West Adam",
-                        "supervisor": "Mrs. Regina Henry"
+                        "supervisor": "Mrs. Regina Henry",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "Production Manager",
@@ -32,7 +33,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "East Joseph",
-                        "supervisor": "John Jennings"
+                        "supervisor": "John Jennings",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "SDA Anayst",
@@ -43,7 +45,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Target date required",
                         "location": "East Larryville",
-                        "supervisor": "Scott Bryant"
+                        "supervisor": "Scott Bryant",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -54,7 +57,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30+ days",
                         "location": "East Martin",
-                        "supervisor": "Samantha Garcia"
+                        "supervisor": "Samantha Garcia",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -65,7 +69,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Target date required",
                         "location": "East Karenfort",
-                        "supervisor": "Rick Mckinney"
+                        "supervisor": "Rick Mckinney",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "Project Manager",
@@ -76,7 +81,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Bradshire",
-                        "supervisor": "Scott Cole"
+                        "supervisor": "Scott Cole",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "Production Manager",
@@ -87,7 +93,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "West Sharonside",
-                        "supervisor": "Katherine Lambert"
+                        "supervisor": "Katherine Lambert",
+                        "council": "Test Council - 19"
                     },
                     {
                         "title": "SDA Anayst",
@@ -98,7 +105,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Target date required",
                         "location": "Tiffanyburgh",
-                        "supervisor": "Stephen Maldonado"
+                        "supervisor": "Stephen Maldonado",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -109,7 +117,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Target date required",
                         "location": "East Gregory",
-                        "supervisor": "Angela Davila MD"
+                        "supervisor": "Angela Davila MD",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -120,7 +129,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Port Shawnchester",
-                        "supervisor": "Diane Morgan"
+                        "supervisor": "Diane Morgan",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Project Manager",
@@ -131,7 +141,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "South Ericaside",
-                        "supervisor": "Trevor Stewart"
+                        "supervisor": "Trevor Stewart",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Production Manager",
@@ -142,7 +153,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Lake Franciscobury",
-                        "supervisor": "Joseph Gates"
+                        "supervisor": "Joseph Gates",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "SDA Anayst",
@@ -153,7 +165,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30 days",
                         "location": "North Terriland",
-                        "supervisor": "John Le"
+                        "supervisor": "John Le",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -164,7 +177,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30 days",
                         "location": "Allenfurt",
-                        "supervisor": "Autumn Cisneros"
+                        "supervisor": "Autumn Cisneros",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -175,7 +189,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Petersborough",
-                        "supervisor": "April Newton"
+                        "supervisor": "April Newton",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Project Manager",
@@ -186,7 +201,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "New Eddie",
-                        "supervisor": "John Mccarty"
+                        "supervisor": "John Mccarty",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "Production Manager",
@@ -197,7 +213,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "West Matthewbury",
-                        "supervisor": "Cheryl Sullivan"
+                        "supervisor": "Cheryl Sullivan",
+                        "council": "Test Council - 26"
                     },
                     {
                         "title": "SDA Anayst",
@@ -208,7 +225,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Craigbury",
-                        "supervisor": "Abigail Miller"
+                        "supervisor": "Abigail Miller",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -219,7 +237,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30 days",
                         "location": "East Kim",
-                        "supervisor": "Megan Cameron"
+                        "supervisor": "Megan Cameron",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -230,7 +249,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Johnsonmouth",
-                        "supervisor": "Alan Solis"
+                        "supervisor": "Alan Solis",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Project Manager",
@@ -241,7 +261,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Lake Bryanmouth",
-                        "supervisor": "Eddie Patterson"
+                        "supervisor": "Eddie Patterson",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Production Manager",
@@ -252,7 +273,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30+ days",
                         "location": "West Patricia",
-                        "supervisor": "Pamela Hunt"
+                        "supervisor": "Pamela Hunt",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "SDA Anayst",
@@ -263,7 +285,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30 days",
                         "location": "Whiteport",
-                        "supervisor": "Shannon Howard"
+                        "supervisor": "Shannon Howard",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -274,7 +297,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30 days",
                         "location": "Robertburgh",
-                        "supervisor": "Karen Joseph"
+                        "supervisor": "Karen Joseph",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -285,7 +309,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Walkerville",
-                        "supervisor": "Emily Johnson"
+                        "supervisor": "Emily Johnson",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Project Manager",
@@ -296,7 +321,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Morrowland",
-                        "supervisor": "Michael Conley"
+                        "supervisor": "Michael Conley",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Production Manager",
@@ -307,7 +333,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "New Jesse",
-                        "supervisor": "Melinda Jackson"
+                        "supervisor": "Melinda Jackson",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "SDA Anayst",
@@ -318,7 +345,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "New Yvonne",
-                        "supervisor": "Ashley Bell"
+                        "supervisor": "Ashley Bell",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -329,7 +357,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30 days",
                         "location": "West Damonburgh",
-                        "supervisor": "Linda Cooper"
+                        "supervisor": "Linda Cooper",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -340,7 +369,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30 days",
                         "location": "Lake Amber",
-                        "supervisor": "Jeffrey Gibson"
+                        "supervisor": "Jeffrey Gibson",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Project Manager",
@@ -351,7 +381,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Russellville",
-                        "supervisor": "Cameron Waller"
+                        "supervisor": "Cameron Waller",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "Production Manager",
@@ -362,7 +393,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"In progress",
                         "dueDate": "Due in 30 days",
                         "location": "Russellville",
-                        "supervisor": "Cameron Waller"
+                        "supervisor": "Cameron Waller",
+                        "council": "Test Council - 007"
                     },
                     {
                         "title": "SDA Anayst",
@@ -373,7 +405,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Due in 30+ days",
                         "location": "Burtonside",
-                        "supervisor": "Traci Glover"
+                        "supervisor": "Traci Glover",
+                        "council": "Test Council - 786"
                     },
                     {
                         "title": "CareerConnect Vendor Manager",
@@ -384,7 +417,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" :"Pending Endorser",
                         "dueDate": "Due in 30 days",
                         "location": "Michelleside",
-                        "supervisor": "Christopher Hill"
+                        "supervisor": "Christopher Hill",
+                        "council": "Test Council - 786"
                     },
                     {
                         "title": "Beaumont Engineering Services",
@@ -395,7 +429,8 @@ function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
                         "status" : "Pending review",
                         "dueDate": "Target date required",
                         "location": "North Colin",
-                        "supervisor": "Pamela Day"
+                        "supervisor": "Pamela Day",
+                        "council": "Test Council - 786"
                     }
                 ],
                 "ExtendedView":{

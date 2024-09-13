@@ -58,7 +58,8 @@
         <tnt:NavigationList id="_IDGenNavigationList1">
             <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Home" icon="sap-icon://home" expanded="true" href="#/home" key="home" />
             <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Needs" icon="sap-icon://activity-items" href="#/main" key="Main" />
-            <tnt:NavigationListItem id="_IDGenNavigationListItem3" text="Rosters" icon="sap-icon://table-view" href="#/rosters" key="rosters" /> 
+            <tnt:NavigationListItem id="_IDGenNavigationListItem6" text="Position Authorization" icon="sap-icon://shield" href="#/position-auth" key="positionAuthorization" />
+            <!-- <tnt:NavigationListItem id="_IDGenNavigationListItem3" text="Rosters" icon="sap-icon://table-view" href="#/rosters" key="rosters" />  -->
             <tnt:NavigationListItem id="_IDGenNavigationListItem4" text="My Tasks" icon="sap-icon://activity-assigned-to-goal" href="#/my-tasks" key="my-tasks" />
             <tnt:NavigationListItem id="_IDGenNavigationListItem5" text="Manage Councils" icon="sap-icon://group" href="#/manage-councils" key="manageCouncils" />
         </tnt:NavigationList>
