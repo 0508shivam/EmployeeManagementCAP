@@ -235,7 +235,8 @@
                     placeholder="Leave a comment for the Sending Organization's contact" 
                     visible="true" maxLength="1000"/>
 
-	
+                <Label/>
+                <CheckBox text="Automate notification"/>
                 
 			</f:content>
             <f:toolbar>
@@ -328,7 +329,7 @@
                     showValueHelp="true" valueHelpRequest="_empSearchRequest"
                 />
 
-                <Label ></Label>
+                <Label/>
                 <CheckBox text="Automate notification"/>
 
 			</f:content>
