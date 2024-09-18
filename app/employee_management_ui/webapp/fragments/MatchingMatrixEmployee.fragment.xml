@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:mm="sap.deloitte.employeemanagement.employeemanagementui.control" 
+	xmlns:core="sap.ui.core">
+	<mm:MM_ResponsivePopover
+		id="sID_Employee_Popover"
+		title="{oModelForMatrix>sHeader} ({oModelForMatrix>sProperty})"
+		class="sapUiContentPadding"
+		placement="Auto" >
+		<mm:content>
+			<VBox items="{oModelForMatrix>aEmpData}">
+				<VBox class="sapUiSmallMarginBottom">
+					<Label text="{oModelForMatrix>sLabel}:"/>
+					<ObjectNumber number="{oModelForMatrix>sProperty}" state="Information"/>
+				</VBox>
+			</VBox>
+		</mm:content>
+		<mm:endButton>
+			<Button text="Close" press="_handleCloseCandidate">
+				<customData>
+					<core:CustomData key="sProperty" value="{oModelForMatrix>sProperty}" />
+				</customData>
+			</Button>
+		</mm:endButton>
+	</mm:MM_ResponsivePopover>
+</core:FragmentDefinition>

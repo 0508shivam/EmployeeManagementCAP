@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:mm="sap.deloitte.employeemanagement.employeemanagementui.control" 
+	xmlns:core="sap.ui.core">
+	<ResponsivePopover
+		id="sID_TalentPool_Popover"
+		title="Talent Pool: {oModelForMatrix>/SelectedTalentPool/Position}"
+		class="sapUiContentPadding"
+		placement="Auto" >
+		<content>
+			<VBox items="{oModelForMatrix>/SelectedTalentPool/aTalentPoolData}">
+				<VBox class="sapUiSmallMarginBottom">
+					<Label text="{oModelForMatrix>candidateName}"/>
+				</VBox>
+			</VBox>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

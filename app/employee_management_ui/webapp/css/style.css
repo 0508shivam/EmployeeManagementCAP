@@ -73,3 +73,20 @@
 .iconColor:hover .sapUiIcon{
     color: #0C479D !important;
 }
+
+.sCss_mm .sapUiCandidate {
+    font-size: .75rem !important;
+} 
+
+.sCss_mm .sapUiSeparator {
+    border-bottom: .0625rem solid #e5e5e5;
+    background-color: #fff;
+}
+
+.sCss_mm .sapUiLeadCaseButton .sapMBtnCustomIcon {
+    display: none !important;
+}
+
+.sCss_mm .sapUiNoBorder{
+    border-bottom: none !important;
+}
