@@ -323,46 +323,30 @@
                                     valueHelpRequest="_empSearchRequest"
                                 />
 
-                                <Label text="Comments to Recepient" />
-                                <TextArea
-                                    id="idSendingOrgRecipientComments"
-                                    value="{taskNotifSendingOrgJsonModel>/Comments}"
-                                    placeholder="Leave a comment for the Sending Organization's contact"
-                                    visible="true"
-                                    maxLength="1000"
-                                />
-                            </f:content>
-                            <f:toolbar>
-                                <Toolbar>
-                                    <HBox
-                                        alignItems="Center"
-                                        justifyContent="SpaceBetween"
-                                        width="100%"
-                                    >
-                                        <Title text="Actions" />
-                                        <HBox>
-                                            <Button
-                                                text="Save"
-                                                icon="sap-icon://save"
-                                                type="Emphasized"
-                                            />
-                                            <ToolbarSpacer width="10px" />
-                                            <Button
-                                                text="Notify Sending Org"
-                                                icon="sap-icon://marketing-campaign"
-                                                type="Emphasized"
-                                            />
-                                            <ToolbarSpacer width="10px" />
-                                            <Button
-                                                text="Delete Task"
-                                                icon="sap-icon://delete"
-                                                type="Emphasized"
-                                            />
-                                        </HBox>
-                                    </HBox>
-                                </Toolbar>
-                            </f:toolbar>
-                        </f:SimpleForm>
+				<Label text="Comments to Recepient" />
+                <TextArea id="id_OrgRecipientComments" 
+                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
+                    placeholder="Leave a comment for the Sending Organization's contact" 
+                    visible="true" maxLength="1000"/>
+
+	
+                
+			</f:content>
+            <f:toolbar>
+                <Toolbar>
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+                        <Title text="Actions" />
+                        <HBox>
+                            <Button text="Save" icon="sap-icon://save" type="Emphasized"/>
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Notify Sending Org" icon="sap-icon://marketing-campaign" type="Emphasized" />
+                            <ToolbarSpacer width="10px"/>
+                            <Button text="Delete Task" icon="sap-icon://delete" type="Reject" />
+                        </HBox>
+                    </HBox>
+                </Toolbar>
+            </f:toolbar>
+		</f:SimpleForm>
                     </content>
                 </Panel>
             </CustomListItem>
@@ -450,16 +434,27 @@
                                         valueHelpRequest="_empSearchRequest"
                                     />
 
-                                    <Label text="Comments to Recepient" />
-                                    <TextArea
-                                        value="{taskNotifSendingOrgJsonModel>/Comments}"
-                                        placeholder="Leave a comment for the Receiving Organization's contact"
-                                        visible="true"
-                                        maxLength="1000"
-                                    />
-                                </f:content>
-                            </f:SimpleForm>
-                        </VBox>
+				<Label text="Comments to Recepient" />
+                <TextArea
+                    value="{taskNotifSendingOrgJsonModel>/Comments}" 
+                    placeholder="Leave a comment for the Receiving Organization's contact" 
+                    visible="true" maxLength="1000"/>
+
+                <Label text="Announcement Initiator" />
+                <Input
+                    id="announcementInitiator"
+                    placeholder=""
+                    value=""
+                    showValueHelp="true" valueHelpRequest="_empSearchRequest"
+                />
+
+                <Label/>
+                <CheckBox text="Automate notification"/>
+
+			</f:content>
+ 
+		</f:SimpleForm>
+	    </VBox>
                     </content>
                 </Panel>
             </CustomListItem>
