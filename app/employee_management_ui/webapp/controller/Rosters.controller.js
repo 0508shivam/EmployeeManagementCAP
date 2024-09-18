@@ -1529,9 +1529,9 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 										"oModelForMatrix>selected"
 									],
 									formatter: function(jr ,suc, re, se){  
-										if(se.includes(mEmployee.employeeId) && re) {
+										if(se && se.includes(mEmployee.employeeId) && re) {
 											return "Success";
-										} else if (se.includes(mEmployee.employeeId)) {
+										} else if (se && se.includes(mEmployee.employeeId)) {
 											return "Accept";
 										} else if (mEmployee.employeeId === suc){
 											return "Emphasized";
@@ -1550,9 +1550,9 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 										"oModelForMatrix>ready"
 									],
 									formatter: function(se, re){ 
-										if (se.includes(mEmployee.employeeId) && re) {
+										if (se && se.includes(mEmployee.employeeId) && re) {
 											return "sap-icon://employee";
-										} else if(se.includes(mEmployee.employeeId) && !re) {
+										} else if(se && se.includes(mEmployee.employeeId) && !re) {
 											return "sap-icon://employee-rejections";
 										} else {
 											return "sap-icon://employee-approvals";
@@ -1565,9 +1565,9 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 										"oModelForMatrix>ready"
 									],
 									formatter: function(se, re){  
-										if (se.includes(mEmployee.employeeId) && re) {
+										if (se && se.includes(mEmployee.employeeId) && re) {
 											return "green";
-										} else if(se.includes(mEmployee.employeeId) && !re) {
+										} else if(se && se.includes(mEmployee.employeeId) && !re) {
 											return "red";
 										} else {
 											return "#0064d9";
@@ -1710,7 +1710,7 @@ function(Controller, JSONModel, Fragment, Filter, FilterOperator){
 		},
 
 		_switchToReady: function (oEvent) {
-			var state = oEvent.getSource().getParameters().state;
+			var state = oEvent.getParameter("state")
 			var oModelForMatrix = this.getView().getModel("oModelForMatrix");
 			var sPath = oEvent.getSource().getBindingContext("oModelForMatrix").getPath();
 			var mPosDataLocal = oModelForMatrix.getProperty(sPath);
