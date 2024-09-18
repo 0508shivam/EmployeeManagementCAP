@@ -44,7 +44,7 @@
             <items>
             <!-- Position Roster Begins-->
                 <IconTabFilter icon="sap-icon://provision" key="positionRoster" text="Position">
-                    <table:Table rows="{/PositionRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true" enableCellFilter="true">
+                    <table:Table fixedColumnCount="4" rows="{/PositionRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true" enableCellFilter="true">
                     <table:extension>
                         <OverflowToolbar style="Clear">
                         <Title text="{i18n>PositionRoster}" />
@@ -54,42 +54,77 @@
                         <rowmodes:Auto />
                     </table:rowMode>
                     <table:rowSettingsTemplate>
-                        <table:RowSettings 
+                        <table:RowSettings
                             highlight="{
                                 path: 'status',
                                 formatter: '.formatAvailableToObjectState'
-                            }" 
+                            }"
                         highlightText="{StatusText}"/>
                     </table:rowSettingsTemplate>
                     <table:columns>
-                        <table:Column width="6rem">
-                            <Label text="Origin" />
+                    <table:Column width="5rem">
+                            <Label text="Progress" />
                             <table:template>
-                                <Text text="{origin}" wrapping="false" />
+                                <HBox height="3rem">
+                                <CheckBox selected="false" class="" />
+                                </HBox>
                             </table:template>
                         </table:Column>
-                        <table:Column width="13rem">
+                        <table:Column width="8rem">
+                            <Label text="Reassign" />
+                            <table:template>
+                                <Select selectedKey="{/selectedCouncil/CouncilID}" items="{/Councils}">
+                                    <core:Item text="{CouncilName}" key="{CouncilID}"/>
+                                </Select>
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="5rem">
+                            <Label text="Remove" />
+                            <table:template>
+                                <Button icon="sap-icon://delete" type="Reject" />
+                            </table:template>
+                        </table:Column>
+                           <table:Column width="12rem">
+                            <Label text="Position Title" />
+                            <table:template>
+                                <Text text="{positionTitle}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="11rem">
+                            <Label text="Position Status" />
+                            <table:template>
+                                <!-- <Text text="{status}" wrapping="true" /> -->
+                                <ObjectStatus text="{status}" state="{ path: 'status', formatter: '.formatAvailableToObjectState' }" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="11rem">
+                            <Label text="Incumbent Status" />
+                            <table:template>
+                                <Text text="{statusOfIncumbent}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="9rem">
+                            <Label text="Incumbent" />
+                            <table:template>
+                                <Text text="{positionId}" wrapping="false" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="13rem">
                             <Label text="Target Next Assignment Year" />
                             <table:template>
                                 <Text text="{targetNextAssignment}" wrapping="false" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="9rem">
+                        <!-- <table:Column width="9rem">
                             <Label text="Position ID" />
                             <table:template>
                                 <Text text="{positionId}" wrapping="false" />
-                            </table:template>
-                        </table:Column>
+                            </table:template> -->
+                        <!-- </table:Column> -->
                         <table:Column width="11rem">
                             <Label text="Functional Supervisor" />
                             <table:template>
                                 <Text text="{functionalSupervisor}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="12rem">
-                            <Label text="Position Title" />
-                            <table:template>
-                                <Text text="{positionTitle}" wrapping="true" />
                             </table:template>
                         </table:Column>
                         <table:Column width="11rem">
@@ -98,16 +133,16 @@
                                 <Text text="{capability}" wrapping="true" />
                             </table:template>
                         </table:Column>
+                         <table:Column width="11rem">
+                            <Label text="Job Tier" />
+                            <table:template>
+                                <Text text="{jobTier}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
                         <table:Column width="11rem">
                             <Label text="Job Role" />
                             <table:template>
                                 <Text text="{jobRole}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Job Tier" />
-                            <table:template>
-                                <Text text="{jobTier}" wrapping="true" />
                             </table:template>
                         </table:Column>
                         <table:Column width="8rem">
@@ -128,28 +163,52 @@
                                 <Text text="{bussiness}" wrapping="true" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Status of Incumbent" />
+                        <table:Column width="6rem">
+                            <Label text="Origin" />
                             <table:template>
-                                <Text text="{statusOfIncumbent}" wrapping="true" />
+                                <Text text="{origin}" wrapping="false" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Status" />
+                        <table:Column width="14rem">
+                            <Label text="Notes" />
                             <table:template>
-                                <!-- <Text text="{status}" wrapping="true" /> -->
-                                <ObjectStatus text="{status}" state="{ path: 'status', formatter: '.formatAvailableToObjectState' }" />
+                                <TextArea value="{notes}" growing="true" width="100%" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="5rem">
+                    </table:columns>
+                    </table:Table>
+                </IconTabFilter>
+            <!-- Position Roster Begins-->
+ 
+            <!-- Employee Roster Begins-->
+                <IconTabFilter icon="sap-icon://workflow-tasks" key="employeeRoster" text="Employee">
+                    <table:Table fixedColumnCount="4" rows="{/EmployeeRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true">
+                    <table:extension>
+                        <OverflowToolbar style="Clear">
+                        <Title text="{i18n>EmployeeRoster}" />
+                        <ToolbarSpacer />
+                        <Button id="addCandidateFromRoster" press="onAdd" text="Add Employee" icon="sap-icon://add" type="Emphasized" />
+                        </OverflowToolbar>
+                    </table:extension>
+                    <table:rowMode>
+                        <rowmodes:Auto />
+                    </table:rowMode>
+                    <table:rowSettingsTemplate>
+                        <table:RowSettings
+                            highlight="{
+                                path: 'status',
+                                formatter: '.formatAvailableToObjectState'
+                            }"
+                        highlightText="{StatusText}"/>
+                    </table:rowSettingsTemplate>
+                    <table:columns>
+                    <table:Column width="5rem">
                             <Label text="Progress" />
                             <table:template>
-                                <HBox height="3rem">
-                                <CheckBox selected="false" class="" />
-                                </HBox>
+                                <CheckBox selected="false" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="12rem">
+                        <table:Column width="8rem">
                             <Label text="Reassign" />
                             <table:template>
                                 <Select selectedKey="{/selectedCouncil/CouncilID}" items="{/Councils}">
@@ -163,43 +222,22 @@
                                 <Button icon="sap-icon://delete" type="Reject" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="14rem">
-                            <Label text="Notes" />
+                        <table:Column width="9rem">
+                            <Label text="Employee Name" />
                             <table:template>
-                                <TextArea value="{notes}" growing="true" width="100%" />
+                                <Text text="{employeeName}" wrapping="false" />
                             </table:template>
                         </table:Column>
-                    </table:columns>
-                    </table:Table>
-                </IconTabFilter>
-            <!-- Position Roster Begins-->
-
-            <!-- Employee Roster Begins-->
-                <IconTabFilter icon="sap-icon://workflow-tasks" key="employeeRoster" text="Employee">
-                    <table:Table rows="{/EmployeeRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true">
-                    <table:extension>
-                        <OverflowToolbar style="Clear">
-                        <Title text="{i18n>EmployeeRoster}" />
-                        <ToolbarSpacer />
-                        <Button id="addCandidateFromRoster" press="onAdd" text="Add Employee" icon="sap-icon://add" type="Emphasized" />
-                        </OverflowToolbar>
-                    </table:extension>
-                    <table:rowMode>
-                        <rowmodes:Auto />
-                    </table:rowMode>
-                    <table:rowSettingsTemplate>
-                        <table:RowSettings 
-                            highlight="{
-                                path: 'status',
-                                formatter: '.formatAvailableToObjectState'
-                            }" 
-                        highlightText="{StatusText}"/>
-                    </table:rowSettingsTemplate>
-                    <table:columns>
-                        <table:Column width="6rem">
-                            <Label text="Origin" />
+                        <table:Column width="11rem">
+                            <Label text="Employee Status" />
                             <table:template>
-                                <Text text="{origin}" wrapping="false" />
+                                <ObjectStatus text="{status}" state="{ path: 'status', formatter: '.formatAvailableToObjectState' }" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="11rem">
+                            <Label text="Current Position Status" />
+                            <table:template>
+                                <Text text="{statusOfCurrentPos}" wrapping="true" />
                             </table:template>
                         </table:Column>
                         <table:Column width="13rem">
@@ -208,46 +246,64 @@
                                 <Text text="{targetNextAssignment}" wrapping="false" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="9rem">
-                            <Label text="Employee Name" />
+                          <table:Column width="13rem">
+                            <Label text="Target Next Assignment Job Role" />
                             <table:template>
-                                <Text text="{employeeName}" wrapping="false" />
+                                <Text text="Job Role 1" wrapping="false" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Supervisor Name" />
+                         <table:Column width="13rem">
+                            <Label text="Target Next Assignment Work Experience" />
+                            <table:template>
+                                <Text text="{targetNextAssignment}" wrapping="false" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="11rem">
+                            <Label text="Career Orientation" />
+                            <table:template>
+                                <Text text="{careerOrientation}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="7rem">
+                            <Label text="Potential" />
+                            <table:template>
+                                <Text text="{potential}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="9rem">
+                            <Label text="Current CL" />
+                            <table:template>
+                                <Text text="{currentCL}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                               <table:Column width="11rem">
+                            <Label text="Functional Supervisor" />
                             <table:template>
                                 <Text text="{supervisorName}" wrapping="true" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="12rem">
+                         <table:Column width="12rem">
                             <Label text="Current Position Title" />
                             <table:template>
                                 <Text text="{positionTitle}" wrapping="true" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="9rem">
-                            <Label text="Current CL" />
+                         <table:Column width="11rem">
+                            <Label text="Current Job Tier" />
                             <table:template>
-                                <Text text="{currentCL}" wrapping="true" />
+                                <Text text="{jobTier}" wrapping="true" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="11rem">
+                            <Label text="Current Job Role" />
+                            <table:template>
+                                <Text text="Job Role 1" wrapping="true" />
                             </table:template>
                         </table:Column>
                         <table:Column width="10rem">
                             <Label text="Current Location" />
                             <table:template>
                                 <Text text="{location}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Current Job Role" />
-                            <table:template>
-                                <Text text="{jobRole}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Current Job Tier" />
-                            <table:template>
-                                <Text text="{jobTier}" wrapping="true" />
                             </table:template>
                         </table:Column>
                         <table:Column width="10rem">
@@ -262,60 +318,10 @@
                                 <Text text="{MGI}" wrapping="true" />
                             </table:template>
                         </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Career Orientation" />
+                         <table:Column width="6rem">
+                            <Label text="Origin" />
                             <table:template>
-                                <Text text="{careerOrientation}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="7rem">
-                            <Label text="Potential" />
-                            <table:template>
-                                <Text text="{potential}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="12rem">
-                            <Label text="Next Assignment Job Role" />
-                            <table:template>
-                                <Text text="{nextAssignmentJobRole}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="12rem">
-                            <Label text="Next Assignment Target Work Experience" />
-                            <table:template>
-                                <Text text="{nextAssignmentTargetWorkExp}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Status of Current Position" />
-                            <table:template>
-                                <Text text="{statusOfCurrentPos}" wrapping="true" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="11rem">
-                            <Label text="Status" />
-                            <table:template>
-                                <ObjectStatus text="{status}" state="{ path: 'status', formatter: '.formatAvailableToObjectState' }" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="5rem">
-                            <Label text="Progress" />
-                            <table:template>
-                                <CheckBox selected="false" />
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="7rem">
-                            <Label text="Reassign" />
-                            <table:template>
-                                <Select selectedKey="{/selectedCouncil/CouncilID}" items="{/Councils}">
-                                    <core:Item text="{CouncilName}" key="{CouncilID}"/>
-                                </Select>
-                            </table:template>
-                        </table:Column>
-                        <table:Column width="5rem">
-                            <Label text="Remove" />
-                            <table:template>
-                                <Button icon="sap-icon://delete" type="Reject" />
+                                <Text text="{origin}" wrapping="false" />
                             </table:template>
                         </table:Column>
                         <table:Column width="14rem">
@@ -328,7 +334,7 @@
                     </table:Table>
                 </IconTabFilter>
             <!-- Employee Roster Ends-->
-
+ 
                 <IconTabFilter
                     icon="sap-icon://excel-attachment"
                     key="matchingMatrix"
@@ -338,9 +344,9 @@
             </items>
         </IconTabBar>
         <IllustratedMessage id="illustratedMessageID" visible="{= !${/selectedCouncil} }"
-					illustrationType="{= ${/inputPopulated} ? 'sapIllus-ErrorScreen' : 'sapIllus-SearchFolder' }"
-					title="{= ${/inputPopulated} ? ${i18n>NotFoundTitle} : ${i18n>EnterCouncil} }"
-					description="{= ${/inputPopulated} ? ${i18n>NotFoundDescription} : ${i18n>EnterCouncilDescription} }"/>
+                    illustrationType="{= ${/inputPopulated} ? 'sapIllus-ErrorScreen' : 'sapIllus-SearchFolder' }"
+                    title="{= ${/inputPopulated} ? ${i18n>NotFoundTitle} : ${i18n>EnterCouncil} }"
+                    description="{= ${/inputPopulated} ? ${i18n>NotFoundDescription} : ${i18n>EnterCouncilDescription} }"/>
     </content>
 </Page>
 </mvc:View>

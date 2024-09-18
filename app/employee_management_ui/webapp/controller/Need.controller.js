@@ -276,6 +276,12 @@ function (Controller, JSONModel) {
                 this._oAddAuthorityDialog.destroy();
                 this._oAddAuthorityDialog = null;
             }
+        },
+
+        handleFooterVisibility: function(oEvent) {
+            var oNavTab = oEvent.getParameter("section").getProperty("title");
+            var oObjectPage = this.getView().byId("idNeedDetailsPageOPL");
+            oNavTab !== "Edit Need" ? oObjectPage.setShowFooter(false) : oObjectPage.setShowFooter(true);
         }
 
     });
