@@ -28,7 +28,7 @@
             <OverflowToolbar class="sapFDynamicPageAlignContent">
                 <SearchField search=".onSearch" width="50%"/>
                 <ToolbarSpacer/>
-                <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
+                <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".addCouncil"/>
             </OverflowToolbar>
             <List
                 id="CouncilList"

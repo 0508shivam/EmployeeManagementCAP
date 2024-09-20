@@ -221,7 +221,36 @@ function (Controller, JSONModel) {
                         "comments": "",
                         "talentPool": "Strategic Talent"
                     }
-                    
+                ],
+                "Authorites": [
+                    {
+                        "name": "Olivia Thompson",
+                        "role": "Endorser",
+                        "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png",
+                        "reviewStatus": "Reviewed",
+                        "infoState": "Success"
+                    },
+                    {
+                        "name": "Jessica Martinez",
+                        "role": "Final Reviewer",
+                        "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png",
+                        "reviewStatus": "Assigned",
+                        "infoState":"Error"
+                    },
+                    {
+                        "name": "Robert Anderson",
+                        "role": "Reviewer",
+                        "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png",
+                        "reviewStatus": "Rejected",
+                        "infoState": "Information"
+                    },
+                    {
+                        "name": "Laura Taylor",
+                        "role": "Reviewer",
+                        "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/uxap/images/imageID_275314.png",
+                        "reviewStatus": "Reviewed",
+                        "infoState": "Information"
+                    }
                 ]
             };
             var oModel = new JSONModel(mData);
@@ -241,7 +270,6 @@ function (Controller, JSONModel) {
             this._oAddCandidateDialog = new sap.ui.xmlfragment("_IDAddCandidate", 
             "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddCandidate", this);
             this.getView().addDependent(this._oAddCandidateDialog);
-            var oModel = this.getView().getModel();
             this._oAddCandidateDialog.open();
         },
 
@@ -264,7 +292,7 @@ function (Controller, JSONModel) {
         },
 
         onAddAuthority: function() {
-            this._oAddAuthorityDialog = new sap.ui.xmlfragment("_IDAddCandidate", 
+            this._oAddAuthorityDialog = new sap.ui.xmlfragment("_IDAddAuthorization", 
             "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddAuthorization", this);
             this.getView().addDependent(this._oAddAuthorityDialog);
             this._oAddAuthorityDialog.open();

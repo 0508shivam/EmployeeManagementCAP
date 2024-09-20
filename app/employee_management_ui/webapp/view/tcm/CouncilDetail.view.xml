@@ -37,8 +37,7 @@
 				</layout:VerticalLayout>
 
 				<layout:VerticalLayout>
-					<ObjectAttribute title="Status"/>
-					<ObjectStatus text="Updated" state="Success" />
+					<ObjectStatus title="Status" text="Updated" state="Success" />
 				</layout:VerticalLayout>
 			</layout:HorizontalLayout>
 		</semantic:headerContent>
@@ -142,7 +141,7 @@
 		</semantic:content>
 		
 		<semantic:titleCustomTextActions>
-			<Button id="idCouncilEdit" icon="sap-icon://edit" text="Update" />
+			<Button id="idCouncilEdit" icon="sap-icon://edit" text="Update" press="handleUpdateCouncil" />
 		</semantic:titleCustomTextActions>
 
 		<semantic:titleCustomTextActions>
@@ -150,7 +149,7 @@
 		</semantic:titleCustomTextActions>
 
 		<semantic:titleCustomIconActions>
-			<OverflowToolbarButton id="idCouncilHint" icon="sap-icon://hint" />
+			<OverflowToolbarButton id="idCouncilHint" icon="sap-icon://hint" press="handleDisplayHint" />
 		</semantic:titleCustomIconActions>
 
 	</semantic:SemanticPage>

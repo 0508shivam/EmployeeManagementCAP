@@ -41,16 +41,17 @@
         </Toolbar>
     </customHeader>
     <content>
-        <IconTabBar id="rosterTabBar" visible="{= !!${/selectedCouncil} }" tabDensityMode="Compact" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="true">
+        <IconTabBar id="rosterTabBar" visible="{= !!${/selectedCouncil} }" tabDensityMode="Compact" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="false">
             <items>
             <!-- Position Roster Begins-->
-                <IconTabFilter icon="sap-icon://provision" key="positionRoster" text="Position">
+                <IconTabFilter key="positionRoster" text="Position Roster">
+                    <!-- icon="sap-icon://provision" -->
                     <table:Table fixedColumnCount="4" rows="{/PositionRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true" enableCellFilter="true">
-                        <table:extension>
+                        <!-- <table:extension>
                             <OverflowToolbar style="Clear">
                             <Title text="{i18n>PositionRoster}" />
                             </OverflowToolbar>
-                        </table:extension>
+                        </table:extension> -->
                         <table:rowMode>
                             <rowmodes:Auto />
                         </table:rowMode>
@@ -182,11 +183,12 @@
             <!-- Position Roster Begins-->
  
             <!-- Employee Roster Begins-->
-                <IconTabFilter icon="sap-icon://workflow-tasks" key="employeeRoster" text="Employee">
+                <IconTabFilter  key="employeeRoster" text="Employee Roster">
+                    <!-- icon="sap-icon://workflow-tasks" -->
                     <table:Table fixedColumnCount="4" rows="{/EmployeeRoster}" ariaLabelledBy="title" selectionMode="None" alternateRowColors="true">
                         <table:extension>
                             <OverflowToolbar style="Clear">
-                            <Title text="{i18n>EmployeeRoster}" />
+                            <!-- <Title text="{i18n>EmployeeRoster}" /> -->
                             <ToolbarSpacer />
                             <Button id="addCandidateFromRoster" press="onAdd" text="Add Employee" icon="sap-icon://add" type="Emphasized" />
                             </OverflowToolbar>
@@ -337,9 +339,9 @@
             <!-- Employee Roster Ends-->
  
                 <IconTabFilter
-                    icon="sap-icon://excel-attachment"
                     key="matchingMatrix"
-                    text="Matrix">
+                    text="Matching Matrix">
+                    <!-- icon="sap-icon://excel-attachment" -->
                     <table:Table id="sId_MatchingMatrixTable" fixedColumnCount="4"
                         columns="{ path: 'oModelForMatrix>/aColumns', factory: '.createContent'}"
                         rows="{oModelForMatrix>/aRows}" rowMode="Auto"
@@ -365,7 +367,7 @@
                                         <FlexItemData
                                             growFactor="1"
                                             baseSize="0"
-                                            styleClass="sapUiTinyMarginBeginEnd sapUiSeparator" />
+                                            styleClass="sapUiSeparator" />
                                     </layoutData>
                                 </HBox>
                                 <HBox alignItems="Center">
@@ -387,7 +389,7 @@
                                         <FlexItemData
                                             growFactor="1"
                                             baseSize="0"
-                                            styleClass="sapUiTinyMarginBeginEnd sapUiSeparator" />
+                                            styleClass="sapUiSeparator" />
                                     </layoutData>
                                 </HBox>	
                             </VBox>

@@ -1,10 +1,19 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "../model/formatter"
+    "../model/formatter",
+    "sap/m/Dialog",
+    "sap/ui/layout/form/SimpleForm",
+    "sap/m/Label",
+    "sap/m/Input",
+    "sap/m/Button",
+    "sap/m/library",
+    "sap/m/MessageBox"
 ],
-    function (Controller, JSONModel, formatter) {
+    function (Controller, JSONModel, formatter, Dialog, SimpleForm, Label, Input, Button, mobileLibrary, MessageBox) {
         "use strict";
+
+        var ButtonType = mobileLibrary.ButtonType;
 
         return Controller.extend("sap.deloitte.employeemanagement.employeemanagementui.controller.CouncilDetail", {
 
@@ -111,6 +120,76 @@ sap.ui.define([
                     return 'sap-icon://private';
                 } else {
                     return "";
+                }
+            },
+
+            handleUpdateCouncil: function() {
+                if(!this.oUpdateCouncilDialog) {
+                    this.oUpdateCouncilDialog = new Dialog({
+                        title: "Update Council",
+                        content: new SimpleForm({
+                            editable: true,
+                            content: [ 
+                                new Label({
+                                    text: "Council Name"
+                                }),
+                                new Input({
+                                    placeholder: "Enter Council Name"
+                                })
+                            ]
+                        }),
+                        beginButton: new Button({
+                            type: ButtonType.Accept,
+                            text: "Submit",
+                            press: function() {
+                                this.oUpdateCouncilDialog.close();
+                            }.bind(this)
+                        }),
+                        endButton: new Button({
+                            type: ButtonType.Reject,
+                            text: "Close",
+                            press: function() {
+                                this.oUpdateCouncilDialog.close();
+                            }.bind(this)
+                        })
+                    });
+                    this.getView().addDependent(this.oUpdateCouncilDialog);
+                }
+                this.oUpdateCouncilDialog.open();
+            },
+
+            handleDisplayHint: function() {
+                
+            },
+
+            handleAddMember: function() {
+                this.oAddCouncilMemberDialog = new sap.ui.xmlfragment("_IDAddCouncilMember", 
+                    "sap.deloitte.employeemanagement.employeemanagementui.fragments.AddCouncilMember", this);
+                this.getView().addDependent(this.oAddCouncilMemberDialog);
+                this.oAddCouncilMemberDialog.open();
+            },
+
+            handleCloseAddCouncilMemberDialog: function() {
+                if (this.oAddCouncilMemberDialog) {
+                    this.oAddCouncilMemberDialog.close();
+                    this.oAddCouncilMemberDialog.destroy();
+                    this.oAddCouncilMemberDialog = null;
+                }
+            },
+
+            onAddCouncilMember: function() {
+                if (this.oAddCouncilMemberDialog) {
+                    this.oAddCouncilMemberDialog.close();
+                    MessageBox.show("Has the requested concil person has been trained using goto/councildboverview? Aditional material can also be foun at goto/counciltraining.", {
+                        icon: MessageBox.Icon.WARNING,
+                        title: "Training Confirmation",
+                        actions: [MessageBox.Action.YES, MessageBox.Action.CANCEL],
+                        emphasizedAction: MessageBox.Action.YES,
+                        onClose: function (sAction) {
+                            MessageBox.Action.CANCEL
+                        },
+                        dependentOn: this.getView()
+                    });
                 }
             }
 

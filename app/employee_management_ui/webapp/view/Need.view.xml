@@ -438,7 +438,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Authorization" showTitle="false">
 						<blocks>
-							<info:Authorizations />
+							<info:Authorizations addAuth="onAddAuthority" />
 							<!-- <m:HBox>
 					 			<m:HBox width="200px" class="AuthorizationList" alignItems="Center" alignContent="Center" justifyContent="Center">						
 									<m:VBox>
@@ -525,6 +525,7 @@
 			<m:Toolbar >
 				<m:ToolbarSpacer />
 				<m:Button text="Save" icon="sap-icon://sys-enter-2" type="Success" press="onEditNeedPress"/>
+				<m:Button text="Reset" icon="sap-icon://reset" type="Attention" press="onResetEditNeedPress"/>
 			</m:Toolbar>
 		</footer>
 	</ObjectPageLayout>
