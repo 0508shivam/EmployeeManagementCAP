@@ -28,6 +28,15 @@ function(Controller, JSONModel){
                         "state": "Success"
                     },
                     {
+                        "title" : "Position Appointment : Senior Principal",
+                        "name" : "Muhammad Solihin",
+                        "type" : "Active",
+                        "date" : "09/28/25",
+                        "message" : "Technology and Engineering - Geoscience",
+                        "status" : "Pending Review",
+                        "state" : "Error"
+                    },
+                    {
                         "title" : "Notify Employee & Confirm",
                         "name": "Stephine R Burdine",
                         "type": "Active",
@@ -71,6 +80,15 @@ function(Controller, JSONModel){
                         "message": "Due in 3 days",
                         "status": "Past Due",
                         "state": "Error"
+                    },
+                    {
+                        "title" : "Position Appointment : AI Engineer",
+                        "name" : "Heath Leadger",
+                        "type" : "Active",
+                        "date" : "09/03/25",
+                        "message" : "Technology and Engineering - AI",
+                        "status" : "Pending Review",
+                        "state" : "Error"
                     }
                 ]
             };
