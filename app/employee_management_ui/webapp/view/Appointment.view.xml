@@ -1,0 +1,199 @@
+<mvc:View
+    controllerName="sap.deloitte.employeemanagement.employeemanagementui.controller.Appointment"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:sf="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <f:DynamicPage id="Appointment_dynamicPageId" class="sapUiNoContentPadding" showFooter="true">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="Position Appointment Authorization"
+                    />
+                </f:heading>
+                <f:breadcrumbs>
+                    <Breadcrumbs>
+                        <Link press="onPress" text="Home"/>
+                        <Link press="onPress" text="My Tasks" />
+                        <currentLocation>
+                            <Link press="onPress" text="Position Appointment" />
+                        </currentLocation>
+                    </Breadcrumbs>
+                </f:breadcrumbs>
+                <f:expandedContent>
+                    <Label text="SENIOR PRINCIPAL" />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="SENIOR PRINCIPAL" />
+                </f:snappedContent>
+                <f:content>
+                    <OverflowToolbar>
+                        <GenericTag
+                            text="Due"
+                            status="Error"
+                            press=""
+                            design="StatusIconHidden"
+                        >
+                            <ObjectNumber
+                                number="2"
+                                unit="Days"
+                                emphasized="false"
+                                state="Error"
+                            />
+                        </GenericTag>
+                    </OverflowToolbar>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+        <IconTabBar id="Appointment_iconTabBar" expanded="true" class="sapUiResponsiveContentPadding">
+        <items>
+            <IconTabFilter icon="sap-icon://employee" key="info" text="Lead Case">
+				<sf:SimpleForm
+                    id="Appointment_SimpleFormChange480-2"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    title="Lead Case Details"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <sf:content>
+                        <Label text="Name" />
+                        <Text id="Appointment_employeeName" text="Muhammad Solihin" />
+                        <Label text="Personnel Number (Home)" />
+                        <Text id="Appointment_employeePernr" text="897652212" />
+                        <Label text="Effective Date" />
+                        <Text id="Appointment_effectiveDate" text="7th Sept, 2024"/>
+                    </sf:content>
+                </sf:SimpleForm>
+                <sf:SimpleForm
+                    id="Appointment_SimpleFormChange480-3"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    title="Additional Information"
+                    labelSpanXL="4"
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <sf:content>
+
+                        <core:Title text="Current Assignment" />
+                        <Label text="Position Title" />
+                        <Text text="Name" />
+                        <Label text="Business Line" />
+                        <Text text="Business Line" />
+                        <Label text="Business Unit" />
+                        <Text text="Business Unit" />
+                        <Label text="Functional Guidance" />
+                        <Text text="Functional Guidance" />
+                        <Label text="Admin Supervisor" />
+                        <Text text="Admin Supervisor" />
+                        <Label text="Capability Manager" />
+                        <Text text="Capability Manager" />
+
+                        <core:Title text="Proposed Assignment" />
+                        <Label text="Position Title" />
+                        <Text text="Position Title" />
+                        <Label text="Business Line" />
+                        <Text text="Business Line" />
+                        <Label text="Business Unit" />
+                        <Text text="Business Unit" />
+                        <Label text="Functional Guidance" />
+                        <Text text="Functional Guidance" />
+                        <Label text="Admin Supervisor" />
+                        <Text text="Admin Supervisor" />
+                        <Label text="Capability Manager" />
+                        <Text text="Capability Manager" />
+                        <Label text="Current Incumbent" />
+                        <Text text="Incumbent Name" />
+                        <Label text="Location (City/ Country)" />
+                        <Text text="Geneva, Switzerland" />
+
+                        <core:Title text="Reference Section" />
+                        <Label text="CL/ CL Date" />
+                        <Text text="17 / Jan 1, 2025" />
+                        <Label text="Potential" />
+                        <Text text="29" />
+                        <Label text="Career Orientation" />
+                        <Text text="Product Solutions" />
+                        <Label text="Aligned with IDP" />
+                        <Text text="Yes" />
+
+                        <core:Title text="Additional Assignment Information" />
+                        <Label text="Global Assignment" />
+                        <Text text="Global Assignment" />
+                        <Label text="Expat Assignment Type" />
+                        <Text text="Regular" />
+                        <Label text="Expat Reason" />
+                        <Text text="Expat Reason" />
+                        <Label text="Duration" />
+                        <Text text="5 years" />
+                        <Label text="Domestic Relocation" />
+                        <Text text="Domestic Relocation" />
+
+                        <core:Title text="Comments" />
+                        <Label text="Council Comments" />
+                        <TextArea rows="3" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." maxLength="1000"/>
+                        <Label text="Authority Comments" />
+                        <TextArea rows="3" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." maxLength="1000" />
+
+                    </sf:content>
+                </sf:SimpleForm>
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://approvals" key="attachments" text="Authorities">
+
+				<List headerText="Authorizations" items="{ path: '/Authorites', 
+        sorter: { path: 'role', descending: false, group: '.getRole'}, 
+        groupHeaderFactory: '.getGroupHeader'}">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Authorities" level="H1" />
+            </Toolbar>
+        </headerToolbar>
+            <StandardListItem
+				title="{name}"
+				description="{role}"
+                info="{reviewStatus}"
+                infoState="{infoState}"
+				iconDensityAware="false"
+				iconInset="false"
+				adaptTitleSize="false" />
+        </List>
+
+			</IconTabFilter>
+        </items>
+        </IconTabBar>
+        </f:content>
+        <f:footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button type="Success" text="Accept" press="handleAcceptAppointment"/>
+                <Button type="Reject" text="Reject" press="handleRejectAppointment"/>
+            </Toolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

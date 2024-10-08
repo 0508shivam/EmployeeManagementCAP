@@ -82,13 +82,22 @@ function(Controller, JSONModel){
                         "state": "Error"
                     },
                     {
-                        "title" : "Position Appointment : AI Engineer",
+                        "title" : "Position Appointment",
                         "name" : "Heath Leadger",
                         "type" : "Active",
                         "date" : "09/03/25",
                         "message" : "Technology and Engineering - AI",
                         "status" : "Pending Review",
                         "state" : "Error"
+                    },
+                    {
+                        "title" : "Position Validation",
+                        "name": "Krik C Nadler",
+                        "type": "Active",
+                        "date": "5/11/19",
+                        "message": "Due 5 days ago",
+                        "status": "Past Due",
+                        "state": "Error"
                     }
                 ]
             };

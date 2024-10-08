@@ -20,7 +20,7 @@
 				</currentLocation>
 			</Breadcrumbs>
 			<f:GridList
-				id="gridList" sticky="HeaderToolbar">
+				id="gridList">
 				<f:headerToolbar>
 					<Toolbar>
 						<Text text="My Tasks(5)" />

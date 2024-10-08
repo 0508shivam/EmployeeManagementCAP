@@ -159,6 +159,11 @@
                     "target": "NotifyEmployee"
                 },
                 {
+                    "pattern": "Position Appointment/{title}",
+                    "name": "Position Appointment",
+                    "target": "PositionAppointment"
+                },
+                {
                     "pattern": "EditNeed",
                     "name": "Edit Need",
                     "target": "EditNeedNav"
@@ -219,6 +224,13 @@
                     "transition": "slide",
                     "viewId": "Notification",
                     "viewName": "Notification",
+                    "viewType": "XML",
+                    "controlAggregation": "pages"
+                },
+                "PositionAppointment": {
+                    "transition": "slide",
+                    "viewId": "Appointment",
+                    "viewName": "Appointment",
                     "viewType": "XML",
                     "controlAggregation": "pages"
                 },
